@@ -1,0 +1,70 @@
+{
+  "monthly": [
+    { "mes": "Jan", "receita": 45000, "despesa": 30000 },
+    { "mes": "Fev", "receita": 41500, "despesa": 27200 },
+    { "mes": "Mar", "receita": 43000, "despesa": 28400 },
+    { "mes": "Abr", "receita": 44500, "despesa": 33600 },
+    { "mes": "Mai", "receita": 46000, "despesa": 30800 },
+    { "mes": "Jun", "receita": 47500, "despesa": 32000 },
+    { "mes": "Jul", "receita": 53000, "despesa": 37200 },
+    { "mes": "Ago", "receita": 50500, "despesa": 34400 },
+    { "mes": "Set", "receita": 52000, "despesa": 35600 },
+    { "mes": "Out", "receita": 53500, "despesa": 40800 },
+    { "mes": "Nov", "receita": 55000, "despesa": 38000 },
+    { "mes": "Dez", "receita": 56500, "despesa": 39200 }
+  ],
+  "categories": [
+    { "name": "Folha", "value": 38000 },
+    { "name": "Infraestrutura", "value": 12000 },
+    { "name": "Marketing", "value": 8000 },
+    { "name": "Operacional", "value": 15000 },
+    { "name": "Impostos", "value": 9000 }
+  ],
+  "transactions": [
+    {
+      "id": "tx-001",
+      "date": "2025-08-01",
+      "description": "Assinatura SaaS",
+      "type": "Despesa",
+      "category": "Infraestrutura",
+      "amount": -1200.5,
+      "account": "Banco Principal"
+    },
+    {
+      "id": "tx-002",
+      "date": "2025-08-02",
+      "description": "Venda Plano Enterprise",
+      "type": "Receita",
+      "category": "Vendas",
+      "amount": 18000,
+      "account": "Banco Principal"
+    },
+    {
+      "id": "tx-003",
+      "date": "2025-08-03",
+      "description": "Campanha Ads",
+      "type": "Despesa",
+      "category": "Marketing",
+      "amount": -3500,
+      "account": "Cartão Corporativo"
+    },
+    {
+      "id": "tx-004",
+      "date": "2025-08-04",
+      "description": "Serviço de Consultoria",
+      "type": "Receita",
+      "category": "Serviços",
+      "amount": 9500,
+      "account": "Banco Secundário"
+    },
+    {
+      "id": "tx-005",
+      "date": "2025-08-05",
+      "description": "Impostos Federais",
+      "type": "Despesa",
+      "category": "Impostos",
+      "amount": -7000,
+      "account": "Banco Principal"
+    }
+  ]
+}
