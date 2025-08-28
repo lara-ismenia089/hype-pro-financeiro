@@ -2,20 +2,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dashboard Financeiro",
+  title: "Hype Financeiro",
   description:
-    "Dashboard financeiro desenvolvido por Israel Frota para facilitar a visualização de informações e apoiar a tomada de decisões.",
+    "Aplicação financeiro desenvolvido por Israel Frota para facilitar a visualização de informações e apoiar a tomada de decisões.",
   authors: [
     { name: "Lara Ismênia" },
     { name: "Ricardo Martins" },
   ],
   keywords: ["finanças", "dashboard", "gestão financeira", "análise de dados"],
   openGraph: {
-    title: "Dashboard Financeiro",
+    title: "Hype Financeiro",
     description:
       "Visualize receitas, despesas e fluxo de caixa em um dashboard financeiro moderno e interativo.",
     type: "website",
     locale: "pt_BR",
+    images: ["/hype_logo.png"]
   },
 };
 
