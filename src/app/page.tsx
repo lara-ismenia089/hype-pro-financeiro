@@ -177,7 +177,7 @@ export default function FinanceDashboardMockup() {
         {/* Header */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <Header 
-            title="Hype Financeiro"
+            title="Hype Pro Financeiro"
             subtitle="Dashboard interativo para visão de receitas, despesas e fluxo de caixa" 
           />
           <div className="flex items-center gap-2">

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hype Financeiro",
+  title: "Hype Pro Financeiro",
   description:
     "Aplicação financeiro desenvolvido por Israel Frota para facilitar a visualização de informações e apoiar a tomada de decisões.",
   authors: [
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   ],
   keywords: ["finanças", "dashboard", "gestão financeira", "análise de dados"],
   openGraph: {
-    title: "Hype Financeiro",
+    title: "Hype Pro Financeiro",
     description:
       "Visualize receitas, despesas e fluxo de caixa em um dashboard financeiro moderno e interativo.",
     type: "website",
