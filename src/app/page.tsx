@@ -239,9 +239,9 @@ export default function FinanceDashboardMockup() {
               <CardContent>
                 <div className="flex items-end justify-between">
                   <div>
-                    <div className="text-2xl font-semibold">{currencyBRL(info ? kpis.receita : 10)}</div>
+                    <div className="text-2xl font-semibold">{currencyBRL(!info ? kpis.receita : 10)}</div>
                     <div className="mt-1 flex items-center text-xs text-emerald-400 dark:text-emerald-400 font-bold">
-                      <ArrowUpRight className="mr-1 h-3 w-3" /> {info ? "+12% vs. período anterior" : "Outra coisa"}
+                      <ArrowUpRight className="mr-1 h-3 w-3" /> {!info ? "+12% vs. período anterior" : "Outra coisa"}
                     </div>
                   </div>
                   <TrendingUp className="h-8 w-8 opacity-60 hover:cursor-pointer" onClick={() => setInfo(prev => !prev)} />
