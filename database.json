@@ -1,17 +1,17 @@
 {
   "monthly": [
-    { "mes": "Jan", "receita": 45000, "despesa": 30000 },
-    { "mes": "Fev", "receita": 41500, "despesa": 27200 },
-    { "mes": "Mar", "receita": 43000, "despesa": 28400 },
-    { "mes": "Abr", "receita": 44500, "despesa": 33600 },
-    { "mes": "Mai", "receita": 46000, "despesa": 30800 },
-    { "mes": "Jun", "receita": 47500, "despesa": 32000 },
-    { "mes": "Jul", "receita": 53000, "despesa": 37200 },
-    { "mes": "Ago", "receita": 50500, "despesa": 34400 },
-    { "mes": "Set", "receita": 52000, "despesa": 35600 },
-    { "mes": "Out", "receita": 53500, "despesa": 40800 },
-    { "mes": "Nov", "receita": 55000, "despesa": 38000 },
-    { "mes": "Dez", "receita": 56500, "despesa": 39200 }
+    { "month": "Jan", "revenue": 45000, "expenses": 30000 },
+    { "month": "Fev", "revenue": 41500, "expenses": 27200 },
+    { "month": "Mar", "revenue": 43000, "expenses": 28400 },
+    { "month": "Abr", "revenue": 44500, "expenses": 33600 },
+    { "month": "Mai", "revenue": 46000, "expenses": 30800 },
+    { "month": "Jun", "revenue": 47500, "expenses": 32000 },
+    { "month": "Jul", "revenue": 53000, "expenses": 37200 },
+    { "month": "Ago", "revenue": 50500, "expenses": 34400 },
+    { "month": "Set", "revenue": 52000, "expenses": 35600 },
+    { "month": "Out", "revenue": 53500, "expenses": 40800 },
+    { "month": "Nov", "revenue": 55000, "expenses": 38000 },
+    { "month": "Dez", "revenue": 56500, "expenses": 39200 }
   ],
   "categories": [
     { "name": "Folha", "value": 38000 },
@@ -65,6 +65,77 @@
       "category": "Impostos",
       "amount": -7000,
       "account": "Banco Principal"
+    }
+  ],
+  "partnerships": [
+    {
+      "cnpj": "98.636.752/0001-63",
+      "companyName": "Empresa ABC LTDA.",
+      "fantasyName": "Empresa ABC",
+      "email": "contato@empresaabc.com.br",
+      "phone": "(11) 98888-7777",
+      "signedContract": "Contrato_ABC_2025.pdf",
+      "signedDate": "2025-01-10",
+      "dueDate": "2026-01-10",
+      "contractTime": "12 meses",
+      "contractStatus": "ativo",
+      "monthlyFee": 1500.00,
+      "terminationClause": "Rescisão com aviso prévio de 60 dias.",
+      "address": {
+        "street": "Rua das Flores",
+        "neighborhood": "Centro",
+        "number": "1200",
+        "zipCode": "01010-000",
+        "city": "São Paulo",
+        "state": "SP",
+        "country": "Brasil"
+      }
+    },
+    {
+      "cnpj": "21.456.789/0001-44",
+      "companyName": "Tech Solutions ME",
+      "fantasyName": "Tech Soluções",
+      "email": "suporte@techsolucoes.com",
+      "phone": "(21) 97777-6666",
+      "signedContract": "Contrato_Tech_2023.pdf",
+      "signedDate": "2023-05-15",
+      "dueDate": "2024-05-15",
+      "contractTime": "12 meses",
+      "contractStatus": "vencido",
+      "monthlyFee": 800.00,
+      "terminationClause": "Rescisão com aviso prévio de 30 dias.",
+      "address": {
+        "street": "Av. Atlântica",
+        "neighborhood": "Copacabana",
+        "number": "505",
+        "zipCode": "22010-001",
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "country": "Brasil"
+      }
+    },
+    {
+      "cnpj": "35.987.654/0001-09",
+      "companyName": "Comercial Delta S.A.",
+      "fantasyName": "Delta Comércio",
+      "email": "delta@comercialdelta.com",
+      "phone": "(31) 96666-5555",
+      "signedContract": null,
+      "signedDate": null,
+      "dueDate": null,
+      "contractTime": null,
+      "contractStatus": "em análise",
+      "monthlyFee": 0,
+      "terminationClause": null,
+      "address": {
+        "street": "Rua Minas Gerais",
+        "neighborhood": "Funcionários",
+        "number": "320",
+        "zipCode": "30130-000",
+        "city": "Belo Horizonte",
+        "state": "MG",
+        "country": "Brasil"
+      }
     }
   ]
 }

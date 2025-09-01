@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hype-pro-financeiro.vercel.app'),
   title: "Hype Pro Financeiro",
   description:
     "Aplicação financeiro desenvolvido por Israel Frota para facilitar a visualização de informações e apoiar a tomada de decisões.",
