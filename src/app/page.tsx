@@ -17,9 +17,7 @@ import {
   SelectTrigger,
   SelectContent,
 } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Badge } from "@/components/ui/badge";
 import {
   Bar,
   Pie,
@@ -34,7 +32,6 @@ import {
 } from "recharts";
 import {
   Filter,
-  Search,
   Wallet,
   Calendar,
   TrendingUp,
