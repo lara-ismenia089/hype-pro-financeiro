@@ -9,3 +9,7 @@ export const currencyBRL = (value: number) =>
   new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(
     value
   );
+
+export const formatDate = (date: string) =>
+  new Date(date).toLocaleDateString('pt-br') + ' ' +
+  new Date(date).toLocaleTimeString("pt-br");
