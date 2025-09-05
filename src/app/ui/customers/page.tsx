@@ -28,13 +28,12 @@ export default function Customers() {
 
   return (
     <MainContainer>
+      <Header
+        title="Hype Pro Financeiro"
+        subtitle="Monitoramento da carteira de clientes"
+      />
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <Header
-          title="Hype Pro Financeiro"
-          subtitle="Monitoramento da carteira de clientes"
-        />
-
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-6">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-6 ml-auto">
           <Input
             placeholder="Buscar cliente..."
             value={search}
