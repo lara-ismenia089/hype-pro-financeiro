@@ -1,23 +1,26 @@
 'use client';
 
 import Image from "next/image";
-import React, { useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { useMemo, useState } from "react";
 import {
   Card,
   CardTitle,
   CardHeader,
   CardContent,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { 
+  Tabs, 
+  TabsList, 
+  TabsTrigger, 
+  TabsContent 
+} from "@/components/ui/tabs";
 import {
-  Select,
+  Select, 
   SelectItem,
   SelectValue,
   SelectTrigger,
   SelectContent,
 } from "@/components/ui/select";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
   Bar,
   Pie,
@@ -31,7 +34,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import {
-  Filter,
   Wallet,
   Calendar,
   TrendingUp,
@@ -41,7 +43,7 @@ import {
 import { Header } from "@/app/_components/header/Header";
 import { MainContainer } from "./_components/container/MainContainer";
 import { FooterContainer } from "./_components/footer/FooterContainer";
-import { currencyBRL } from "@/lib/utils";
+import { currencyBRL, formatDate } from "@/lib/utils";
 import { pieColors } from "@/lib/color";
 import { 
   mockMonthly,
@@ -49,8 +51,9 @@ import {
   mockTransactions,
 } from "@/lib/mock";
 import { Overview } from "./_components/overview/Overview";
-import { CardComponent } from "./_components/card/CardComponent";
 import { TableTransaction } from "./_components/overview/TableTransaction";
+import { KpiCard } from "./_components/card/KpiCard";
+import { StackedColumnChart } from "./_components/fixed-variable/StackedColumnChart";
 
 export default function FinanceDashboardMockup() {
   const [range, setRange] = useState("12m");
@@ -95,15 +98,14 @@ export default function FinanceDashboardMockup() {
 
   return (
     <MainContainer>
-      {/* Header */}
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between ">
-        <Header 
-          title="Hype Pro Financeiro"
-          subtitle="Dashboard interativo para visão de receitas, despesas e fluxo de caixa" 
-        />
-        <div className="flex items-center gap-2">
+      <Header 
+        title="Hype Pro Financeiro"
+        subtitle="Dashboard interativo para visão de receitas, despesas e fluxo de caixa" 
+      />
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center gap-2 ml-auto">
           <Select value={range} onValueChange={setRange}>
-            <SelectTrigger className="w-[140px]">
+            <SelectTrigger>
               <Calendar className="mr-2 h-4 w-4" />
               <SelectValue placeholder="Período" />
             </SelectTrigger>
@@ -115,7 +117,7 @@ export default function FinanceDashboardMockup() {
             </SelectContent>
           </Select>
           <Select value={account} onValueChange={setAccount}>
-            <SelectTrigger className="w-[190px]">
+            <SelectTrigger>
               <Wallet className="mr-2 h-4 w-4" />
               <SelectValue placeholder="Conta" />
             </SelectTrigger>
@@ -126,56 +128,49 @@ export default function FinanceDashboardMockup() {
               <SelectItem value="Cartão Corporativo">Cartão Corporativo</SelectItem>
             </SelectContent>
           </Select>
-          <Button variant="outline" className="gap-2">
-            <Filter className="h-4 w-4" />
-            Filtros
-          </Button>
         </div>
       </div>
 
       {/* KPIs */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.02 }}>
-          <CardComponent title="Receita">
-            <div className="flex items-end justify-between">
-              <div>
-                <div className="text-2xl font-semibold">{currencyBRL(!info ? kpis.variableRevenue : kpis.fixedRevenue)}</div>
-                <div className="mt-1 flex items-center text-xs text-emerald-400 dark:text-emerald-400 font-bold">
-                  <ArrowUpRight className="mr-1 h-3 w-3" /> {!info ? "+12% vs. período anterior" : "Outra coisa"}
-                </div>
-              </div>
-              <TrendingUp className="h-8 w-8 opacity-60 hover:cursor-pointer" onClick={() => setInfo(prev => !prev)} />
-            </div>
-          </CardComponent>
-        </motion.div>
+        <KpiCard
+          title="Receita"
+          value={currencyBRL(!info ? kpis.variableRevenue : kpis.fixedRevenue)}
+          variation={{
+            value: !info ? "+12% vs. período anterior" : "Outra coisa",
+            color: "text-emerald-400",
+            icon: <ArrowUpRight className="mr-1 h-3 w-3" />,
+          }}
+          icon={<TrendingUp />}
+          onIconClick={() => setInfo((prev) => !prev)}
+          delay={0.02}
+        />
 
-        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.06 }}>
-          <CardComponent title="Despesas">
-            <div className="flex items-end justify-between">
-              <div>
-                <div className="text-2xl font-semibold">{currencyBRL(kpis.totalExpenses)}</div>
-                <div className="mt-1 flex items-center text-xs text-red-500 dark:text-red-400 font-bold">
-                  <ArrowDownRight className="mr-1 h-3 w-3" /> +7% vs. período anterior
-                </div>
-              </div>
-              <ArrowDownRight className="h-8 w-8 opacity-60" />
-            </div>
-          </CardComponent>
-        </motion.div>
+        <KpiCard
+          title="Despesas"
+          value={currencyBRL(kpis.totalExpenses)}
+          variation={{
+            value: "+7% vs. período anterior",
+            color: "text-red-500 dark:text-red-400",
+            icon: <ArrowDownRight className="mr-1 h-3 w-3" />,
+          }}
+          icon={<ArrowDownRight />}
+          delay={0.06}
+        />
 
-        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-          <CardComponent title="Saldo de Caixa">
-            <div className="text-2xl font-semibold">{currencyBRL(kpis.netIncome)}</div>
-            <div className="mt-1 text-xs text-muted-foreground">Disponível consolidado</div>
-          </CardComponent>
-        </motion.div>
+        <KpiCard
+          title="Saldo de Caixa"
+          value={currencyBRL(kpis.netIncome)}
+          description="Disponível consolidado"
+          delay={0.1}
+        />
 
-        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.14 }}>
-          <CardComponent title="Margem">
-            <div className="text-2xl font-semibold">{kpis.profitMargin.toFixed(1)}%</div>
-            <div className="mt-1 text-xs text-muted-foreground">Lucro líquido / Receita</div>
-          </CardComponent>
-        </motion.div>
+        <KpiCard
+          title="Margem"
+          value={`${kpis.profitMargin.toFixed(1)}%`}
+          description="Lucro líquido / Receita"
+          delay={0.14}
+        />
       </div>
 
       {/* Conteúdo Principal */}
@@ -201,41 +196,23 @@ export default function FinanceDashboardMockup() {
         {/* Fixo vs Variádo */}
         <TabsContent value="fixed-variable" className="space-y-4">
           <div className="grid gap-4 lg:grid-cols-2">
-            <Card className="shadow-sm">
-              <CardHeader>
-                <CardTitle>Receitas Mensais: Fixas x Variáveis</CardTitle>
-              </CardHeader>
-              <CardContent className="h-[320px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={mockMonthly}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="month" />
-                    <YAxis />
-                    <Tooltip formatter={(v: number) => currencyBRL(v)} />
-                    <Bar dataKey="fixedRevenue" stackId="a" fill="#3b82f6" name="Receita Fixa" />
-                    <Bar dataKey="variableRevenue" stackId="a" fill="#10b981" name="Receita Variável" />
-                  </BarChart>
-                </ResponsiveContainer>
-              </CardContent>
-            </Card>
+            <StackedColumnChart 
+              title="Receitas Mensais: Fixas x Variáveis"
+              name01="Receita Fixa"
+              dataKeyBar01="fixedRevenue"
+              name02="Receita Variável"
+              dataKeyBar02="variableRevenue"
+              dataKeyXAxis="month"
+            />
 
-            <Card className="shadow-sm">
-              <CardHeader>
-                <CardTitle>Despesas Mensais: Fixas x Variáveis</CardTitle>
-              </CardHeader>
-              <CardContent className="h-[320px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={mockMonthly}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="month" />
-                    <YAxis />
-                    <Tooltip formatter={(v: number) => currencyBRL(v)} />
-                    <Bar dataKey="fixedExpense" stackId="b" fill="#ef4444" name="Despesa Fixa" />
-                    <Bar dataKey="variableExpenses" stackId="b" fill="#f97316" name="Despesa Variável" />
-                  </BarChart>
-                </ResponsiveContainer>
-              </CardContent>
-            </Card>
+            <StackedColumnChart
+              title="Despesas Mensais: Fixas x Variáveis"
+              name01="Despesa Fixa"
+              dataKeyBar01="fixedExpense"
+              name02="Despesa Variável"
+              dataKeyBar02="variableExpenses"
+              dataKeyXAxis="month"
+            />
           </div>
 
           {/* Resumo Anual */}
