@@ -1,143 +1,9 @@
-export type MockMonthlyType = {
-	month: string;
-	fixedRevenue: number;
-	variableRevenue: number;
-	fixedExpense: number;
-	variableExpenses: number;
-};
-
-export const mockMonthly: MockMonthlyType[] = [
-	{
-		month: "Ago",
-		fixedRevenue: 2875.99,
-		fixedExpense: 3528.53,
-		variableRevenue: 2749.54,
-		variableExpenses: 1736.63
-	},
-	{
-		month: "Set",
-		fixedRevenue: 3000,
-		fixedExpense: 2800,
-		variableRevenue: 2568.89,
-		variableExpenses: 1897.57
-	},
-	{
-		month: "Out",
-		fixedRevenue: 3000,
-		fixedExpense: 2800,
-		variableRevenue: 3128.45,
-		variableExpenses: 2341.12
-	},
-	{
-		month: "Nov",
-		fixedRevenue: 3000,
-		fixedExpense: 2800,
-		variableRevenue: 1544.67,
-		variableExpenses: 2027.34
-	},
-	{
-		month: "Dez",
-		fixedRevenue: 3000,
-		fixedExpense: 2800,
-		variableRevenue: 3000,
-		variableExpenses: 2000
-	},
-]
-
-type MockCategoriesType = {
-	name: string;
-	value: number;
-};
-
-export const mockCategories: MockCategoriesType[] = [
-	{ name: "Folha", value: 38000 },
-	{ name: "Infraestrutura", value: 12000 },
-	{ name: "Marketing", value: 8000 },
-	{ name: "Operacional", value: 15000 },
-	{ name: "Impostos", value: 9000 },
-];
-
-export type MockTransactionsType = {
-	id: string;
-	date: string;
-	description: string;
-	type: string;
-	category: string;
-	amount: number;
-	account: string;
-};
-
-export const mockTransactions: MockTransactionsType[] = [
-	{
-		id: "tx-001",
-		date: "2025-08-01",
-		description: "Assinatura SaaS",
-		type: "Despesa",
-		category: "Infraestrutura",
-		amount: -1200.5,
-		account: "Banco Principal",
-	},
-	{
-		id: "tx-002",
-		date: "2025-08-02",
-		description: "Venda Plano Enterprise",
-		type: "Receita",
-		category: "Vendas",
-		amount: 18000,
-		account: "Banco Principal",
-	},
-	{
-		id: "tx-003",
-		date: "2025-08-03",
-		description: "Campanha Ads",
-		type: "Despesa",
-		category: "Marketing",
-		amount: -3500,
-		account: "Cartão Corporativo",
-	},
-	{
-		id: "tx-004",
-		date: "2025-08-04",
-		description: "Serviço de Consultoria",
-		type: "Receita",
-		category: "Serviços",
-		amount: 9500,
-		account: "Banco Secundário",
-	},
-	{
-		id: "tx-005",
-		date: "2025-08-05",
-		description: "Impostos Federais",
-		type: "Despesa",
-		category: "Impostos",
-		amount: -7000,
-		account: "Banco Principal",
-	},
-];
-
-type MockCustomers = {
-	cnpj: string;
-	companyName: string;
-	fantasyName: string;
-	email: string;
-	phone: string;
-	signedContract: string | null;
-	signedDate: string | null;
-	dueDate: string | null;
-	contractTime: string | null;
-	contractStatus: string;
-	monthlyFee: number;
-	terminationClause: string | null;
-	address: {
-		street: string;
-		neighborhood: string;
-		number: string;
-		zipCode: string;
-		city: string;
-		state: string;
-		country: string;
-	}
-};
+import {
+  MockCustomers,
+  MockMonthlyType,
+  MockCategoriesType,
+  MockTransactionsType,
+} from "@/lib/types";
 
 export const mockCustomers: MockCustomers[] = [
   {
@@ -301,4 +167,88 @@ export const mockCustomers: MockCustomers[] = [
       country: "Brasil",
     },
   },
+];
+
+export const mockMonthly: MockMonthlyType[] = [
+	{
+		month: "Ago",
+    date: "2025-08-01",
+		fixedRevenue: 2875.99,
+		fixedExpense: 3528.53,
+		variableRevenue: 2749.54,
+		variableExpenses: 1736.63
+	},
+	{
+		month: "Set",
+    date: "2025-09-01",
+		fixedRevenue: 3000,
+		fixedExpense: 2800,
+		variableRevenue: 2568.89,
+		variableExpenses: 1897.57
+	},
+	{
+		month: "Out",
+    date: "2025-10-01",
+		fixedRevenue: 3000,
+		fixedExpense: 2800,
+		variableRevenue: 3128.45,
+		variableExpenses: 2341.12
+	},
+	{
+		month: "Nov",
+    date: "2025-11-01",
+		fixedRevenue: 3000,
+		fixedExpense: 2800,
+		variableRevenue: 1544.67,
+		variableExpenses: 2027.34
+	},
+	{
+		month: "Dez",
+    date: "2025-12-01",
+		fixedRevenue: 3000,
+		fixedExpense: 2800,
+		variableRevenue: 3000,
+		variableExpenses: 2000
+	},
+];
+
+export const mockCategories: MockCategoriesType[] = [
+	{ name: "Folha", value: 38000 },
+	{ name: "Infraestrutura", value: 12000 },
+	{ name: "Marketing", value: 8000 },
+	{ name: "Operacional", value: 15000 },
+	{ name: "Impostos", value: 9000 },
+];
+
+export const mockTransactions: MockTransactionsType[] = [
+  { id: "tx-001", date: "2025-08-01", description: "Assinatura SaaS", type: "Despesa", category: "Infraestrutura", amount: -1200.5, account: "Banco Principal" },
+  { id: "tx-002", date: "2025-08-02", description: "Venda Plano Enterprise", type: "Receita", category: "Vendas", amount: 18000, account: "Banco Principal" },
+  { id: "tx-003", date: "2025-08-03", description: "Campanha Ads", type: "Despesa", category: "Marketing", amount: -3500, account: "Cartão Corporativo" },
+  { id: "tx-004", date: "2025-08-04", description: "Serviço de Consultoria", type: "Receita", category: "Serviços", amount: 9500, account: "Banco Secundário" },
+  { id: "tx-005", date: "2025-08-05", description: "Impostos Federais", type: "Despesa", category: "Impostos", amount: -7000, account: "Banco Principal" },
+  { id: "tx-006", date: "2025-08-06", description: "Assinatura Cloud Hosting", type: "Despesa", category: "Infraestrutura", amount: -2200, account: "Cartão Corporativo" },
+  { id: "tx-007", date: "2025-08-06", description: "Pagamento Cliente Beta", type: "Receita", category: "Vendas", amount: 4500, account: "Banco Principal" },
+  { id: "tx-008", date: "2025-08-07", description: "Treinamento de Equipe", type: "Despesa", category: "RH", amount: -1800, account: "Banco Secundário" },
+  { id: "tx-009", date: "2025-08-08", description: "Venda Plano Premium", type: "Receita", category: "Vendas", amount: 7200, account: "Banco Principal" },
+  { id: "tx-010", date: "2025-08-09", description: "Energia Elétrica Escritório", type: "Despesa", category: "Operacional", amount: -950, account: "Banco Principal" },
+  { id: "tx-011", date: "2025-08-10", description: "Manutenção Servidores", type: "Despesa", category: "Infraestrutura", amount: -3100, account: "Cartão Corporativo" },
+  { id: "tx-012", date: "2025-08-11", description: "Receita Parceria Estratégica", type: "Receita", category: "Parcerias", amount: 15000, account: "Banco Secundário" },
+  { id: "tx-013", date: "2025-08-12", description: "Aluguel Escritório", type: "Despesa", category: "Operacional", amount: -8500, account: "Banco Principal" },
+  { id: "tx-014", date: "2025-08-12", description: "Venda Customizada Cliente X", type: "Receita", category: "Serviços", amount: 12500, account: "Banco Principal" },
+  { id: "tx-015", date: "2025-08-13", description: "Compra Equipamentos TI", type: "Despesa", category: "Infraestrutura", amount: -5600, account: "Banco Secundário" },
+  { id: "tx-016", date: "2025-08-14", description: "Receita Workshop Online", type: "Receita", category: "Serviços", amount: 4200, account: "Banco Principal" },
+  { id: "tx-017", date: "2025-08-15", description: "Marketing Influencer", type: "Despesa", category: "Marketing", amount: -2300, account: "Cartão Corporativo" },
+  { id: "tx-018", date: "2025-08-16", description: "Venda Licença Software", type: "Receita", category: "Vendas", amount: 9800, account: "Banco Principal" },
+  { id: "tx-019", date: "2025-08-17", description: "Alimentação Escritório", type: "Despesa", category: "Operacional", amount: -600, account: "Banco Secundário" },
+  { id: "tx-020", date: "2025-08-18", description: "Pagamento Cliente Gamma", type: "Receita", category: "Vendas", amount: 5400, account: "Banco Principal" },
+  { id: "tx-021", date: "2025-08-19", description: "Seguro Empresarial", type: "Despesa", category: "Operacional", amount: -2700, account: "Banco Principal" },
+  { id: "tx-022", date: "2025-08-20", description: "Receita Programa Afiliados", type: "Receita", category: "Marketing", amount: 3100, account: "Banco Secundário" },
+  { id: "tx-023", date: "2025-08-21", description: "Transporte Colaboradores", type: "Despesa", category: "RH", amount: -1250, account: "Cartão Corporativo" },
+  { id: "tx-024", date: "2025-08-22", description: "Venda Consultoria Avançada", type: "Receita", category: "Serviços", amount: 13800, account: "Banco Principal" },
+  { id: "tx-025", date: "2025-08-23", description: "Material de Escritório", type: "Despesa", category: "Operacional", amount: -750, account: "Banco Secundário" },
+  { id: "tx-026", date: "2025-08-24", description: "Assinatura Plataforma Analytics", type: "Despesa", category: "Infraestrutura", amount: -1400, account: "Cartão Corporativo" },
+  { id: "tx-027", date: "2025-08-25", description: "Receita Licenciamento API", type: "Receita", category: "Serviços", amount: 8900, account: "Banco Principal" },
+  { id: "tx-028", date: "2025-08-26", description: "Consultoria Jurídica", type: "Despesa", category: "Serviços", amount: -3200, account: "Banco Secundário" },
+  { id: "tx-029", date: "2025-08-27", description: "Venda Pacote Treinamento", type: "Receita", category: "Serviços", amount: 6700, account: "Banco Principal" },
+  { id: "tx-030", date: "2025-08-28", description: "Infraestrutura Cloud Extra", type: "Despesa", category: "Infraestrutura", amount: -4100, account: "Cartão Corporativo" },
 ];
