@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { MockMonthlyType } from "@/lib/mock";
+import { MockMonthlyType } from "@/lib/types";
 import { 
 	Card,
 	CardTitle,

@@ -8,7 +8,7 @@ import { Search } from "lucide-react";
 import { currencyBRL } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { MockTransactionsType } from "@/lib/mock";
+import { MockTransactionsType } from "@/lib/types";
 
 type TableTransactionType = {
 	query: string;
@@ -21,7 +21,7 @@ export function TableTransaction({ query, setQuery, filter }: TableTransactionTy
 		<Card className="shadow-sm">
 			<CardHeader className="flex items-center justify-between">
 				<CardTitle>Transações Recentes</CardTitle>
-				
+
 				<div className="flex items-center gap-2">
 					<div className="relative w-full sm:w-96">
 						<Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -53,19 +53,19 @@ export function TableTransaction({ query, setQuery, filter }: TableTransactionTy
 								</td>
 							</tr>
 						) : (
-						filter.map((t) => (
-							<tr key={t.id} className="border-b last:border-0">
-								<td className="py-2 pr-4">{new Date(t.date).toLocaleDateString("pt-BR")}</td>
-								<td className="py-2 pr-4">{t.description}</td>
-								<td className="py-2 pr-4">
-									<Badge variant={t.type === "Receita" ? "default" : "secondary"}>{t.category}</Badge>
-								</td>
-								<td className="py-2 pr-4">{t.account}</td>
-								<td className={`py-2 pr-0 text-right font-medium ${t.amount < 0 ? "text-red-600 dark:text-red-400" : "text-emerald-600 dark:text-emerald-400"}`}>
-									{currencyBRL(t.amount)}
-								</td>
-							</tr>
-						)))}
+							filter.map((t) => (
+								<tr key={t.id} className="border-b last:border-0">
+									<td className="py-2 pr-4">{t.date}</td>
+									<td className="py-2 pr-4">{t.description}</td>
+									<td className="py-2 pr-4">
+										<Badge variant={t.type === "Receita" ? "default" : "secondary"}>{t.category}</Badge>
+									</td>
+									<td className="py-2 pr-4">{t.account}</td>
+									<td className={`py-2 pr-0 text-right font-medium ${t.amount < 0 ? "text-red-600 dark:text-red-400" : "text-emerald-600 dark:text-emerald-400"}`}>
+										{currencyBRL(t.amount)}
+									</td>
+								</tr>
+							)))}
 					</tbody>
 				</table>
 			</CardContent>
