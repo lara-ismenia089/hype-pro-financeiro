@@ -78,11 +78,11 @@ export default function Customers() {
           <SelectContent>
             <SelectItem value="todos">Todos</SelectItem>
             <SelectItem value="ativo">Ativo</SelectItem>
-            <SelectItem value="vencido">Vencido</SelectItem>
-            <SelectItem value="pendente">Pendente</SelectItem>
+            <SelectItem value="suspenso">Suspenso</SelectItem>
+            {/* <SelectItem value="pendente">Pendente</SelectItem>
             <SelectItem value="em análise">Em análise</SelectItem>
             <SelectItem value="rescindido">Rescindido</SelectItem>
-            <SelectItem value="em renovação">Em renovação</SelectItem>
+            <SelectItem value="em renovação">Em renovação</SelectItem> */}
           </SelectContent>
         </Select>
       </div>

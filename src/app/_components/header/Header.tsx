@@ -52,14 +52,14 @@ export function Header({ title, subtitle }: HeaderProps) {
           <Link href="/">
             <ButtonContainer>
               <Home className="mr-2 h-4 w-4" />
-              Home
+              Página inicial
             </ButtonContainer>
           </Link>
         ) : (
           <Link href="/ui/customers">
             <ButtonContainer>
               <UserRound className="mr-2 h-4 w-4" />
-              Clientes
+              Parcerias
             </ButtonContainer>
           </Link>
         )}

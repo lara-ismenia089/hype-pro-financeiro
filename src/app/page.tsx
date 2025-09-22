@@ -12,42 +12,39 @@ import {
   Tabs, 
   TabsList, 
   TabsTrigger, 
-  TabsContent 
+  TabsContent,
 } from "@/components/ui/tabs";
-import {
-  Select, 
-  SelectItem,
-  SelectValue,
-  SelectTrigger,
-  SelectContent,
-} from "@/components/ui/select";
+// import {
+//   Select, 
+//   SelectItem,
+//   SelectValue,
+//   SelectTrigger,
+//   SelectContent,
+// } from "@/components/ui/select";
 import {
   Bar,
-  Pie,
-  Cell,
+  // Cell,
   XAxis,
   YAxis,
   Tooltip,
   BarChart,
-  PieChart,
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
 import {
-  Wallet,
-  Calendar,
+  // Wallet,
+  // Calendar,
   TrendingUp,
-  ArrowUpRight,
+  // ArrowUpRight,
   ArrowDownRight,
 } from "lucide-react";
 import { Header } from "@/app/_components/header/Header";
 import { MainContainer } from "./_components/container/MainContainer";
 import { FooterContainer } from "./_components/footer/FooterContainer";
-import { currencyBRL, formatDate } from "@/lib/utils";
-import { pieColors } from "@/lib/color";
+import { currencyBRL } from "@/lib/utils";
 import { 
   mockMonthly,
-  mockCategories,
+  // mockCategories,
   mockTransactions,
 } from "@/lib/mock";
 import { Overview } from "./_components/overview/Overview";
@@ -56,32 +53,33 @@ import { KpiCard } from "./_components/card/KpiCard";
 import { StackedColumnChart } from "./_components/fixed-variable/StackedColumnChart";
 
 export default function FinanceDashboardMockup() {
-  const [range, setRange] = useState("12m");
-  const [account, setAccount] = useState("all");
+  // const [range, setRange] = useState("12m");
+  // const [account, setAccount] = useState("all");
   const [query, setQuery] = useState("");
   const [tab, setTab] = useState("overview");
-  const [info, setInfo] = useState(false);
+  const [kpiRevenue, setKpiRevenue] = useState(false);
+  const [kpiExpense, setKpiExpense] = useState(false);
 
   const kpis = useMemo(() => {
     const fixedRevenue = mockMonthly.reduce((a, c) => a + c.fixedRevenue, 0);
     const variableRevenue = mockMonthly.reduce((a, c) => a + c.variableRevenue, 0);
-    const fixedExpenses = mockMonthly.reduce((a, c) => a + c.fixedExpense, 0);
-    const variableExpenses = mockMonthly.reduce((a, c) => a + c.variableExpenses, 0);
+    const cost = mockMonthly.reduce((a, c) => a + c.cost, 0);
+    const expense = mockMonthly.reduce((a, c) => a + c.expense, 0);
 
     const totalRevenue = fixedRevenue + variableRevenue;
-    const totalExpenses = fixedExpenses + variableExpenses;
+    const totalExpenses = cost + expense;
     const netIncome = totalRevenue - totalExpenses;
     const profitMargin = totalRevenue ? (netIncome / totalRevenue) * 100 : 0;
 
     return {
       totalRevenue,
       totalExpenses,
+      expense,
+      cost,
       netIncome,
       profitMargin,
       fixedRevenue,
       variableRevenue,
-      fixedExpenses,
-      variableExpenses,
     };
   }, []);
 
@@ -89,12 +87,11 @@ export default function FinanceDashboardMockup() {
     const q = query.toLowerCase();
     return mockTransactions.filter(
       (t) =>
-        (account === "all" || t.account === account) &&
-        (t.description.toLowerCase().includes(q) ||
-          t.category.toLowerCase().includes(q) ||
-          t.type.toLowerCase().includes(q))
+        t.description.toLowerCase().includes(q) ||
+        t.type.toLowerCase().includes(q) ||
+        t.bank.toLowerCase().includes(q)
     );
-  }, [account, query]);
+  }, [query]);
 
   return (
     <MainContainer>
@@ -102,7 +99,7 @@ export default function FinanceDashboardMockup() {
         title="Hype Pro Financeiro"
         subtitle="Dashboard interativo para visão de receitas, despesas e fluxo de caixa" 
       />
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      {/* <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2 ml-auto">
           <Select value={range} onValueChange={setRange}>
             <SelectTrigger>
@@ -129,45 +126,48 @@ export default function FinanceDashboardMockup() {
             </SelectContent>
           </Select>
         </div>
-      </div>
+      </div> */}
 
       {/* KPIs */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <KpiCard
           title="Receita"
-          value={currencyBRL(!info ? kpis.variableRevenue : kpis.fixedRevenue)}
-          variation={{
-            value: !info ? "+12% vs. período anterior" : "Outra coisa",
-            color: "text-emerald-400",
-            icon: <ArrowUpRight className="mr-1 h-3 w-3" />,
-          }}
+          value={currencyBRL(kpis.totalRevenue)}
+          primaryLabel="Fixa"
+          primaryValue={currencyBRL(kpis.fixedRevenue)}
+          secondaryLabel="Variável"
+          secondaryValue={currencyBRL(kpis.variableRevenue)}
+          doubleResult={kpiRevenue}
           icon={<TrendingUp />}
-          onIconClick={() => setInfo((prev) => !prev)}
+          onIconClick={() => setKpiRevenue((prev) => !prev)}
           delay={0.02}
+          description="Fixa e variável"
         />
 
         <KpiCard
           title="Despesas"
           value={currencyBRL(kpis.totalExpenses)}
-          variation={{
-            value: "+7% vs. período anterior",
-            color: "text-red-500 dark:text-red-400",
-            icon: <ArrowDownRight className="mr-1 h-3 w-3" />,
-          }}
+          primaryLabel="Custo"
+          primaryValue={currencyBRL(kpis.cost)}
+          secondaryLabel="Despesa"
+          secondaryValue={currencyBRL(kpis.expense)}
+          doubleResult={kpiExpense}
           icon={<ArrowDownRight />}
+          onIconClick={() => setKpiExpense((prev) => !prev)}
           delay={0.06}
+          description="Custo e Despesa"
         />
 
         <KpiCard
-          title="Saldo de Caixa"
-          value={currencyBRL(kpis.netIncome)}
+          title="Resultado"
+          value={currencyBRL(kpis.totalRevenue - kpis.totalExpenses)}
           description="Disponível consolidado"
           delay={0.1}
         />
 
         <KpiCard
           title="Margem"
-          value={`${kpis.profitMargin.toFixed(1)}%`}
+          value={`${(((kpis.totalRevenue - kpis.totalExpenses) / kpis.totalRevenue) * 100).toFixed(2)}%`}
           description="Lucro líquido / Receita"
           delay={0.14}
         />
@@ -175,11 +175,11 @@ export default function FinanceDashboardMockup() {
 
       {/* Conteúdo Principal */}
       <Tabs value={tab} onValueChange={setTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-4 sm:w-auto">
+        <TabsList className="grid w-full grid-cols-3 sm:w-auto">
           <TabsTrigger value="overview">Visão Geral</TabsTrigger>
           <TabsTrigger value="fixed-variable">Fixo x Variável</TabsTrigger>
           <TabsTrigger value="cash-flow">Fluxo de Caixa</TabsTrigger>
-          <TabsTrigger value="categories">Categorias</TabsTrigger>
+          {/* <TabsTrigger value="categories">Categorias</TabsTrigger> */}
         </TabsList>
 
         {/* Visão Geral */}
@@ -206,11 +206,11 @@ export default function FinanceDashboardMockup() {
             />
 
             <StackedColumnChart
-              title="Despesas Mensais: Fixas x Variáveis"
-              name01="Despesa Fixa"
-              dataKeyBar01="fixedExpense"
-              name02="Despesa Variável"
-              dataKeyBar02="variableExpenses"
+              title="Despesas e Custos Mensais"
+              name01="Despesa"
+              dataKeyBar01="expense"
+              name02="Custo"
+              dataKeyBar02="cost"
               dataKeyXAxis="month"
             />
           </div>
@@ -230,12 +230,12 @@ export default function FinanceDashboardMockup() {
                 <span className="text-lg font-semibold">{currencyBRL(kpis.variableRevenue)}</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-sm text-muted-foreground">Despesas Fixas</span>
-                <span className="text-lg font-semibold">{currencyBRL(kpis.fixedExpenses)}</span>
+                <span className="text-sm text-muted-foreground">Despesas</span>
+                <span className="text-lg font-semibold">{currencyBRL(kpis.expense)}</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-sm text-muted-foreground">Despesas Variáveis</span>
-                <span className="text-lg font-semibold">{currencyBRL(kpis.variableExpenses)}</span>
+                <span className="text-sm text-muted-foreground">Custos</span>
+                <span className="text-lg font-semibold">{currencyBRL(kpis.cost)}</span>
               </div>
             </CardContent>
           </Card>
@@ -269,7 +269,7 @@ export default function FinanceDashboardMockup() {
               </CardHeader>
               <CardContent className="space-y-2">
                 {mockMonthly.map((m) => {
-                  const balance = m.variableRevenue - m.variableExpenses;
+                  const balance = m.variableRevenue - 0;
                   return (
                     <div key={m.month} className="flex items-center justify-between text-sm">
                       <span className="text-muted-foreground">{m.month}</span>
@@ -285,56 +285,85 @@ export default function FinanceDashboardMockup() {
         </TabsContent>
 
         {/* Categorias */}
-        <TabsContent value="categories" className="space-y-4">
+        {/* <TabsContent value="categories" className="space-y-4">
           <div className="grid gap-4 lg:grid-cols-3">
             <Card className="shadow-sm lg:col-span-2">
               <CardHeader>
-                <CardTitle>Distribuição de Despesas por Categoria</CardTitle>
+                <CardTitle>Distribuição de Categorias</CardTitle>
               </CardHeader>
               <CardContent className="h-[340px]">
                 <ResponsiveContainer width="100%" height="100%">
-                  <PieChart>
-                    <Pie data={mockCategories} dataKey="value" nameKey="name" innerRadius={70} outerRadius={110}>
-                      {mockCategories.map((_, idx) => (
-                        <Cell key={idx} fill={pieColors[idx % pieColors.length]} />
+                  <BarChart
+                    data={mockCategories}
+                    margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis 
+                      dataKey="name"
+                      tick={{ fill: "#6b7280", fontSize: 10 }}
+                      axisLine={false}
+                      tickLine={false}
+                    />
+                    <YAxis
+                      tickFormatter={(value: number) => currencyBRL(value)}
+                      tick={{ fill: "#6b7280", fontSize: 10 }}
+                      axisLine={false}
+                      tickLine={false}
+                    />
+                    <Tooltip
+                      formatter={(value: number) => currencyBRL(value)}
+                      contentStyle={{
+                        backgroundColor: "#fff",
+                        borderRadius: "8px",
+                        border: "1px solid #e5e7eb",
+                        boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+                      }}
+                      labelStyle={{ fontWeight: "bold", color: "#374151" }}
+                    />
+
+                    <Bar
+                      dataKey="value"
+                      name="Valor"
+                      fill="#8884d8"                     
+                    >
+                      {mockCategories.map((entry, idx) => (
+                        <Cell
+                          key={`cell-${idx}`}
+                          fill={entry.value >= 0 ? "#4ade80" : "#f87171"}
+                        />
                       ))}
-                    </Pie>
-                    <Tooltip formatter={(v: number) => currencyBRL(v)} />
-                  </PieChart>
+                    </Bar>
+                  </BarChart>
                 </ResponsiveContainer>
               </CardContent>
             </Card>
 
             <Card className="shadow-sm">
               <CardHeader>
-                <CardTitle>Top Gastos</CardTitle>
+                <CardTitle>Categorias</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 {mockCategories
                   .slice()
                   .sort((a, b) => b.value - a.value)
-                  .map((c, idx) => (
-                    <div key={c.name} className="flex items-center justify-between text-sm">
+                  .map((categorie) => (
+                    <div key={categorie.name} className="flex items-center justify-between text-sm">
                       <div className="flex items-center gap-2">
-                        <span
-                          className="inline-block h-3 w-3 rounded"
-                          style={{ background: pieColors[idx % pieColors.length] }}
-                        />
-                        <span>{c.name}</span>
+                        <span>{categorie.name}</span>
                       </div>
-                      <span className="font-medium">{currencyBRL(c.value)}</span>
+                      <span className="font-medium">{currencyBRL(categorie.value)}</span>
                     </div>
                   ))}
               </CardContent>
             </Card>
           </div>
-        </TabsContent>
+        </TabsContent> */}
       </Tabs>
 
       {/* Rodapé / Ações */}
       <FooterContainer>
         <p className="text-xs text-muted-foreground">
-          * Este é um mockup estático. Conecte seus endpoints para dados reais.
+          *
         </p>
         <Image src={"/imagem.jpeg"} alt="Logo" width={50} height={50} />
       </FooterContainer>

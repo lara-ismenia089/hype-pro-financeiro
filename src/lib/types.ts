@@ -12,6 +12,7 @@ export type MockCustomers = {
 	monthlyFee: number;
 	terminationClause: string | null;
 	address: {
+		avenue: string;
 		street: string;
 		neighborhood: string;
 		number: string;
@@ -22,13 +23,21 @@ export type MockCustomers = {
 	}
 };
 
+export type MockFixedExpense = {
+  description: string;
+  paymentMethod: string;
+  amount: number;
+  dueDate: string;
+  observation: string;
+}
+
 export type MockMonthlyType = {
 	month: string;
   date: string;
 	fixedRevenue: number;
 	variableRevenue: number;
-	fixedExpense: number;
-	variableExpenses: number;
+	cost: number;
+	expense: number;
 };
 
 export type MockCategoriesType = {
@@ -40,8 +49,24 @@ export type MockTransactionsType = {
 	id: string;
 	date: string;
 	description: string;
+	history: string;
+	customerId: string;
+	customer: string;
+	typeId: number;
 	type: string;
-	category: string;
 	amount: number;
-	account: string;
+	accountId: number;
+	bank: string;
+};
+
+export type SubcategoriesType = {
+  accountId: number;
+  categories: string;
+  subordinate: string;
+};
+
+export type ChartAccountsType = {
+  id: number;
+  type: string;
+  subcategories: SubcategoriesType[];
 };

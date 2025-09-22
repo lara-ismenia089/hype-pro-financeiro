@@ -19,6 +19,28 @@ import {
 import { currencyBRL } from "@/lib/utils";
 
 export function Overview({ mockMonthly }: { mockMonthly: MockMonthlyType[] }) {
+	const totalRevenue = mockMonthly.reduce(
+		(acc, cur) => acc + cur.fixedRevenue + cur.variableRevenue,
+		0
+	);
+
+	const totalExpenses = mockMonthly.reduce(
+		(acc, cur) => acc + cur.expense + cur.cost,
+		0
+	);
+
+	// const netResult = totalRevenue - totalExpenses;
+	const breakEven = totalExpenses;
+
+	const cost = mockMonthly.reduce(
+		(acc, cur) => acc + cur.cost,
+		0
+	);
+	const expense = mockMonthly.reduce(
+		(acc, cur) => acc + cur.expense,
+		0
+	);
+
 	return (
 		<div className="grid gap-4 lg:grid-cols-3">
 			<Card className="shadow-md border border-gray-200 rounded-2xl lg:col-span-2">
@@ -60,16 +82,34 @@ export function Overview({ mockMonthly }: { mockMonthly: MockMonthlyType[] }) {
 								type="monotone"
 								dataKey="variableRevenue"
 								name="Receita Variável"
-								stroke="#22c55e"
+								stroke="#16a34a"
 								strokeWidth={2}
 								dot={{ r: 3 }}
 								activeDot={{ r: 5 }}
 							/>
 							<Line
 								type="monotone"
-								dataKey="variableExpenses"
-								name="Despesa Variável"
-								stroke="#ef4444"
+								dataKey="fixedRevenue"
+								name="Receita Fixa"
+								stroke="#4ade80"
+								strokeWidth={2}
+								dot={{ r: 3 }}
+								activeDot={{ r: 5 }}
+							/>
+							<Line
+								type="monotone"
+								dataKey="expense"
+								name="Despesa"
+								stroke="#dc2626"
+								strokeWidth={2}
+								dot={{ r: 3 }}
+								activeDot={{ r: 5 }}
+							/>
+							<Line
+								type="monotone"
+								dataKey="cost"
+								name="Custo"
+								stroke="#f87171"
 								strokeWidth={2}
 								dot={{ r: 3 }}
 								activeDot={{ r: 5 }}
@@ -81,24 +121,20 @@ export function Overview({ mockMonthly }: { mockMonthly: MockMonthlyType[] }) {
 
 			<Card className="shadow-sm">
 				<CardHeader>
-					<CardTitle>Resumo Rápido</CardTitle>
+					<CardTitle>Resumo Financeiro</CardTitle>
 				</CardHeader>
 				<CardContent className="space-y-3">
 					<div className="flex items-center justify-between text-sm">
-						<span>Ticket Médio</span>
-						<span className="font-medium">{currencyBRL(1870)}</span>
+						<span>Ponto de Equilíbrio</span>
+						<span className="font-medium">{currencyBRL(breakEven)}</span>
 					</div>
 					<div className="flex items-center justify-between text-sm">
-						<span>Clientes Ativos</span>
-						<span className="font-medium">326</span>
+						<span>Despesa / Receita</span>
+						<Badge variant="secondary">{((expense / totalRevenue) * 100).toFixed(2)}%</Badge>
 					</div>
 					<div className="flex items-center justify-between text-sm">
-						<span>Inadimplência</span>
-						<Badge variant="secondary">3,4%</Badge>
-					</div>
-					<div className="flex items-center justify-between text-sm">
-						<span>Runway de Caixa</span>
-						<span className="font-medium">8,2 meses</span>
+						<span>Custos / Receita</span>
+						<Badge variant="secondary">{((cost / totalRevenue) * 100).toFixed(2)}%</Badge>
 					</div>
 				</CardContent>
 			</Card>
