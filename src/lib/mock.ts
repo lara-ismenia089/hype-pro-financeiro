@@ -335,7 +335,7 @@ function createMockMonthly(data: MockTransactionsType[]) {
   const minDate = dates[0];
   const maxDate = dates[dates.length - 1];
 
-  let count = data.reduce((accumulator, currentValue) => {
+  const count = data.reduce((accumulator, currentValue) => {
     return (currentValue.accountId === 2 || currentValue.accountId === 3) ? accumulator + 1 : accumulator;
   }, 0);
 

@@ -33,7 +33,7 @@ export function StackedColumnChart(data: StackedColumnChartType) {
 			</CardHeader>
 			<CardContent className="h-[320px]">
 				<ResponsiveContainer width="100%" height="100%">
-					<BarChart data={mockMonthly}>
+					<BarChart data={mockMonthly.month}>
 						<CartesianGrid strokeDasharray="3 3" />
 						<XAxis dataKey={data.dataKeyXAxis} />
 						<YAxis />
