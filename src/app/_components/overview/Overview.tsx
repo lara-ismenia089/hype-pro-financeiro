@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { MockMonthlyType } from "@/lib/types";
 import { 
@@ -7,18 +10,21 @@ import {
 	CardContent,
 } from "@/components/ui/card";
 import { 
-	Line,
+	Bar,
 	XAxis,
 	YAxis,
-	Legend,
 	Tooltip,
-	LineChart,
+	BarChart,
+	LabelList,
 	CartesianGrid,
 	ResponsiveContainer,
 } from "recharts";
+import { ChartColumn } from "lucide-react";
 import { currencyBRL } from "@/lib/utils";
 
 export function Overview({ mockMonthly, avg }: { mockMonthly: MockMonthlyType[], avg: number }) {
+	const [isOpen, setIsOpen] = useState(true);
+
 	const totalRevenue = mockMonthly.reduce(
 		(acc, cur) => acc + cur.fixedRevenue + cur.variableRevenue,
 		0
@@ -28,26 +34,33 @@ export function Overview({ mockMonthly, avg }: { mockMonthly: MockMonthlyType[],
 		(acc, cur) => acc + cur.cost,
 		0
 	);
+	
 	const expense = mockMonthly.reduce(
 		(acc, cur) => acc + cur.expense,
 		0
 	);
 
+	const dataResult = mockMonthly.map((item) => ({
+		month: item.month,
+		totalRevenue: item.fixedRevenue + item.variableRevenue,
+		totalExpense: item.expense + item.cost,
+	}));
+
 	return (
 		<div className="grid gap-4 lg:grid-cols-3">
 			<Card className="shadow-md border border-gray-200 rounded-2xl lg:col-span-2">
 				<CardHeader>
-					<CardTitle>Evolução Receita x Despesas</CardTitle>
+					<div className="flex w-full justify-between">
+						<CardTitle>Evolução Receita x Despesas</CardTitle>
+						<span onClick={() => setIsOpen((prev) => !prev)}>
+							<ChartColumn width={20} height={20} />
+						</span>
+					</div>
 				</CardHeader>
 				<CardContent className="h-[320px]">
 					<ResponsiveContainer width="100%" height="100%">
-						<LineChart data={mockMonthly} margin={{ left: 8, right: 8, top: 8, bottom: 8 }}>
+						{isOpen ? (<BarChart data={mockMonthly} margin={{ left: 8, right: 8, top: 8, bottom: 8 }}>
 							<CartesianGrid stroke="#e5e7eb" strokeDasharray="4 4" />
-							<Legend
-								verticalAlign="top"
-								align="center"
-								wrapperStyle={{ paddingBottom: "12px" }}
-							/>
 							<XAxis
 								dataKey="month"
 								tick={{ fill: "#6b7280", fontSize: 10 }}
@@ -70,43 +83,122 @@ export function Overview({ mockMonthly, avg }: { mockMonthly: MockMonthlyType[],
 								}}
 								labelStyle={{ fontWeight: "bold", color: "#374151" }}
 							/>
-							<Line
+							<Bar
 								type="monotone"
 								dataKey="variableRevenue"
+								stackId={"revenue"}
 								name="Receita Variável"
-								stroke="#16a34a"
-								strokeWidth={2}
-								dot={{ r: 3 }}
-								activeDot={{ r: 5 }}
-							/>
-							<Line
+								fill="#031B3D"
+							>
+								<LabelList 
+									dataKey="variableRevenue"
+									formatter={(label: React.ReactNode) =>
+										currencyBRL(Number(label))
+									}
+									fontSize={10}
+								/>
+							</Bar>
+							<Bar
 								type="monotone"
 								dataKey="fixedRevenue"
+								stackId={"revenue"}
 								name="Receita Fixa"
-								stroke="#4ade80"
-								strokeWidth={2}
-								dot={{ r: 3 }}
-								activeDot={{ r: 5 }}
-							/>
-							<Line
+								fill="#020E20"
+							>
+								<LabelList 
+									dataKey="fixedRevenue"
+									formatter={(value: React.ReactNode) => 
+										currencyBRL(Number(value))
+									}
+									fontSize={10}
+								/>
+							</Bar>
+							<Bar
 								type="monotone"
 								dataKey="expense"
 								name="Despesa"
-								stroke="#dc2626"
-								strokeWidth={2}
-								dot={{ r: 3 }}
-								activeDot={{ r: 5 }}
-							/>
-							<Line
+								stackId={"expense"}
+								fill="#031B3D"
+							>
+								<LabelList
+									dataKey="expense"
+									formatter={(label: React.ReactNode) =>
+										currencyBRL(Number(label))
+									}
+									fontSize={10}
+								/>
+							</Bar>
+							<Bar
 								type="monotone"
 								dataKey="cost"
 								name="Custo"
-								stroke="#f87171"
-								strokeWidth={2}
-								dot={{ r: 3 }}
-								activeDot={{ r: 5 }}
+								stackId={"expense"}
+								fill="#020E20"
+							>
+								<LabelList 
+									dataKey="cost"
+									formatter={(label: React.ReactNode) =>
+										currencyBRL(Number(label))
+									}
+									fontSize={10}
+								/>
+							</Bar>
+						</BarChart>) : (
+						<BarChart data={dataResult} margin={{ left: 8, right: 8, top: 8, bottom: 8 }}>
+							<CartesianGrid stroke="#e5e7eb" strokeDasharray="4 4" />
+							<XAxis
+								dataKey="month"
+								tick={{ fill: "#6b7280", fontSize: 10 }}
+								axisLine={false}
+								tickLine={false}
 							/>
-						</LineChart>
+							<YAxis
+								tickFormatter={(value: number) => currencyBRL(value)}
+								tick={{ fill: "#6b7280", fontSize: 10 }}
+								axisLine={false}
+								tickLine={false}
+							/>
+							<Tooltip
+								formatter={(value: number) => currencyBRL(value)}
+								contentStyle={{
+									backgroundColor: "#fff",
+									borderRadius: "8px",
+									border: "1px solid #e5e7eb",
+									boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+								}}
+								labelStyle={{ fontWeight: "bold", color: "#374151" }}
+							/>
+							<Bar
+								type="monotone"
+								dataKey="totalRevenue"
+								stackId={"revenue"}
+								name="Receita"
+								fill="#031B3D"
+							>
+								<LabelList 
+									dataKey="totalRevenue"
+									formatter={(label: React.ReactNode) =>
+										currencyBRL(Number(label))
+									}
+									fontSize={10}
+								/>
+							</Bar>
+							<Bar
+								type="monotone"
+								dataKey="totalExpense"
+								stackId={"revenue"}
+								name="Despesa e custo"
+								fill="#020E20"
+							>
+								<LabelList 
+									dataKey="totalExpense"
+									formatter={(label: React.ReactNode) =>
+										currencyBRL(Number(label))
+									}
+									fontSize={10}
+								/>
+							</Bar>
+						</BarChart>)}
 					</ResponsiveContainer>
 				</CardContent>
 			</Card>
