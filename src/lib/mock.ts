@@ -586,10 +586,10 @@ export const mockTransactions: MockTransactionsType[] = [
     customerId: "067.164.483-14",
     customer: "JULIO CESAR RODR…",
     history: "Pró-labore",
-    typeId: 2,
+    typeId: 3,
     type: "Débito",
     amount: 1500.0,
-    accountId: 83,
+    accountId: 82,
     bank: "cora"
   },
   {
@@ -638,10 +638,10 @@ export const mockTransactions: MockTransactionsType[] = [
     customerId: "067.164.483-14",
     customer: "JULIO CESAR RODR…",
     history: "Pró-labore",
-    typeId: 2,
+    typeId: 3,
     type: "Débito",
     amount: 2793.06,
-    accountId: 83,
+    accountId: 82,
     bank: "cora"
   },
   {
@@ -703,10 +703,10 @@ export const mockTransactions: MockTransactionsType[] = [
     customerId: "067.164.483-14",
     customer: "JULIO CESAR RODR…",
     history: "Pró-labore",
-    typeId: 2,
+    typeId: 3,
     type: "Débito",
     amount: 50.0,
-    accountId: 83,
+    accountId: 82,
     bank: "cora"
   },
   {
@@ -1106,10 +1106,10 @@ export const mockTransactions: MockTransactionsType[] = [
     customerId: "",
     customer: "MP*CHEFDOACAI",
     history: "Pró-labore",
-    typeId: 2,
+    typeId: 3,
     type: "Débito",
     amount: 13.12,
-    accountId: 103,
+    accountId: 82,
     bank: "cora"
   },
   {
@@ -1381,7 +1381,8 @@ export const chartAccounts: ChartAccountsType[] = [
     { accountId: 2, categories: "Projetos Avulsos", subordinate: "Receitas Variáveis" },
     { accountId: 3, categories: "Contratos Mensais", subordinate: "Receita Fixo" },
     { accountId: 4, categories: "Resgate de Aplicação", subordinate: "Retorno de Capital" },
-    { accountId: 5, categories: "Juros e Multas", subordinate: "Outras Receitas" },  
+    { accountId: 5, categories: "Juros e Multas", subordinate: "Outras Receitas" },
+    { accountId: 106, categories: "Transferências", subordinate: "" }
   ] },
   { id: 2, type: "Despesas", subcategories: [
     { accountId: 1, categories: "Adiantamento de Salário", subordinate:	"Despesas Com Colaboradores" },
@@ -1462,6 +1463,8 @@ export const chartAccounts: ChartAccountsType[] = [
     { accountId: 98, categories: "Treinamentos e Cursos", subordinate: "Despesas Administrativas" },
     { accountId: 99, categories: "Uniformes e Crachás", subordinate: "Despesas Com Colaboradores" },
     { accountId: 100, categories: "Vale Transportes", subordinate: "Despesas Com Colaboradores" },
+    { accountId: 102, categories: "Copa e Cozinha", subordinate: "Despesas com Colaboradores" },
+    { accountId: 104, categories: "Transferências", subordinate: "" }
   ] },
   { id: 3, type: "Custos", subcategories: [
     { accountId: 11, categories: "Benefícios", subordinate: "Custo" },
