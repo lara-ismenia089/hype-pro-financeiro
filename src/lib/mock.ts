@@ -352,7 +352,7 @@ function createMockMonthly(data: MockTransactionsType[]) {
       .filter((register) => register.typeId === 3)
       .reduce((accumulator, currentValue) => accumulator + currentValue.amount, 0);
     const expense = filtered
-      .filter((register) => register.typeId === 2)
+      .filter((register) => register.typeId === 2 && register.accountId !== 104)
       .reduce((accumulator, currentValue) => accumulator + currentValue.amount, 0);
 
     result.push({ 
@@ -563,7 +563,7 @@ export const mockTransactions: MockTransactionsType[] = [
     typeId: 1,
     type: "Crédito",
     amount: 2500.0,
-    accountId: 105,
+    accountId: 106,
     bank: "cora"
   },
   {
@@ -576,7 +576,7 @@ export const mockTransactions: MockTransactionsType[] = [
     typeId: 1,
     type: "Crédito",
     amount: 2299.0,
-    accountId: 105,
+    accountId: 106,
     bank: "cora"
   },
   {
@@ -1358,6 +1358,19 @@ export const mockTransactions: MockTransactionsType[] = [
     amount: 1000.0,
     accountId: 2,
     bank: "santander"
+  },
+  {
+    id: "tx-074",
+    date: "2025-09-03",
+    description: "Transf Pix enviada",
+    customerId: "52.640.748/0001-52",
+    customer: "52.640.748 ANDRE …",
+    history: "",
+    typeId: 2,
+    type: "Débito",
+    amount: 180.0,
+    accountId: 88,
+    bank: "cora"
   },
 ];
 
