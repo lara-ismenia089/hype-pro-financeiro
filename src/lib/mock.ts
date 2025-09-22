@@ -8,7 +8,8 @@ import {
 
 export const openingBalance = [
   { date: "2025-08-16", openingBalance: 1.40, bank: "Cora" },
-  { date: "2025-08-24", openingBalance: 3.06, bank: "Asaas" }
+  { date: "2025-08-24", openingBalance: 3.06, bank: "Asaas" },
+  { date: "2025-08-16", openingBalance: 0.0, bank: "Santander" }
 ];
 
 export const mockCustomers: MockCustomers[] = [
@@ -133,7 +134,6 @@ export const mockCustomers: MockCustomers[] = [
     },
   }
 ];
-
 
 export const mockExpensesFixed: MockFixedExpense[] = [
   {
@@ -313,16 +313,6 @@ export const mockExpensesFixed: MockFixedExpense[] = [
   },
 ];
 
-// function createMockCategories(data: MockTransactionsType[]) {
-//   const categoryMap = new Map<string, number>();
-
-//   data.forEach((item) => {
-//     categoryMap.set(item.category, (categoryMap.get(item.category) || 0) + item.amount);
-//   });
-
-//   return Array.from(categoryMap.entries()).map(([name, value]) => ({ name, value }));
-// }
-
 function createMockMonthly(data: MockTransactionsType[]) {
   const monthName = [
     { name: 'Jan', number: 0 },
@@ -345,11 +335,15 @@ function createMockMonthly(data: MockTransactionsType[]) {
   const minDate = dates[0];
   const maxDate = dates[dates.length - 1];
 
+  let count = data.reduce((accumulator, currentValue) => {
+    return (currentValue.accountId === 2 || currentValue.accountId === 3) ? accumulator + 1 : accumulator;
+  }, 0);
+
   for (let i = minDate.getMonth(); i <= maxDate.getMonth(); i++) {
     const filtered = data.filter((register) => new Date(register.date).getMonth() === i);
 
     const variableRevenue = filtered
-      .filter((register) => register.typeId === 1 && register.accountId !== 3)
+      .filter((register) => register.typeId === 1 && register.accountId === 2)
       .reduce((accumulator, currentValue) => accumulator + currentValue.amount, 0);
     const fixedRevenue = filtered
       .filter((register) => register.typeId === 1 && register.accountId === 3)
@@ -370,8 +364,10 @@ function createMockMonthly(data: MockTransactionsType[]) {
       cost,
     });
   }
+  
+  const averageOrderValue = result.reduce((acc, cur) => acc + cur.fixedRevenue + cur.variableRevenue, 0) / count;
 
-  return result;
+  return { month: result, averageOrderValue };
 }
 
 export const mockTransactions: MockTransactionsType[] = [
@@ -1168,11 +1164,204 @@ export const mockTransactions: MockTransactionsType[] = [
     accountId: 104,
     bank: "cora"
   },
+  {
+    id: "tx-059",
+    date: "2025-09-10",
+    description: "PIX RECEBIDO",
+    customerId: "41.655.312/0001-10",
+    customer: "41.655.312 JULIO CESAR RODRIGUES PIRES",
+    history: "",
+    typeId: 1,
+    type: "Crédito",
+    amount: 30.0,
+    accountId: 106,
+    bank: "santander"
+  },
+  {
+    id: "tx-060",
+    date: "2025-09-10",
+    description: "PIX RECEBIDO",
+    customerId: "41.655.312/0001-10",
+    customer: "41.655.312 JULIO CESAR RODRIGUES PIRES",
+    history: "",
+    typeId: 1,
+    type: "Crédito",
+    amount: 30.0,
+    accountId: 106,
+    bank: "santander"
+  },
+  {
+    id: "tx-061",
+    date: "2025-09-10",
+    description: "PIX RECEBIDO",
+    customerId: "41.655.312/0001-10",
+    customer: "41.655.312 JULIO CESAR RODRIGUES PIRES",
+    history: "",
+    typeId: 1,
+    type: "Crédito",
+    amount: 30.0,
+    accountId: 106,
+    bank: "santander"
+  },
+  {
+    id: "tx-062",
+    date: "2025-09-11",
+    description: "COMPRA CARTAO DEB MC 11/09",
+    customerId: "",
+    customer: "POSTO CATATAU VIII",
+    history: "",
+    typeId: 2,
+    type: "Débito",
+    amount: 100.0,
+    accountId: 33,
+    bank: "santander"
+  },
+  {
+    id: "tx-063",
+    date: "2025-09-11",
+    description: "PIX RECEBIDO",
+    customerId: "41.655.312/0001-10",
+    customer: "41.655.312 JULIO CESAR RODRIGUES PIRES",
+    history: "",
+    typeId: 1,
+    type: "Crédito",
+    amount: 7129.65,
+    accountId: 106,
+    bank: "santander"
+  },
+  {
+    id: "tx-064",
+    date: "2025-09-12",
+    description: "COMPRA CARTAO DEB MC 12/09",
+    customerId: "",
+    customer: "MEGA BOLO",
+    history: "",
+    typeId: 2,
+    type: "Débito",
+    amount: 5.0,
+    accountId: 65,
+    bank: "santander"
+  },
+  {
+    id: "tx-065",
+    date: "2025-09-15",
+    description: "COMPRA CARTAO DEB MC 15/09",
+    customerId: "",
+    customer: "FRANCISCO JOSE DE S",
+    history: "",
+    typeId: 2,
+    type: "Débito",
+    amount: 6.5,
+    accountId: 65,
+    bank: "santander"
+  },
+  {
+    id: "tx-066",
+    date: "2025-09-15",
+    description: "PIX ENVIADO",
+    customerId: "",
+    customer: "AMAZON COM BR",
+    history: "",
+    typeId: 2,
+    type: "Débito",
+    amount: 46.94,
+    accountId: 44,
+    bank: "santander"
+  },
+  {
+    id: "tx-067",
+    date: "2025-09-15",
+    description: "COMPRA CARTAO DEB MC 15/09",
+    customerId: "",
+    customer: "POSTO CATATAU",
+    history: "",
+    typeId: 2,
+    type: "Débito",
+    amount: 150.0,
+    accountId: 33,
+    bank: "santander"
+  },
+  {
+    id: "tx-068",
+    date: "2025-09-15",
+    description: "PIX RECEBIDO 06780700320",
+    customerId: "",
+    customer: "JOSE INACIO SOUSA ALBUQUERQUE",
+    history: "",
+    typeId: 1,
+    type: "Crédito",
+    amount: 650.0,
+    accountId: 2,
+    bank: "santander"
+  },
+  {
+    id: "tx-069",
+    date: "2025-09-17",
+    description: "COMPRA CARTAO DEB MC 17/09",
+    customerId: "",
+    customer: "MP .TEIXEIRASACOL",
+    history: "",
+    typeId: 2,
+    type: "Débito",
+    amount: 5.2,
+    accountId: 102,
+    bank: "santander"
+  },
+  {
+    id: "tx-070",
+    date: "2025-09-17",
+    description: "COMPRA CARTAO DEB MC 17/09",
+    customerId: "",
+    customer: "LIPI SUPERMERCADO",
+    history: "",
+    typeId: 2,
+    type: "Débito",
+    amount: 4.39,
+    accountId: 65,
+    bank: "santander"
+  },
+  {
+    id: "tx-071",
+    date: "2025-09-17",
+    description: "PIX RECEBIDO 41655312000110",
+    customerId: "",
+    customer: "41.655.312 JULIO CESAR RODRIGUES PIRES",
+    history: "",
+    typeId: 1,
+    type: "Crédito",
+    amount: 1998.12,
+    accountId: 106,
+    bank: "santander"
+  },
+  {
+    id: "tx-072",
+    date: "2025-09-18",
+    description: "COMPRA CARTAO DEB MC 18/09",
+    customerId: "",
+    customer: "R G MOREIRA SOUZA C",
+    history: "",
+    typeId: 2,
+    type: "Débito",
+    amount: 7.49,
+    accountId: 65,
+    bank: "santander"
+  },
+  {
+    id: "tx-073",
+    date: "2025-09-18",
+    description: "PIX RECEBIDO",
+    customerId: "992.561.775-87",
+    customer: "DANILA C M CERQUEIRA",
+    history: "",
+    typeId: 1,
+    type: "Crédito",
+    amount: 1000.0,
+    accountId: 2,
+    bank: "santander"
+  },
 ];
 
-// export const mockCategories: MockCategoriesType[] = createMockCategories(mockTransactions);
-
-export const mockMonthly: MockMonthlyType[] = createMockMonthly(mockTransactions);
+export const mockMonthly: { month: MockMonthlyType[], averageOrderValue: number } = createMockMonthly(mockTransactions);
 
 export const chartAccounts: ChartAccountsType[] = [
   { id: 1, type: "Receitas", subcategories: [

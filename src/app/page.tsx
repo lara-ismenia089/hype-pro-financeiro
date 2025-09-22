@@ -61,10 +61,10 @@ export default function FinanceDashboardMockup() {
   const [kpiExpense, setKpiExpense] = useState(false);
 
   const kpis = useMemo(() => {
-    const fixedRevenue = mockMonthly.reduce((a, c) => a + c.fixedRevenue, 0);
-    const variableRevenue = mockMonthly.reduce((a, c) => a + c.variableRevenue, 0);
-    const cost = mockMonthly.reduce((a, c) => a + c.cost, 0);
-    const expense = mockMonthly.reduce((a, c) => a + c.expense, 0);
+    const fixedRevenue = mockMonthly.month.reduce((a, c) => a + c.fixedRevenue, 0);
+    const variableRevenue = mockMonthly.month.reduce((a, c) => a + c.variableRevenue, 0);
+    const cost = mockMonthly.month.reduce((a, c) => a + c.cost, 0);
+    const expense = mockMonthly.month.reduce((a, c) => a + c.expense, 0);
 
     const totalRevenue = fixedRevenue + variableRevenue;
     const totalExpenses = cost + expense;
@@ -184,7 +184,7 @@ export default function FinanceDashboardMockup() {
 
         {/* Visão Geral */}
         <TabsContent value="overview" className="space-y-4">
-          <Overview mockMonthly={mockMonthly} />
+          <Overview mockMonthly={mockMonthly.month} avg={mockMonthly.averageOrderValue} />
 
           <TableTransaction
             query={query}
@@ -251,7 +251,7 @@ export default function FinanceDashboardMockup() {
               </CardHeader>
               <CardContent className="h-[340px]">
                 <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={mockMonthly} margin={{ left: 8, right: 8, top: 8, bottom: 8 }}>
+                  <BarChart data={mockMonthly.month} margin={{ left: 8, right: 8, top: 8, bottom: 8 }}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="month" />
                     <YAxis />
@@ -268,7 +268,7 @@ export default function FinanceDashboardMockup() {
                 <CardTitle>Saldo Mensal</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
-                {mockMonthly.map((m) => {
+                {mockMonthly.month.map((m) => {
                   const balance = m.variableRevenue - 0;
                   return (
                     <div key={m.month} className="flex items-center justify-between text-sm">

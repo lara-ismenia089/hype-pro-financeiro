@@ -18,19 +18,11 @@ import {
 } from "recharts";
 import { currencyBRL } from "@/lib/utils";
 
-export function Overview({ mockMonthly }: { mockMonthly: MockMonthlyType[] }) {
+export function Overview({ mockMonthly, avg }: { mockMonthly: MockMonthlyType[], avg: number }) {
 	const totalRevenue = mockMonthly.reduce(
 		(acc, cur) => acc + cur.fixedRevenue + cur.variableRevenue,
 		0
 	);
-
-	const totalExpenses = mockMonthly.reduce(
-		(acc, cur) => acc + cur.expense + cur.cost,
-		0
-	);
-
-	// const netResult = totalRevenue - totalExpenses;
-	const breakEven = totalExpenses;
 
 	const cost = mockMonthly.reduce(
 		(acc, cur) => acc + cur.cost,
@@ -125,8 +117,8 @@ export function Overview({ mockMonthly }: { mockMonthly: MockMonthlyType[] }) {
 				</CardHeader>
 				<CardContent className="space-y-3">
 					<div className="flex items-center justify-between text-sm">
-						<span>Ponto de Equilíbrio</span>
-						<span className="font-medium">{currencyBRL(breakEven)}</span>
+						<span>Ticket Médio</span>
+						<span className="font-medium">{currencyBRL(avg)}</span>
 					</div>
 					<div className="flex items-center justify-between text-sm">
 						<span>Despesa / Receita</span>

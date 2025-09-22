@@ -99,7 +99,7 @@ export function TableTransaction({ query, setQuery, filter }: TableTransactionTy
             ) : (
               Object.entries(groupedWithCumulative).map(([date, transactions]) => (
                 <React.Fragment key={date}>
-                <tr
+                {(date !== "2025-08-16" && date !== "2025-08-24") ? (<tr
                   className="bg-gray-100 dark:bg-gray-800 font-semibold cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                   onClick={() => toggleCustomer(date)}
                 >
@@ -116,36 +116,39 @@ export function TableTransaction({ query, setQuery, filter }: TableTransactionTy
                       </span>
                     </div>
                   </td>
-                </tr>
+                </tr>): <></>}
 
                   {openCustomers[date] &&
-                    transactions.transactions.map((t) => (
-                      <tr
-                        key={t.id}
-                        className="border-b last:border-0 bg-white dark:bg-gray-900 transition-colors"
-                      >
-                        <td className="py-2 pr-4 pl-4">{formatDate(t.date)}</td>
-                        <td className="py-2 pr-4">{t.customer.toLowerCase()}</td>
-                        <td className="py-2 pr-4">{t.description}</td>
-                        <td className="py-2 pr-4">
-                          <Badge variant={t.typeId === 1 ? "default" : "secondary"}>
-                            {t.type}
-                          </Badge>
-                        </td>
-                        <td className="py-2 pr-4 pl-4">
-                          {getSubcategory(t.accountId)}
-                        </td>
-                        <td
-                          className={`py-2 pr-0 text-right font-medium ${
-                            t.type === "Débito"
-                              ? "text-red-600 dark:text-red-400"
-                              : "text-emerald-600 dark:text-emerald-400"
-                          }`}
-                        >
-                          {currencyBRL(t.amount)}
-                        </td>
-                      </tr>
-                    ))}
+  transactions.transactions
+    .filter((t) => t.id !== "tx-00101" && t.id !== "tx-00111")
+    .map((t) => (
+      <tr
+        key={t.id}
+        className="border-b last:border-0 bg-white dark:bg-gray-900 transition-colors"
+      >
+        <td className="py-2 pr-4 pl-4">{formatDate(t.date)}</td>
+        <td className="py-2 pr-4">{t.customer.toLowerCase()}</td>
+        <td className="py-2 pr-4">{t.description}</td>
+        <td className="py-2 pr-4">
+          <Badge variant={t.typeId === 1 ? "default" : "secondary"}>
+            {t.type}
+          </Badge>
+        </td>
+        <td className="py-2 pr-4 pl-4">
+          {getSubcategory(t.accountId)}
+        </td>
+        <td
+          className={`py-2 pr-0 text-right font-medium ${
+            t.type === "Débito"
+              ? "text-red-600 dark:text-red-400"
+              : "text-emerald-600 dark:text-emerald-400"
+          }`}
+        >
+          {currencyBRL(t.amount)}
+        </td>
+      </tr>
+    ))}
+
                 </React.Fragment>
               ))
             )}
