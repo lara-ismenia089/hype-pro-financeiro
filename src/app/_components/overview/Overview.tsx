@@ -53,7 +53,7 @@ export function Overview({ mockMonthly, avg }: { mockMonthly: MockMonthlyType[],
 					<div className="flex w-full justify-between">
 						<CardTitle>Evolução Receita x Despesas</CardTitle>
 						<span onClick={() => setIsOpen((prev) => !prev)}>
-							<ChartColumn width={20} height={20} />
+							<ChartColumn width={20} height={20} className="hover:cursor-pointer" />
 						</span>
 					</div>
 				</CardHeader>
@@ -104,6 +104,7 @@ export function Overview({ mockMonthly, avg }: { mockMonthly: MockMonthlyType[],
 								stackId={"revenue"}
 								name="Receita Fixa"
 								fill="#020E20"
+								radius={[6, 6, 0, 0]}
 							>
 								<LabelList 
 									dataKey="fixedRevenue"
@@ -134,6 +135,7 @@ export function Overview({ mockMonthly, avg }: { mockMonthly: MockMonthlyType[],
 								name="Custo"
 								stackId={"expense"}
 								fill="#020E20"
+								radius={[6, 6, 0, 0]}
 							>
 								<LabelList 
 									dataKey="cost"
@@ -189,6 +191,7 @@ export function Overview({ mockMonthly, avg }: { mockMonthly: MockMonthlyType[],
 								stackId={"revenue"}
 								name="Despesa e custo"
 								fill="#020E20"
+								radius={[6, 6, 0, 0]}
 							>
 								<LabelList 
 									dataKey="totalExpense"

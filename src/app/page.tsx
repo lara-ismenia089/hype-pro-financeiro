@@ -38,7 +38,7 @@ import {
 import { Overview } from "./_components/overview/Overview";
 import { TableTransaction } from "./_components/overview/TableTransaction";
 import { KpiCard } from "./_components/card/KpiCard";
-import { StackedColumnChart } from "./_components/fixed-variable/StackedColumnChart";
+import { CategoriesTreemap } from "./_components/tree-map/TreeMap";
 
 export default function FinanceDashboardMockup() {
   const [query, setQuery] = useState("");
@@ -85,7 +85,7 @@ export default function FinanceDashboardMockup() {
 
       return matchesQuery && beforeEnd;
     });
-  }, [query, endDate, mockTransactions]);
+  }, [query, endDate]);
 
   return (
     <MainContainer>
@@ -94,7 +94,6 @@ export default function FinanceDashboardMockup() {
         subtitle="Dashboard interativo para visão de receitas, despesas e fluxo de caixa" 
       />
 
-      {/* KPIs */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <KpiCard
           title="Receita"
@@ -139,15 +138,13 @@ export default function FinanceDashboardMockup() {
         />
       </div>
 
-      {/* Conteúdo Principal */}
       <Tabs value={tab} onValueChange={setTab} className="w-full">
         <TabsList className="grid w-full grid-cols-3 sm:w-auto">
           <TabsTrigger value="overview">Visão Geral</TabsTrigger>
-          <TabsTrigger value="fixed-variable">Fixo x Variável</TabsTrigger>
           <TabsTrigger value="cash-flow">Fluxo de Caixa</TabsTrigger>
+          <TabsTrigger value="categories">Categorias</TabsTrigger>
         </TabsList>
 
-        {/* Visão Geral */}
         <TabsContent value="overview" className="space-y-4">
           <Overview mockMonthly={mockMonthly.month} avg={mockMonthly.averageOrderValue} />
 
@@ -160,29 +157,9 @@ export default function FinanceDashboardMockup() {
           />
         </TabsContent>
 
-        {/* Fixo vs Variádo */}
-        <TabsContent value="fixed-variable" className="space-y-4">
-          <div className="grid gap-4 lg:grid-cols-2">
-            <StackedColumnChart 
-              title="Receitas Mensais: Fixas x Variáveis"
-              name01="Receita Fixa"
-              dataKeyBar01="fixedRevenue"
-              name02="Receita Variável"
-              dataKeyBar02="variableRevenue"
-              dataKeyXAxis="month"
-            />
-
-            <StackedColumnChart
-              title="Despesas e Custos Mensais"
-              name01="Despesa"
-              dataKeyBar01="expense"
-              name02="Custo"
-              dataKeyBar02="cost"
-              dataKeyXAxis="month"
-            />
-          </div>
-
-          {/* Resumo Anual */}
+        <TabsContent value="categories" className="space-y-4">
+          <CategoriesTreemap />
+         
           <Card className="shadow-sm">
             <CardHeader>
               <CardTitle>Resumo Anual Consolidado</CardTitle>
@@ -208,13 +185,11 @@ export default function FinanceDashboardMockup() {
           </Card>
         </TabsContent>
 
-
-        {/* Fluxo de Caixa */}
         <TabsContent value="cash-flow" className="space-y-4">
           <div className="grid gap-4 lg:grid-cols-3">
             <Card className="shadow-sm lg:col-span-2">
               <CardHeader>
-                <CardTitle>Entradas x Saídas (Barra)</CardTitle>
+                <CardTitle>Entradas x Saídas</CardTitle>
               </CardHeader>
               <CardContent className="h-[340px]">
                 <ResponsiveContainer width="100%" height="100%">
@@ -252,7 +227,6 @@ export default function FinanceDashboardMockup() {
         </TabsContent>
       </Tabs>
 
-      {/* Rodapé / Ações */}
       <FooterContainer>
         <p className="text-xs text-muted-foreground">
           *
