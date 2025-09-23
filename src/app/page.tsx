@@ -14,16 +14,8 @@ import {
   TabsTrigger, 
   TabsContent,
 } from "@/components/ui/tabs";
-// import {
-//   Select, 
-//   SelectItem,
-//   SelectValue,
-//   SelectTrigger,
-//   SelectContent,
-// } from "@/components/ui/select";
 import {
   Bar,
-  // Cell,
   XAxis,
   YAxis,
   Tooltip,
@@ -32,10 +24,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import {
-  // Wallet,
-  // Calendar,
   TrendingUp,
-  // ArrowUpRight,
   ArrowDownRight,
 } from "lucide-react";
 import { Header } from "@/app/_components/header/Header";
@@ -44,7 +33,6 @@ import { FooterContainer } from "./_components/footer/FooterContainer";
 import { currencyBRL } from "@/lib/utils";
 import { 
   mockMonthly,
-  // mockCategories,
   mockTransactions,
 } from "@/lib/mock";
 import { Overview } from "./_components/overview/Overview";
@@ -53,9 +41,8 @@ import { KpiCard } from "./_components/card/KpiCard";
 import { StackedColumnChart } from "./_components/fixed-variable/StackedColumnChart";
 
 export default function FinanceDashboardMockup() {
-  // const [range, setRange] = useState("12m");
-  // const [account, setAccount] = useState("all");
   const [query, setQuery] = useState("");
+  const [endDate, setEndDate] = useState(new Date());
   const [tab, setTab] = useState("overview");
   const [kpiRevenue, setKpiRevenue] = useState(false);
   const [kpiExpense, setKpiExpense] = useState(false);
@@ -85,13 +72,20 @@ export default function FinanceDashboardMockup() {
 
   const filteredTx = useMemo(() => {
     const q = query.toLowerCase();
-    return mockTransactions.filter(
-      (t) =>
+
+    return mockTransactions.filter((t) => {
+      const matchesQuery =
         t.description.toLowerCase().includes(q) ||
         t.type.toLowerCase().includes(q) ||
-        t.bank.toLowerCase().includes(q)
-    );
-  }, [query]);
+        t.bank.toLowerCase().includes(q) ||
+        t.date.toLowerCase().includes(q);
+
+      const txDate = new Date(t.date);
+      const beforeEnd = !endDate || txDate <= new Date(endDate);
+
+      return matchesQuery && beforeEnd;
+    });
+  }, [query, endDate, mockTransactions]);
 
   return (
     <MainContainer>
@@ -99,34 +93,6 @@ export default function FinanceDashboardMockup() {
         title="Hype Pro Financeiro"
         subtitle="Dashboard interativo para visão de receitas, despesas e fluxo de caixa" 
       />
-      {/* <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex items-center gap-2 ml-auto">
-          <Select value={range} onValueChange={setRange}>
-            <SelectTrigger>
-              <Calendar className="mr-2 h-4 w-4" />
-              <SelectValue placeholder="Período" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="3m">Últimos 3 meses</SelectItem>
-              <SelectItem value="6m">Últimos 6 meses</SelectItem>
-              <SelectItem value="12m">Últimos 12 meses</SelectItem>
-              <SelectItem value="ytd">YTD</SelectItem>
-            </SelectContent>
-          </Select>
-          <Select value={account} onValueChange={setAccount}>
-            <SelectTrigger>
-              <Wallet className="mr-2 h-4 w-4" />
-              <SelectValue placeholder="Conta" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">Todas as contas</SelectItem>
-              <SelectItem value="Banco Principal">Banco Principal</SelectItem>
-              <SelectItem value="Banco Secundário">Banco Secundário</SelectItem>
-              <SelectItem value="Cartão Corporativo">Cartão Corporativo</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-      </div> */}
 
       {/* KPIs */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -179,7 +145,6 @@ export default function FinanceDashboardMockup() {
           <TabsTrigger value="overview">Visão Geral</TabsTrigger>
           <TabsTrigger value="fixed-variable">Fixo x Variável</TabsTrigger>
           <TabsTrigger value="cash-flow">Fluxo de Caixa</TabsTrigger>
-          {/* <TabsTrigger value="categories">Categorias</TabsTrigger> */}
         </TabsList>
 
         {/* Visão Geral */}
@@ -188,7 +153,9 @@ export default function FinanceDashboardMockup() {
 
           <TableTransaction
             query={query}
-            setQuery={setQuery}
+            setQuery={setQuery}            
+            endDate={endDate}
+            setEndDate={setEndDate}
             filter={filteredTx}
           />
         </TabsContent>
@@ -283,81 +250,6 @@ export default function FinanceDashboardMockup() {
             </Card>
           </div>
         </TabsContent>
-
-        {/* Categorias */}
-        {/* <TabsContent value="categories" className="space-y-4">
-          <div className="grid gap-4 lg:grid-cols-3">
-            <Card className="shadow-sm lg:col-span-2">
-              <CardHeader>
-                <CardTitle>Distribuição de Categorias</CardTitle>
-              </CardHeader>
-              <CardContent className="h-[340px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart
-                    data={mockCategories}
-                    margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-                  >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis 
-                      dataKey="name"
-                      tick={{ fill: "#6b7280", fontSize: 10 }}
-                      axisLine={false}
-                      tickLine={false}
-                    />
-                    <YAxis
-                      tickFormatter={(value: number) => currencyBRL(value)}
-                      tick={{ fill: "#6b7280", fontSize: 10 }}
-                      axisLine={false}
-                      tickLine={false}
-                    />
-                    <Tooltip
-                      formatter={(value: number) => currencyBRL(value)}
-                      contentStyle={{
-                        backgroundColor: "#fff",
-                        borderRadius: "8px",
-                        border: "1px solid #e5e7eb",
-                        boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-                      }}
-                      labelStyle={{ fontWeight: "bold", color: "#374151" }}
-                    />
-
-                    <Bar
-                      dataKey="value"
-                      name="Valor"
-                      fill="#8884d8"                     
-                    >
-                      {mockCategories.map((entry, idx) => (
-                        <Cell
-                          key={`cell-${idx}`}
-                          fill={entry.value >= 0 ? "#4ade80" : "#f87171"}
-                        />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-sm">
-              <CardHeader>
-                <CardTitle>Categorias</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                {mockCategories
-                  .slice()
-                  .sort((a, b) => b.value - a.value)
-                  .map((categorie) => (
-                    <div key={categorie.name} className="flex items-center justify-between text-sm">
-                      <div className="flex items-center gap-2">
-                        <span>{categorie.name}</span>
-                      </div>
-                      <span className="font-medium">{currencyBRL(categorie.value)}</span>
-                    </div>
-                  ))}
-              </CardContent>
-            </Card>
-          </div>
-        </TabsContent> */}
       </Tabs>
 
       {/* Rodapé / Ações */}

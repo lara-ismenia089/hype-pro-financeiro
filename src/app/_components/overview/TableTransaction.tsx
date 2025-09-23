@@ -4,15 +4,29 @@ import {
   CardHeader,
   CardContent,
 } from "@/components/ui/card";
+import {
+  Button
+} from "@/components/ui/button";
+import {
+  Calendar
+} from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { 
 	Search,
-	ChevronDown, 
+	ChevronDown,
+  CalendarIcon
 } from "lucide-react";
+import { format } from "date-fns";
 import { 
 	formatDate,
 	currencyBRL,
   getSubcategory, 
 } from "@/lib/utils";
+import { Tooltip } from "react-tooltip";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { MockTransactionsType } from "@/lib/types";
@@ -21,10 +35,18 @@ import React, { useState } from "react";
 type TableTransactionType = {
   query: string;
   setQuery: (value: string) => void;
+  endDate: Date;
+  setEndDate: (value: Date) => void;
   filter: MockTransactionsType[];
 };
 
-export function TableTransaction({ query, setQuery, filter }: TableTransactionType) {
+export function TableTransaction({ 
+  query, 
+  filter,
+  endDate,
+  setQuery,
+  setEndDate, 
+}: TableTransactionType) {
   const [openCustomers, setOpenCustomers] = useState<Record<string, boolean>>({});
 
   const toggleCustomer = (date: string) => {
@@ -40,11 +62,9 @@ export function TableTransaction({ query, setQuery, filter }: TableTransactionTy
     return acc;
   }, {});
 
-  // Ordenar as datas
   const dates = Object.keys(grouped).sort();
   let runningTotal = 0;
 
-  // Criar novo objeto mantendo arrays + acumulado
   const groupedWithCumulative = dates.reduce<Record<string, { transactions: MockTransactionsType[]; cumulative: number }>>(
     (acc, date) => {
       const dailySum = grouped[date].reduce((sum, t) => t.typeId <= 1 ? sum + t.amount : sum - t.amount, 0);
@@ -59,19 +79,40 @@ export function TableTransaction({ query, setQuery, filter }: TableTransactionTy
     {}
   );
 
-
   return (
     <Card className="shadow-sm">
       <CardHeader className="flex items-center justify-between">
         <CardTitle>Movimentações</CardTitle>
-        <div className="flex items-center gap-2">
-          <div className="relative w-full sm:w-96">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+          <div className="relative">            
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="outline"
+                  className="w-[180px] justify-start text-left font-normal"
+                >
+                  <CalendarIcon className="mr-2 h-4 w-4" />
+                  {endDate ? format(endDate, "dd/MM/yyyy") : <span>Até a data</span>}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0" align="start">
+                <Calendar
+                  mode="single"
+                  selected={endDate}
+                  onSelect={setEndDate}
+                  required
+                />
+              </PopoverContent>
+            </Popover>
+          </div>
+
+          <div className="relative flex-1 sm:w-80">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Buscar transações por descrição, categoria ou tipo..."
-              className="pl-9"
+              placeholder="Buscar transações..."
+              className="pl-9 rounded-lg"
             />
           </div>
         </div>
@@ -117,14 +158,17 @@ export function TableTransaction({ query, setQuery, filter }: TableTransactionTy
                     </div>
                   </td>
                 </tr>): <></>}
-                  {/** Colocar uma dica de ferramenta com o history da transação */}
-                  {openCustomers[date] &&
-                    transactions.transactions
-                      .filter((t) => t.id !== "tx-00101" && t.id !== "tx-00111")
-                      .map((t) => (
+
+                {openCustomers[date] &&
+                  transactions.transactions
+                    .filter((t) => t.id !== "tx-00101" && t.id !== "tx-00111")
+                    .map((t) => (
+                      <React.Fragment key={t.id}>
                         <tr
-                          key={t.id}
                           className="border-b last:border-0 bg-white dark:bg-gray-900 transition-colors"
+                          data-tooltip-id={`tooltip-${t.accountId}`}
+                          data-tooltip-content={t.history}
+                          data-tooltip-place="top"
                         >
                           <td className="py-2 pr-4 pl-4">{formatDate(t.date)}</td>
                           <td className="py-2 pr-4">{t.customer.toLowerCase()}</td>
@@ -147,12 +191,18 @@ export function TableTransaction({ query, setQuery, filter }: TableTransactionTy
                             {currencyBRL(t.amount)}
                           </td>
                         </tr>
-                      ))}
+                      </React.Fragment>
+                    ))}
                 </React.Fragment>
               ))
             )}
           </tbody>
         </table>
+        {Object.entries(groupedWithCumulative).map(([_, transactions]) => (
+          transactions.transactions.map((t) => (
+            <Tooltip key={t.id} id={`tooltip-${t.accountId}`} />
+          ))
+        ))}
       </CardContent>
     </Card>
   );
