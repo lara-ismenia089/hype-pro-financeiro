@@ -2,12 +2,6 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import {
-  Card,
-  CardTitle,
-  CardHeader,
-  CardContent,
-} from "@/components/ui/card";
 import { 
   Tabs, 
   TabsList, 
@@ -15,17 +9,10 @@ import {
   TabsContent,
 } from "@/components/ui/tabs";
 import {
-  Bar,
-  XAxis,
-  YAxis,
-  Tooltip,
-  BarChart,
-  CartesianGrid,
-  ResponsiveContainer,
-} from "recharts";
-import {
   TrendingUp,
   ArrowDownRight,
+  Phone,
+  Mail
 } from "lucide-react";
 import { Header } from "@/app/_components/header/Header";
 import { MainContainer } from "./_components/container/MainContainer";
@@ -163,78 +150,13 @@ export default function FinanceDashboardMockup() {
           <DetailsReport />
         </TabsContent>
       </Tabs>
-        {/* </TabsContent>
-
-        <TabsContent value="cash-flow" className="space-y-4">
-          <div className="grid gap-4 lg:grid-cols-3"> */}
-            {/* <Card className="shadow-sm lg:col-span-2">
-              <CardHeader>
-                <CardTitle>Entradas x Saídas</CardTitle>
-              </CardHeader>
-              <CardContent className="h-[340px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={mockMonthly.month} margin={{ left: 8, right: 8, top: 8, bottom: 8 }}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="month" />
-                    <YAxis />
-                    <Tooltip formatter={(v: number) => currencyBRL(v)} />
-                    <Bar dataKey="variableRevenue" name="Receita Variável" radius={[6, 6, 0, 0]} />
-                    <Bar dataKey="variableExpenses" name="Despesa Variável" radius={[6, 6, 0, 0]} />
-                  </BarChart>
-                </ResponsiveContainer>
-              </CardContent>
-            </Card> */}
-
-            {/* <Card className="shadow-sm">
-              <CardHeader>
-                <CardTitle>Saldo Mensal</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                {mockMonthly.month.map((m) => {
-                  const balance = m.variableRevenue - 0;
-                  return (
-                    <div key={m.month} className="flex items-center justify-between text-sm">
-                      <span className="text-muted-foreground">{m.month}</span>
-                      <span className={`font-medium ${balance >= 0 ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"}`}>
-                        {currencyBRL(balance)}
-                      </span>
-                    </div>
-                  );
-                })}
-              </CardContent>
-            </Card> */}
-          {/* </div> */}
-
-          {/* <Card className="shadow-sm">
-            <CardHeader>
-              <CardTitle>Resumo Anual Consolidado</CardTitle>
-            </CardHeader>
-            <CardContent className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="flex flex-col">
-                <span className="text-sm text-muted-foreground">Receitas Fixas</span>
-                <span className="text-lg font-semibold">{currencyBRL(kpis.fixedRevenue)}</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-sm text-muted-foreground">Receitas Variáveis</span>
-                <span className="text-lg font-semibold">{currencyBRL(kpis.variableRevenue)}</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-sm text-muted-foreground">Despesas</span>
-                <span className="text-lg font-semibold">{currencyBRL(kpis.expense)}</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-sm text-muted-foreground">Custos</span>
-                <span className="text-lg font-semibold">{currencyBRL(kpis.cost)}</span>
-              </div>
-            </CardContent>
-          </Card> */}
-
-          
-
+        
       <FooterContainer>
-        <p className="text-xs text-muted-foreground">
-          
-        </p>
+        <div className="flex flex-col text-xs text-muted-foreground">
+          <p className="font-semibold text-[14px]">Israel Frota Inteligência Contábil</p>
+          <span className="flex gap-2"><Phone width={20} height={20} /> (88) 9205-8544</span>
+          <span className="flex gap-2"><Mail width={20} height={20} /> financeiro01@israelfrota.com.br</span>
+        </div>
         <Image src={"/imagem.jpeg"} alt="Logo" width={50} height={50} />
       </FooterContainer>
     </MainContainer>

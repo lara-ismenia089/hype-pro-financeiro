@@ -7,8 +7,8 @@ import {
 } from "@/lib/types";
 
 export const openingBalance = [
-  { date: "2025-08-16", openingBalance: 1.40, bank: "Cora" },
-  { date: "2025-08-24", openingBalance: 3.06, bank: "Asaas" },
+  { date: "2025-08-16", openingBalance: 0.0, bank: "Cora" },
+  { date: "2025-08-24", openingBalance: 0.0, bank: "Asaas" }, 
   { date: "2025-08-16", openingBalance: 0.0, bank: "Santander" }
 ];
 
@@ -380,7 +380,7 @@ export const mockTransactions: MockTransactionsType[] = [
     history: "",
     typeId: 0,
     type: "",
-    amount: 3.06,
+    amount: 0.0,
     accountId: 0,
     bank: "asaas"
   },
@@ -393,7 +393,7 @@ export const mockTransactions: MockTransactionsType[] = [
     history: "",
     typeId: 0,
     type: "",
-    amount: 1.40,
+    amount: 0.0,
     accountId: 0,
     bank: "cora"
   },
@@ -1348,7 +1348,7 @@ export const mockTransactions: MockTransactionsType[] = [
   },
   {
     id: "tx-073",
-    date: "2025-09-18",
+    date: "2025-09-19",
     description: "PIX RECEBIDO",
     customerId: "992.561.775-87",
     customer: "DANILA C M CERQUEIRA",
@@ -1370,6 +1370,19 @@ export const mockTransactions: MockTransactionsType[] = [
     type: "Débito",
     amount: 180.0,
     accountId: 88,
+    bank: "cora"
+  },
+  {
+    id: "tx-075",
+    date: "2025-09-11",
+    description: "Transf Pix enviada",
+    customerId: "",
+    customer: "",
+    history: "Transferencia entre contas",
+    typeId: 2,
+    type: "Débito",
+    amount: 7129.65,
+    accountId: 106,
     bank: "cora"
   },
 ];
