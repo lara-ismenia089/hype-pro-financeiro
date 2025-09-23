@@ -39,6 +39,7 @@ import { Overview } from "./_components/overview/Overview";
 import { TableTransaction } from "./_components/overview/TableTransaction";
 import { KpiCard } from "./_components/card/KpiCard";
 import { CategoriesTreemap } from "./_components/tree-map/TreeMap";
+import { DetailsReport } from "./_components/report/DetailsReport";
 
 export default function FinanceDashboardMockup() {
   const [query, setQuery] = useState("");
@@ -139,10 +140,10 @@ export default function FinanceDashboardMockup() {
       </div>
 
       <Tabs value={tab} onValueChange={setTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-3 sm:w-auto">
+        <TabsList className="grid w-full grid-cols-2 sm:w-auto">
           <TabsTrigger value="overview">Visão Geral</TabsTrigger>
-          <TabsTrigger value="cash-flow">Fluxo de Caixa</TabsTrigger>
-          <TabsTrigger value="categories">Categorias</TabsTrigger>
+          {/* <TabsTrigger value="cash-flow">Fluxo de Caixa</TabsTrigger> */}
+          <TabsTrigger value="categories">Fluxo de Caixa</TabsTrigger>
         </TabsList>
 
         <TabsContent value="overview" className="space-y-4">
@@ -159,8 +160,52 @@ export default function FinanceDashboardMockup() {
 
         <TabsContent value="categories" className="space-y-4">
           <CategoriesTreemap />
-         
-          <Card className="shadow-sm">
+          <DetailsReport />
+        </TabsContent>
+      </Tabs>
+        {/* </TabsContent>
+
+        <TabsContent value="cash-flow" className="space-y-4">
+          <div className="grid gap-4 lg:grid-cols-3"> */}
+            {/* <Card className="shadow-sm lg:col-span-2">
+              <CardHeader>
+                <CardTitle>Entradas x Saídas</CardTitle>
+              </CardHeader>
+              <CardContent className="h-[340px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={mockMonthly.month} margin={{ left: 8, right: 8, top: 8, bottom: 8 }}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="month" />
+                    <YAxis />
+                    <Tooltip formatter={(v: number) => currencyBRL(v)} />
+                    <Bar dataKey="variableRevenue" name="Receita Variável" radius={[6, 6, 0, 0]} />
+                    <Bar dataKey="variableExpenses" name="Despesa Variável" radius={[6, 6, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </CardContent>
+            </Card> */}
+
+            {/* <Card className="shadow-sm">
+              <CardHeader>
+                <CardTitle>Saldo Mensal</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                {mockMonthly.month.map((m) => {
+                  const balance = m.variableRevenue - 0;
+                  return (
+                    <div key={m.month} className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">{m.month}</span>
+                      <span className={`font-medium ${balance >= 0 ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"}`}>
+                        {currencyBRL(balance)}
+                      </span>
+                    </div>
+                  );
+                })}
+              </CardContent>
+            </Card> */}
+          {/* </div> */}
+
+          {/* <Card className="shadow-sm">
             <CardHeader>
               <CardTitle>Resumo Anual Consolidado</CardTitle>
             </CardHeader>
@@ -182,54 +227,13 @@ export default function FinanceDashboardMockup() {
                 <span className="text-lg font-semibold">{currencyBRL(kpis.cost)}</span>
               </div>
             </CardContent>
-          </Card>
-        </TabsContent>
+          </Card> */}
 
-        <TabsContent value="cash-flow" className="space-y-4">
-          <div className="grid gap-4 lg:grid-cols-3">
-            <Card className="shadow-sm lg:col-span-2">
-              <CardHeader>
-                <CardTitle>Entradas x Saídas</CardTitle>
-              </CardHeader>
-              <CardContent className="h-[340px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={mockMonthly.month} margin={{ left: 8, right: 8, top: 8, bottom: 8 }}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="month" />
-                    <YAxis />
-                    <Tooltip formatter={(v: number) => currencyBRL(v)} />
-                    <Bar dataKey="variableRevenue" name="Receita Variável" radius={[6, 6, 0, 0]} />
-                    <Bar dataKey="variableExpenses" name="Despesa Variável" radius={[6, 6, 0, 0]} />
-                  </BarChart>
-                </ResponsiveContainer>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-sm">
-              <CardHeader>
-                <CardTitle>Saldo Mensal</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                {mockMonthly.month.map((m) => {
-                  const balance = m.variableRevenue - 0;
-                  return (
-                    <div key={m.month} className="flex items-center justify-between text-sm">
-                      <span className="text-muted-foreground">{m.month}</span>
-                      <span className={`font-medium ${balance >= 0 ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"}`}>
-                        {currencyBRL(balance)}
-                      </span>
-                    </div>
-                  );
-                })}
-              </CardContent>
-            </Card>
-          </div>
-        </TabsContent>
-      </Tabs>
+          
 
       <FooterContainer>
         <p className="text-xs text-muted-foreground">
-          *
+          
         </p>
         <Image src={"/imagem.jpeg"} alt="Logo" width={50} height={50} />
       </FooterContainer>

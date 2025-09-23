@@ -70,3 +70,8 @@ export type ChartAccountsType = {
   type: string;
   subcategories: SubcategoriesType[];
 };
+
+export type ReportGroup = {
+  type: "Receita" | "Despesa" | "Custos";
+  categories: { category: string; total: number }[];
+};
