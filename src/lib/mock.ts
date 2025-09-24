@@ -1379,10 +1379,10 @@ export const mockTransactions: MockTransactionsType[] = [
     customerId: "",
     customer: "",
     history: "Transferencia entre contas",
-    typeId: 1,
+    typeId: 2,
     type: "Débito",
     amount: 7129.65,
-    accountId: 106,
+    accountId: 104,
     bank: "cora"
   },
 ];
