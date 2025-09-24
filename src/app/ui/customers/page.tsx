@@ -62,7 +62,6 @@ export default function Customers() {
         subtitle="Monitoramento da carteira de clientes"
       />
 
-      {/* Filtros */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6">
         <Input
           placeholder="Buscar cliente..."
@@ -79,15 +78,10 @@ export default function Customers() {
             <SelectItem value="todos">Todos</SelectItem>
             <SelectItem value="ativo">Ativo</SelectItem>
             <SelectItem value="suspenso">Suspenso</SelectItem>
-            {/* <SelectItem value="pendente">Pendente</SelectItem>
-            <SelectItem value="em análise">Em análise</SelectItem>
-            <SelectItem value="rescindido">Rescindido</SelectItem>
-            <SelectItem value="em renovação">Em renovação</SelectItem> */}
           </SelectContent>
         </Select>
       </div>
 
-      {/* Seção de Resumo */}
       <Card className="mb-8 rounded-2xl shadow-md border">
         <CardHeader>
           <CardTitle className="text-xl">Resumo</CardTitle>
@@ -129,7 +123,6 @@ export default function Customers() {
         </CardContent>
       </Card>
 
-      {/* Seção de Clientes */}
       <Card className="rounded-2xl shadow-md border">
         <CardHeader>
           <CardTitle className="text-xl">Clientes</CardTitle>

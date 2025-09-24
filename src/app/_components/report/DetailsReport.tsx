@@ -1,8 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { mockTransactions } from "@/lib/mock";
 import { ReportGroup } from "@/lib/types";
 import { currencyBRL, buildReportArray } from "@/lib/utils";
 import { ArrowUpRight, ArrowDownRight, Activity } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Input } from "@/components/ui/input";
 
 const typeColors: Record<ReportGroup["type"], string> = {
   Receita: "text-emerald-700 dark:text-emerald-400",
@@ -17,12 +22,46 @@ const typeIcons: Record<ReportGroup["type"], React.ReactElement> = {
 };
 
 export function DetailsReport() {
-  const result = buildReportArray(mockTransactions);
+  const [month, setMonth] = useState<number>(new Date().getMonth() + 1);
+  const [year, setYear] = useState<number>(new Date().getFullYear());
+
+  const filteredTransactions = mockTransactions.filter((tx) => {
+    const txDate = new Date(tx.date);
+    return txDate.getMonth() + 1 === month && txDate.getFullYear() === year;
+  });
+
+  const result = buildReportArray(filteredTransactions);
 
   return (
     <Card className="shadow-sm">
       <CardHeader>
-        <CardTitle>Detalhamento por Categoria</CardTitle>
+        <div className="flex w-full justify-between items-center">
+          <CardTitle>Detalhamento por Categoria</CardTitle>
+
+          <div className="flex gap-2">
+            {/* Mês */}
+            <Select value={month.toString()} onValueChange={(v) => setMonth(Number(v))}>
+              <SelectTrigger className="w-24">
+                <SelectValue placeholder="Mês" />
+              </SelectTrigger>
+              <SelectContent>
+                {Array.from({ length: 12 }, (_, i) => i + 1).map((m) => (
+                  <SelectItem key={m} value={m.toString()}>
+                    {m.toString().padStart(2, "0")}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+
+            {/* Ano */}
+            <Input
+              type="number"
+              value={year}
+              onChange={(e) => setYear(Number(e.target.value))}
+              className="w-28"
+            />
+          </div>
+        </div>
       </CardHeader>
       <CardContent>
         <div className="space-y-6">

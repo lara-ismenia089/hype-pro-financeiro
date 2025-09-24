@@ -129,7 +129,6 @@ export default function FinanceDashboardMockup() {
       <Tabs value={tab} onValueChange={setTab} className="w-full">
         <TabsList className="grid w-full grid-cols-2 sm:w-auto">
           <TabsTrigger value="overview">Visão Geral</TabsTrigger>
-          {/* <TabsTrigger value="cash-flow">Fluxo de Caixa</TabsTrigger> */}
           <TabsTrigger value="categories">Fluxo de Caixa</TabsTrigger>
         </TabsList>
 
