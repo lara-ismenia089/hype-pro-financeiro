@@ -371,32 +371,32 @@ function createMockMonthly(data: MockTransactionsType[]) {
 }
 
 export const mockTransactions: MockTransactionsType[] = [
-  { 
-    id: "tx-00101",
-    date: "2025-08-24",
-    description: "Saldo Inicial",
-    customerId: "",
-    customer: "",
-    history: "",
-    typeId: 0,
-    type: "",
-    amount: 0.0,
-    accountId: 0,
-    bank: "asaas"
-  },
-  { 
-    id: "tx-00111",
-    date: "2025-08-16",
-    description: "Saldo Inicial",
-    customerId: "",
-    customer: "",
-    history: "",
-    typeId: 0,
-    type: "",
-    amount: 0.0,
-    accountId: 0,
-    bank: "cora"
-  },
+  // { 
+  //   id: "tx-00101",
+  //   date: "2025-08-24",
+  //   description: "Saldo Inicial",
+  //   customerId: "",
+  //   customer: "",
+  //   history: "",
+  //   typeId: 0,
+  //   type: "",
+  //   amount: 0.0,
+  //   accountId: 0,
+  //   bank: "asaas"
+  // },
+  // { 
+  //   id: "tx-00111",
+  //   date: "2025-08-16",
+  //   description: "Saldo Inicial",
+  //   customerId: "",
+  //   customer: "",
+  //   history: "",
+  //   typeId: 0,
+  //   type: "",
+  //   amount: 0.0,
+  //   accountId: 0,
+  //   bank: "cora"
+  // },
   { 
     id: "tx-001",
     date: "2025-08-22",
@@ -1379,7 +1379,7 @@ export const mockTransactions: MockTransactionsType[] = [
     customerId: "",
     customer: "",
     history: "Transferencia entre contas",
-    typeId: 2,
+    typeId: 1,
     type: "Débito",
     amount: 7129.65,
     accountId: 106,

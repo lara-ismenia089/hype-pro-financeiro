@@ -12,7 +12,8 @@ import {
   TrendingUp,
   ArrowDownRight,
   Phone,
-  Mail
+  Mail,
+  Building2
 } from "lucide-react";
 import { Header } from "@/app/_components/header/Header";
 import { MainContainer } from "./_components/container/MainContainer";
@@ -152,7 +153,7 @@ export default function FinanceDashboardMockup() {
         
       <FooterContainer>
         <div className="flex flex-col text-xs text-muted-foreground">
-          <p className="font-semibold text-[14px]">Israel Frota Inteligência Contábil</p>
+          <p className="flex gap-2 py-1 font-semibold text-[14px]"><Building2 width={20} height={20} /> IF Consult LTDA</p>
           <span className="flex gap-2"><Phone width={20} height={20} /> (88) 9205-8544</span>
           <span className="flex gap-2"><Mail width={20} height={20} /> financeiro01@israelfrota.com.br</span>
         </div>
