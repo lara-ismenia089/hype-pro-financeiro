@@ -183,7 +183,7 @@ export function TableTransaction({
                           </td>
                           <td
                             className={`py-2 pr-0 text-right font-medium ${
-                              t.type === "Débito"
+                              t.type === "Debito"
                                 ? "text-red-600 dark:text-red-400"
                                 : "text-emerald-600 dark:text-emerald-400"
                             }`}
