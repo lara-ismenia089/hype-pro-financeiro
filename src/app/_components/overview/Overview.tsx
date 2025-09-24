@@ -22,7 +22,7 @@ import {
 import { ChartColumn } from "lucide-react";
 import { currencyBRL } from "@/lib/utils";
 
-export function Overview({ mockMonthly, avg }: { mockMonthly: MockMonthlyType[], avg: number }) {
+export function Overview({ mockMonthly, fixedAvg, eventAvg }: { mockMonthly: MockMonthlyType[], fixedAvg: number, eventAvg: number }) {
 	const [isOpen, setIsOpen] = useState(true);
 
 	const totalRevenue = mockMonthly.reduce(
@@ -211,9 +211,18 @@ export function Overview({ mockMonthly, avg }: { mockMonthly: MockMonthlyType[],
 					<CardTitle>Resumo Financeiro</CardTitle>
 				</CardHeader>
 				<CardContent className="space-y-3">
-					<div className="flex items-center justify-between text-sm">
+					<div className="flex items-center justify-between text-sm border-b py-2">
 						<span>Ticket Médio</span>
-						<span className="font-medium">{currencyBRL(avg)}</span>
+						<div className="flex flex-col gap-2 text-muted-foreground">
+							<span className="font-medium flex space-x-1.5 justify-between">
+								<span>Fixo</span>
+								<span>{currencyBRL(fixedAvg)}</span>
+							</span>
+							<span className="font-medium flex space-x-1.5 justify-between">
+								<span>Eventos</span>
+								<span>{currencyBRL(eventAvg)}</span>
+							</span>
+						</div>
 					</div>
 					<div className="flex items-center justify-between text-sm">
 						<span>Despesa / Receita</span>

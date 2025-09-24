@@ -9,7 +9,7 @@ import { Building2, Mail, Phone, CalendarDays, DollarSign } from "lucide-react";
 import { mockCustomers } from "@/lib/mock";
 import { Header } from "@/app/_components/header/Header";
 import { MainContainer } from "@/app/_components/container/MainContainer";
-import { currencyBRL } from "@/lib/utils";
+import { currencyBRL, formatDate } from "@/lib/utils";
 
 export default function Customers() {
   const [search, setSearch] = useState("");
@@ -193,7 +193,7 @@ export default function Customers() {
                           <CalendarDays className="w-4 h-4 text-muted-foreground" />
                           Vencimento:{" "}
                           <span className="font-medium">
-                            {new Date(customer.dueDate).toLocaleDateString()}
+                            {formatDate(customer.dueDate)}
                           </span>
                         </p>
                       )}

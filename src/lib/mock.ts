@@ -21,7 +21,7 @@ export const mockCustomers: MockCustomers[] = [
     phone: "(86) 9413-8179",
     signedContract: "",
     signedDate: "",
-    dueDate: "",
+    dueDate: "2025-10-20",
     contractTime: "",
     contractStatus: "ativo",
     monthlyFee: 3000.0,
@@ -45,7 +45,7 @@ export const mockCustomers: MockCustomers[] = [
     phone: "(88) 9206-8076",
     signedContract: "",
     signedDate: "",
-    dueDate: "",
+    dueDate: "2025-10-15",
     contractTime: "",
     contractStatus: "ativo",
     monthlyFee: 2000.0,
@@ -69,7 +69,7 @@ export const mockCustomers: MockCustomers[] = [
     phone: "(88) 3671-0000",
     signedContract: "",
     signedDate: "",
-    dueDate: "",
+    dueDate: "2025-10-20",
     contractTime: "",
     contractStatus: "ativo",
     monthlyFee: 2500.0,
@@ -93,7 +93,7 @@ export const mockCustomers: MockCustomers[] = [
     phone: "(88) 9717-6200",
     signedContract: "",
     signedDate: "",
-    dueDate: "",
+    dueDate: "2025-10-20",
     contractTime: "",
     contractStatus: "ativo",
     monthlyFee: 3000.0,
@@ -117,7 +117,7 @@ export const mockCustomers: MockCustomers[] = [
     phone: "(88) 9344-7144",
     signedContract: "",
     signedDate: "",
-    dueDate: "",
+    dueDate: "2025-09-26",
     contractTime: "",
     contractStatus: "suspenso",
     monthlyFee: 2300.0,
@@ -335,10 +335,14 @@ function createMockMonthly(data: MockTransactionsType[]) {
   const minDate = dates[0];
   const maxDate = dates[dates.length - 1];
 
-  const count = data.reduce((accumulator, currentValue) => {
-    return (currentValue.accountId === 2 || currentValue.accountId === 3) ? accumulator + 1 : accumulator;
-  }, 0);
+  // const fixedCount = data.reduce((accumulator, currentValue) => {
+  //   return currentValue.accountId === 3 ? accumulator + 1 : accumulator;
+  // }, 0);
 
+  // const eventCount = data.reduce((accumulator, currentValue) => {
+  //   return currentValue.accountId === 2 ? accumulator + 1 : accumulator;
+  // }, 0);
+  
   for (let i = minDate.getMonth(); i <= maxDate.getMonth(); i++) {
     const filtered = data.filter((register) => new Date(register.date).getMonth() === i);
 
@@ -365,9 +369,10 @@ function createMockMonthly(data: MockTransactionsType[]) {
     });
   }
   
-  const averageOrderValue = result.reduce((acc, cur) => acc + cur.fixedRevenue + cur.variableRevenue, 0) / count;
+  const averageOrderValueFixed = result.reduce((acc, cur) => acc + cur.fixedRevenue, 0) / 5;
+  const averageOrderValueEvent = result.reduce((acc, cur) => acc + cur.variableRevenue, 0) / 4;
 
-  return { month: result, averageOrderValue };
+  return { month: result, averageOrderValueFixed, averageOrderValueEvent };
 }
 
 export const mockTransactions: MockTransactionsType[] = [
@@ -1361,7 +1366,11 @@ export const mockTransactions: MockTransactionsType[] = [
   }
 ];
 
-export const mockMonthly: { month: MockMonthlyType[], averageOrderValue: number } = createMockMonthly(mockTransactions);
+export const mockMonthly: { 
+  month: MockMonthlyType[],
+  averageOrderValueFixed: number,
+  averageOrderValueEvent: number 
+} = createMockMonthly(mockTransactions);
 
 export const chartAccounts: ChartAccountsType[] = [
   { id: 1, type: "Receitas", subcategories: [

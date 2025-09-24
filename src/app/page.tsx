@@ -134,7 +134,11 @@ export default function FinanceDashboardMockup() {
         </TabsList>
 
         <TabsContent value="overview" className="space-y-4">
-          <Overview mockMonthly={mockMonthly.month} avg={mockMonthly.averageOrderValue} />
+          <Overview
+            mockMonthly={mockMonthly.month}
+            fixedAvg={mockMonthly.averageOrderValueFixed}
+            eventAvg={mockMonthly.averageOrderValueEvent}
+          />
 
           <TableTransaction
             query={query}
