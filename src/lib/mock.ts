@@ -4,6 +4,7 @@ import {
   MockFixedExpense,
   ChartAccountsType,
   MockTransactionsType,
+  MockCustomersVariables,
 } from "@/lib/types";
 
 export const openingBalance = [
@@ -14,303 +15,387 @@ export const openingBalance = [
 
 export const mockCustomers: MockCustomers[] = [
   {
-    cnpj: "31.189.690/0001-00",
-    companyName: "T. C DE SOUSA & CIA LTDA ",
-    fantasyName: "Diamond",
-    email: "tiangua@clinicasdiamond.com",
-    phone: "(86) 9413-8179",
-    signedContract: "",
-    signedDate: "",
-    dueDate: "2025-10-20",
-    contractTime: "",
-    contractStatus: "ativo",
-    monthlyFee: 3000.0,
-    terminationClause: "",
-    address: {
-      avenue: "Av Prefeito Jaques Nunes",
-      street: "",
-      neighborhood: "Centro",
-      number: "1028",
-      zipCode: "62320-000",
-      city: "Tianguá",
-      state: "CE",
-      country: "Brasil",
-    },
+    "id": "ct-0001",
+    "cnpj": "31.189.690/0001-00",
+    "companyName": "T. C DE SOUSA & CIA LTDA",
+    "fantasyName": "Diamond",
+    "email": "tiangua@clinicasdiamond.com",
+    "phone": "(86) 9413-8179",
+    "signedContract": "",
+    "signedDate": "",
+    "dueDate": "2025-10-20",
+    "contractTime": "",
+    "contractStatus": "Ativo",
+    "monthlyFee": 3000.0,
+    "terminationClause": "",
+    "address": {
+      "street": "",
+      "avenue": "Avenida Prefeito Jaques Nunes",
+      "number": 1028,
+      "neighborhood": "Centro",
+      "city": "Tianguá",
+      "state": "CE"
+    }
   },
   {
-    cnpj: "54.687.930/0001-94",
-    companyName: "FRAGA E REZENDE LTDA",
-    fantasyName: "Farmaformula",
-    email: "lutrf1@gmail.com",
-    phone: "(88) 9206-8076",
-    signedContract: "",
-    signedDate: "",
-    dueDate: "2025-10-15",
-    contractTime: "",
-    contractStatus: "ativo",
-    monthlyFee: 2000.0,
-    terminationClause: "",
-    address: {
-      avenue: "",
-      street: "Rua 31 de Julho",
-      neighborhood: "Centro",
-      number: "200",
-      zipCode: "62320-000",
-      city: "Tianguá",
-      state: "CE",
-      country: "Brasil",
-    },
-  },
-  { 
-    cnpj: "05.356.440/0001-08",
-    companyName: "J B FERREIRA DE SA",
-    fantasyName: "J. Lanches Pizzaria Delivery",
-    email: "",
-    phone: "(88) 3671-0000",
-    signedContract: "",
-    signedDate: "",
-    dueDate: "2025-10-20",
-    contractTime: "",
-    contractStatus: "ativo",
-    monthlyFee: 2500.0,
-    terminationClause: "",
-    address: {
-      avenue: "Av Prefeito Jaques Nunes",
-      street: "",
-      neighborhood: "Centro",
-      number: "2210",
-      zipCode: "62320-000",
-      city: "Tianguá",
-      state: "CE",
-      country: "Brasil",
-    },
+    "id": "ct-0002",
+    "cnpj": "54.687.930/0001-94",
+    "companyName": "FRAGA E REZENDE LTDA",
+    "fantasyName": "FarmaFormula",
+    "email": "lutrf1@gmail.com",
+    "phone": "(88) 9206-8076",
+    "signedContract": "",
+    "signedDate": "",
+    "dueDate": "2025-10-15",
+    "contractTime": "",
+    "contractStatus": "Ativo",
+    "monthlyFee": 2000.0,
+    "terminationClause": "",
+    "address": {
+      "street": "Rua 31 de Julho",
+      "avenue": "",
+      "number": 200,
+      "neighborhood": "Ibiapaba shopping Centro",
+      "city": "Tianguá",
+      "state": "CE"
+    }
   },
   {
-    cnpj: "43.213.724/0001-08",
-    companyName: "F OLIVER AGUIAR LOPES LTDA",
-    fantasyName: "Casa de Cecília",
-    email: "franzemlopes@hotmail.com",
-    phone: "(88) 9717-6200",
-    signedContract: "",
-    signedDate: "",
-    dueDate: "2025-10-20",
-    contractTime: "",
-    contractStatus: "ativo",
-    monthlyFee: 3000.0,
-    terminationClause: "",
-    address: {
-      avenue: "Av Prefeito Jaques Nunes",
-      street: "",
-      neighborhood: "Centro",
-      number: "1048",
-      zipCode: "62320-000",
-      city: "Tianguá",
-      state: "CE",
-      country: "Brasil",
-    },
+    "id": "ct-0003",
+    "cnpj": "05.356.440/0001-08",
+    "companyName": "J B FERREIRA DE SA",
+    "fantasyName": "JLanches",
+    "email": "Não informado",
+    "phone": "(88) 3671-0000",
+    "signedContract": "",
+    "signedDate": "",
+    "dueDate": "2025-10-20",
+    "contractTime": "",
+    "contractStatus": "Ativo",
+    "monthlyFee": 2500.0,
+    "terminationClause": "",
+    "address": {
+      "street": "",
+      "avenue": "Avenida Prefeito Jaques Nunes",
+      "number": 2172,
+      "neighborhood": "Lions Club",
+      "city": "Tianguá",
+      "state": "CE"
+    }
   },
   {
-    cnpj: "26.158.183/0004-04",
-    companyName: "KAROLYNE SIQUEIRA FREIRE LTDA",
-    fantasyName: "Perolab",
-    email: "otica_perola@hotmail.com",
-    phone: "(88) 9344-7144",
-    signedContract: "",
-    signedDate: "",
-    dueDate: "2025-09-26",
-    contractTime: "",
-    contractStatus: "suspenso",
-    monthlyFee: 2300.0,
-    terminationClause: "",
-    address: {
-      avenue: "",
-      street: "R Maria do Socorro Frota e Fontenele",
-      neighborhood: "Regis Diniz",
-      number: "381",
-      zipCode: "62320-000",
-      city: "Tianguá",
-      state: "CE",
-      country: "Brasil",
-    },
+    "id": "ct-0004",
+    "cnpj": "43.213.742/0001-08",
+    "companyName": "F OLIVER AGUIAR LOPES LTDA",
+    "fantasyName": "Casa de Cecília",
+    "email": "franzemlopes@hotmail.com",
+    "phone": "(88) 9717-6200",
+    "signedContract": "",
+    "signedDate": "",
+    "dueDate": "2025-10-20",
+    "contractTime": "",
+    "contractStatus": "Ativo",
+    "monthlyFee": 3000.0,
+    "terminationClause": "",
+    "address": {
+      "street": "",
+      "avenue": "Avenida Prefeito Jaques Nunes",
+      "number": 1048,
+      "neighborhood": "Centro",
+      "city": "Tianguá",
+      "state": "CE"
+    }
+  },
+  {
+    "id": "ct-0005",
+    "cnpj": "26.158.183/0004-04",
+    "companyName": "KAROLYNE SIQUEIRA FREIRE LTDA",
+    "fantasyName": "Perolab",
+    "email": "otica_perola@hotmail.com",
+    "phone": "(88) 9344-7144",
+    "signedContract": "",
+    "signedDate": "",
+    "dueDate": "2025-10-26",
+    "contractTime": "",
+    "contractStatus": "Suspenso",
+    "monthlyFee": 2300.0,
+    "terminationClause": "",
+    "address": {
+      "street": "Rua Maria do Socorro Frota e Fontenele",
+      "avenue": "",
+      "number": 381,
+      "neighborhood": "Regis Diniz",
+      "city": "Tianguá",
+      "state": "CE"
+    }
   }
 ];
 
 export const mockExpensesFixed: MockFixedExpense[] = [
   {
-    description: "João Vitor",
-    paymentMethod: "Transferência",
-    amount: 1500.0,
-    dueDate: "2025-10-01",
-    observation: "Carteira assinada"
+    "id": "ep-0001",
+    "description": "João Vitor",
+    "paymentMethod": "Transferencia",
+    "amount": 1500.0,
+    "dueDate": "2025-10-01",
+    "observation": "Carteira assinada",
+    "type": "Colaboradores - Salários"
   },
   {
-    description: "Saymon",
-    paymentMethod: "Transferência",
-    amount: 800.0,
-    dueDate: "2025-10-01",
-    observation: "Estagiário"
+    "id": "ep-0002",
+    "description": "Saymon",
+    "paymentMethod": "Transferencia",
+    "amount": 800.0,
+    "dueDate": "2025-10-01",
+    "observation": "Estagiário",
+    "type": "Colaboradores - Salários"
   },
   {
-    description: "Mayane",
-    paymentMethod: "Transferência",
-    amount: 1500.0,
-    dueDate: "2025-10-01",
-    observation: "Sócio sem recolhimento"
+    "id": "ep-0003",
+    "description": "Mayane",
+    "paymentMethod": "Transferencia",
+    "amount": 1500.0,
+    "dueDate": "2025-10-01",
+    "observation": "Sócia sem recolhimento",
+    "type": "Colaboradores - Salários"
   },
   {
-    description: "Júlio César",
-    paymentMethod: "Transferência",
-    amount: 4000.0,
-    dueDate: "2025-10-01",
-    observation: "Sócio sem recolhimento"
+    "id": "ep-0004",
+    "description": "Júlio César",
+    "paymentMethod": "Transferencia",
+    "amount": 4000.0,
+    "dueDate": "2025-10-01",
+    "observation": "Sócio sem recolhimento",
+    "type": "Colaboradores - Salários"
   },
   {
-    description: "INSS",
-    paymentMethod: "Guia",
-    amount: 0.0,
-    dueDate: "2025-09-20",
-    observation: "Encargo CLT"
+    "id": "ep-0005",
+    "description": "INSS",
+    "paymentMethod": "Guia",
+    "amount": 0.0,
+    "dueDate": "2025-10-20",
+    "observation": "Encargo CLT",
+    "type": "Impostos"
   },
   {
-    description: "FGTS",
-    paymentMethod: "Guia",
-    amount: 0.0,
-    dueDate: "2025-09-01",
-    observation: "Encargo CLT"
+    "id": "ep-0006",
+    "description": "FGTS",
+    "paymentMethod": "Guia",
+    "amount": 0.0,
+    "dueDate": "2025-10-20",
+    "observation": "Encargo CLT",
+    "type": "Impostos"
   },
   {
-    description: "Seguro",
-    paymentMethod: "",
-    amount: 0.0,
-    dueDate: "",
-    observation: "Encargo estagiário"
+    "id": "ep-0007",
+    "description": "Seguro",
+    "paymentMethod": "-",
+    "amount": 0.0,
+    "dueDate": "2025-10-28",
+    "observation": "Encargo Estagiário",
+    "type": "Colaboradores - Encargos"
   },
   {
-    description: "Agência",
-    paymentMethod: "",
-    amount: 0.0,
-    dueDate: "",
-    observation: "Encargo estagiário"
+    "id": "ep-0008",
+    "description": "Agência",
+    "paymentMethod": "-",
+    "amount": 0.0,
+    "dueDate": "2025-10-28",
+    "observation": "Encargo Estagiário",
+    "type": "Colaboradores - Encargos"
   },
   {
-    description: "Provisão 13º",
-    paymentMethod: "",
-    amount: 0.0,
-    dueDate: "",
-    observation: "Provisão mensal CLT"
+    "id": "ep-0009",
+    "description": "Provisão 13º",
+    "paymentMethod": "-",
+    "amount": 0.0,
+    "dueDate": "2025-10-28",
+    "observation": "Provisão mensal CLT",
+    "type": "Colaboradores - Encargos"
   },
   {
-    description: "Provisão Féria",
-    paymentMethod: "",
-    amount: 0.0,
-    dueDate: "",
-    observation: "Provisão mensal CLT"
+    "id": "ep-0010",
+    "description": "Provisão Férias",
+    "paymentMethod": "-",
+    "amount": 0.0,
+    "dueDate": "2025-10-28",
+    "observation": "Provisão mensal CLT",
+    "type": "Colaboradores - Encargos"
   },
   {
-    description: "Internet",
-    paymentMethod: "Boleto",
-    amount: 92.17,
-    dueDate: "2025-10-10",
-    observation: ""
+    "id": "ep-0011",
+    "description": "Internet",
+    "paymentMethod": "Boleto",
+    "amount": 92.17,
+    "dueDate": "2025-10-10",
+    "observation": "nan",
+    "type": "Despesas de funcionamento"
   },
   {
-    description: "Aluguel + Energia",
-    paymentMethod: "Desconto",
-    amount: 700.0,
-    dueDate: "2025-10-20",
-    observation: ""
+    "id": "ep-0012",
+    "description": "Aluguel + Energia",
+    "paymentMethod": "Desconto",
+    "amount": 700.0,
+    "dueDate": "2025-10-20",
+    "observation": "nan",
+    "type": "Despesas de funcionamento"
   },
   {
-    description: "Software - Adobe (cartão hype)",
-    paymentMethod: "Cartão",
-    amount: 92.0,
-    dueDate: "2025-10-20",
-    observation: ""
+    "id": "ep-0013",
+    "description": "Software – Adobe (cartão hype)",
+    "paymentMethod": "Cartão",
+    "amount": 92.0,
+    "dueDate": "2025-10-20",
+    "observation": "-",
+    "type": "Cartão de crédito"
   },
   {
-    description: "Software - Google",
-    paymentMethod: "Cartão",
-    amount: 105.0,
-    dueDate: "2025-10-20",
-    observation: ""
+    "id": "ep-0014",
+    "description": "Software – Google",
+    "paymentMethod": "Cartão",
+    "amount": 105.0,
+    "dueDate": "2025-10-20",
+    "observation": "-",
+    "type": "Cartão de crédito"
   },
   {
-    description: "Tripé",
-    paymentMethod: "Cartão",
-    amount: 49.44,
-    dueDate: "2025-10-20",
-    observation: "18x (2/18) - Finaliza (12/2026)"
+    "id": "ep-0015",
+    "description": "Tripé",
+    "paymentMethod": "Cartão",
+    "amount": 49.44,
+    "dueDate": "2025-10-20",
+    "observation": "18x (2/18) – Finaliza Dez/26",
+    "type": "Cartão de crédito"
   },
   {
-    description: "Treinamento Don",
-    paymentMethod: "Cartão",
-    amount: 149.44,
-    dueDate: "2025-10-20",
-    observation: "12x (2/12) - Finaliza (06/2026)"
+    "id": "ep-0016",
+    "description": "Treinamento Don",
+    "paymentMethod": "Cartão",
+    "amount": 149.44,
+    "dueDate": "2025-10-20",
+    "observation": "12x (2/12) – Finaliza Jun/26",
+    "type": "Cartão de crédito"
   },
   {
-    description: "DAF/Gaveteiros",
-    paymentMethod: "Cartão",
-    amount: 66.93,
-    dueDate: "2025-10-20",
-    observation: "3x (2/3) - Finaliza (09/2025)"
+    "id": "ep-0017",
+    "description": "DAF/Gaveteiros",
+    "paymentMethod": "Cartão",
+    "amount": 66.93,
+    "dueDate": "2025-10-20",
+    "observation": "3x (2/3) – Finaliza Set/25",
+    "type": "Cartão de crédito"
   },
   {
-    description: "Ar-condicionado",
-    paymentMethod: "Cartão",
-    amount: 291.83,
-    dueDate: "2025-10-20",
-    observation: "10x (8/10) - Finaliza (10/2025)"
+    "id": "ep-0018",
+    "description": "Ar-condicionado",
+    "paymentMethod": "Cartão",
+    "amount": 291.83,
+    "dueDate": "2025-10-20",
+    "observation": "10x (8/10) – Finaliza Out/25",
+    "type": "Cartão de crédito"
   },
   {
-    description: "Mensalidade BPO",
-    paymentMethod: "Boleto",
-    amount: 300.0,
-    dueDate: "2025-10-25",
-    observation: "A partir de setembro"
+    "id": "ep-0019",
+    "description": "Mensalidade BPO",
+    "paymentMethod": "Boleto",
+    "amount": 300.0,
+    "dueDate": "2025-10-25",
+    "observation": "A partir de setembro",
+    "type": "Contabilidade e serviços extras"
   },
   {
-    description: "Mensalidade Contabilidade",
-    paymentMethod: "Boleto",
-    amount: 80.0,
-    dueDate: "2025-10-25",
-    observation: "Após alteração"
+    "id": "ep-0020",
+    "description": "Mensalidade Contabilidade",
+    "paymentMethod": "Boleto",
+    "amount": 80.0,
+    "dueDate": "2025-10-25",
+    "observation": "Após alteração",
+    "type": "Contabilidade e serviços extras"
   },
   {
-    description: "Simples Nacional",
-    paymentMethod: "Guia",
-    amount: 600.0,
-    dueDate: "2025-10-20",
-    observation: "6% do faturamento"
+    "id": "ep-0021",
+    "description": "Simples Nacional",
+    "paymentMethod": "Guia",
+    "amount": 600.0,
+    "dueDate": "2025-10-20",
+    "observation": "6% do Faturamento (Após alteração)",
+    "type": "Impostos"
+  },
+  // {
+  //   "id": "ep-0022",
+  //   "description": "Processo de alteração contábil",
+  //   "paymentMethod": "Transferencia",
+  //   "amount": 1000.0,
+  //   "dueDate": "",
+  //   "observation": "Apenas uma vez",
+  //   "type": "nan"
+  // },
+  // {
+  //   "id": "ep-0023",
+  //   "description": "Taxa de processo JUCEC",
+  //   "paymentMethod": "Boleto",
+  //   "amount": 260.0,
+  //   "dueDate": "",
+  //   "observation": "Apenas quando iniciar o processo",
+  //   "type": "nan"
+  // },
+  // {
+  //   "id": "ep-0024",
+  //   "description": "Débitos antigos MEI",
+  //   "paymentMethod": "Guia",
+  //   "amount": 1236.08,
+  //   "dueDate": "",
+  //   "observation": "309,02/mês (4x)",
+  //   "type": "nan"
+  // },
+  // {
+  //   "id": "ep-0025",
+  //   "description": "MEI 2025",
+  //   "paymentMethod": "Guia",
+  //   "amount": 471.17,
+  //   "dueDate": "",
+  //   "observation": "Em aberto p/ 2025",
+  //   "type": "nan"
+  // }
+];
+
+export const mockCustomersVariables: MockCustomersVariables[] = [
+  {
+    "id": "ct-0001",
+    "date": "2025-09-30",
+    "customer": "JANAINA ALBUQUE…",
+    "event": "15 anos",
+    "total": 3000,
+    "paid": 3000,
+    "open": 0
   },
   {
-    description: "Processo de alteração contábil",
-    paymentMethod: "Transferência",
-    amount: 1000.0,
-    dueDate: "A definir",
-    observation: "Apenas uma vez"
+    "id": "ct-0002",
+    "date": "2025-09-19",
+    "customer": "DANILA C M CERQU…",
+    "event": "15 anos",
+    "total": 3000,
+    "paid": 3000,
+    "open": 0
   },
   {
-    description: "Taxa de processo JUCEC",
-    paymentMethod: "Boleto",
-    amount: 260.0,
-    dueDate: "",
-    observation: "Apenas quando iniciar o processo"
+    "id": "ct-0003",
+    "date": "2025-09-03",
+    "customer": "ANA VLADIA MOREI…",
+    "event": "15 anos",
+    "total": 2400,
+    "paid": 2400,
+    "open": 0
   },
   {
-    description: "Débitos antigos MEI",
-    paymentMethod: "Guia",
-    amount: 1236.08,
-    dueDate: "",
-    observation: "309.02/mês (4x)"
-  },
-  {
-    description: "MEI 2025",
-    paymentMethod: "Guia",
-    amount: 471.17,
-    dueDate: "",
-    observation: "Em aberto para 2025"
-  },
+    "id": "ct-0004",
+    "date": "2025-09-15",
+    "customer": "JOSE INACIO SOUSA ALBUQUERQUE",
+    "event": "Cobertura Evento",
+    "total": 1300,
+    "paid": 650,
+    "open": 650
+  }
 ];
 
 function createMockMonthly(data: MockTransactionsType[]) {
@@ -334,14 +419,6 @@ function createMockMonthly(data: MockTransactionsType[]) {
   const dates = data.map((item) => new Date(item.date)).sort((a, b) => a.getTime() - b.getTime());
   const minDate = dates[0];
   const maxDate = dates[dates.length - 1];
-
-  // const fixedCount = data.reduce((accumulator, currentValue) => {
-  //   return currentValue.accountId === 3 ? accumulator + 1 : accumulator;
-  // }, 0);
-
-  // const eventCount = data.reduce((accumulator, currentValue) => {
-  //   return currentValue.accountId === 2 ? accumulator + 1 : accumulator;
-  // }, 0);
   
   for (let i = minDate.getMonth(); i <= maxDate.getMonth(); i++) {
     const filtered = data.filter((register) => new Date(register.date).getMonth() === i);
@@ -407,7 +484,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "date": "2025-08-23",
     "description": "Pgto QR Code Pix",
     "history": "Gaveteiros",
-    "customerId": "10.573.521/0001-92",
+    "customerId": "10.573.521/0001-91",
     "customer": "MERCADO PAGO IN…",
     "typeId": 2,
     "type": "Debito",
@@ -420,7 +497,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "date": "2025-08-23",
     "description": "Pgto QR Code Pix",
     "history": "Ar Condicionado",
-    "customerId": "10.573.521/0001-93",
+    "customerId": "10.573.521/0001-91",
     "customer": "MERCADO PAGO IN…",
     "typeId": 2,
     "type": "Debito",
@@ -433,7 +510,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "date": "2025-08-23",
     "description": "Pgto QR Code Pix",
     "history": "Tripé",
-    "customerId": "10.573.521/0001-94",
+    "customerId": "10.573.521/0001-91",
     "customer": "MERCADO PAGO IN…",
     "typeId": 2,
     "type": "Debito",
@@ -446,7 +523,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "date": "2025-08-23",
     "description": "Pgto QR Code Pix",
     "history": "Trieinamento",
-    "customerId": "10.573.521/0001-95",
+    "customerId": "10.573.521/0001-91",
     "customer": "MERCADO PAGO IN…",
     "typeId": 2,
     "type": "Debito",
@@ -458,8 +535,21 @@ export const mockTransactions: MockTransactionsType[] = [
     "id": "tx-0007",
     "date": "2025-08-23",
     "description": "Pgto QR Code Pix",
+    "history": "Trieinamento",
+    "customerId": "10.573.521/0001-91",
+    "customer": "MERCADO PAGO IN…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 149.7,
+    "accountId": 98,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0008",
+    "date": "2025-08-23",
+    "description": "Pgto QR Code Pix",
     "history": "Programa de Edição",
-    "customerId": "10.573.521/0001-96",
+    "customerId": "10.573.521/0001-91",
     "customer": "MERCADO PAGO IN…",
     "typeId": 3,
     "type": "Debito",
@@ -468,11 +558,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0008",
+    "id": "tx-0009",
     "date": "2025-08-23",
     "description": "Pgto QR Code Pix",
     "history": "Sistemas Contratados",
-    "customerId": "10.573.521/0001-97",
+    "customerId": "10.573.521/0001-91",
     "customer": "MERCADO PAGO IN…",
     "typeId": 2,
     "type": "Debito",
@@ -481,11 +571,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0009",
+    "id": "tx-0010",
     "date": "2025-08-23",
     "description": "Pgto QR Code Pix",
     "history": "Sistemas Contratados",
-    "customerId": "10.573.521/0001-98",
+    "customerId": "10.573.521/0001-91",
     "customer": "MERCADO PAGO IN…",
     "typeId": 2,
     "type": "Debito",
@@ -494,11 +584,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0010",
+    "id": "tx-0011",
     "date": "2025-08-23",
     "description": "Pgto QR Code Pix",
     "history": "Sistemas Contratados",
-    "customerId": "10.573.521/0001-99",
+    "customerId": "10.573.521/0001-91",
     "customer": "MERCADO PAGO IN…",
     "typeId": 2,
     "type": "Debito",
@@ -507,7 +597,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0011",
+    "id": "tx-0012",
     "date": "2025-08-25",
     "description": "Transf Pix recebida",
     "history": "Transferencia entre contas",
@@ -520,7 +610,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0012",
+    "id": "tx-0013",
     "date": "2025-08-26",
     "description": "Transf Pix recebida",
     "history": "Mensalidade",
@@ -533,7 +623,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0013",
+    "id": "tx-0014",
     "date": "2025-08-26",
     "description": "Pgto QR Code Pix",
     "history": "Lanches para colaboradores",
@@ -546,7 +636,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0014",
+    "id": "tx-0015",
     "date": "2025-08-26",
     "description": "Transf Pix recebida",
     "history": "Transferencia entre contas",
@@ -559,7 +649,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0015",
+    "id": "tx-0016",
     "date": "2025-08-27",
     "description": "Pgto QR Code Pix",
     "history": "Coador de café",
@@ -572,7 +662,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0016",
+    "id": "tx-0017",
     "date": "2025-08-27",
     "description": "Pgto QR Code Pix",
     "history": "Copos descartaveis",
@@ -581,11 +671,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "typeId": 2,
     "type": "Debito",
     "amount": 4.9,
-    "accountId": 74,
+    "accountId": 102,
     "bank": "Cora"
   },
   {
-    "id": "tx-0017",
+    "id": "tx-0018",
     "date": "2025-08-27",
     "description": "Pgto QR Code Pix",
     "history": "Lanches para colaboradores",
@@ -598,7 +688,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0018",
+    "id": "tx-0019",
     "date": "2025-08-27",
     "description": "Pgto QR Code Pix",
     "history": "Lanches para colaboradores",
@@ -611,7 +701,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0019",
+    "id": "tx-0020",
     "date": "2025-08-27",
     "description": "Transf Pix enviada",
     "history": "Pró-labore",
@@ -624,7 +714,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0020",
+    "id": "tx-0021",
     "date": "2025-08-28",
     "description": "Transf Pix recebida",
     "history": "Mensalidade",
@@ -637,11 +727,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0021",
+    "id": "tx-0022",
     "date": "2025-08-29",
     "description": "Compra no débito",
     "history": "Combustiveis",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "POSTO CATATAU VII",
     "typeId": 2,
     "type": "Debito",
@@ -650,11 +740,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0022",
+    "id": "tx-0023",
     "date": "2025-08-29",
     "description": "Compra no débito",
     "history": "Cabo tipo-c",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "DENNYSCELL UBAJ…",
     "typeId": 2,
     "type": "Debito",
@@ -663,11 +753,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0023",
+    "id": "tx-0024",
     "date": "2025-08-29",
     "description": "Compra no débito",
     "history": "Caixas para entrega final ao cliente",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "AliceArtefatosEm",
     "typeId": 2,
     "type": "Debito",
@@ -676,11 +766,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0024",
+    "id": "tx-0025",
     "date": "2025-08-30",
     "description": "Compra no débito",
     "history": "Impressão de Fotos",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "SMILICOPY GRAFIVA",
     "typeId": 3,
     "type": "Debito",
@@ -689,11 +779,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0025",
+    "id": "tx-0026",
     "date": "2025-08-30",
     "description": "Compra no débito",
     "history": "3 Pen Drives para entrega ao cliente",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "AMERICANAS SA",
     "typeId": 3,
     "type": "Debito",
@@ -702,11 +792,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0026",
+    "id": "tx-0027",
     "date": "2025-08-30",
     "description": "Compra no débito",
     "history": "Chocolate para entrega final ao cliente",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "CACAU SHOW",
     "typeId": 2,
     "type": "Debito",
@@ -715,11 +805,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0027",
+    "id": "tx-0028",
     "date": "2025-08-30",
     "description": "Compra no débito",
     "history": "Porta-retratos para entrega ao cliente",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "MP*DAFFCE",
     "typeId": 2,
     "type": "Debito",
@@ -728,7 +818,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0028",
+    "id": "tx-0029",
     "date": "2025-09-01",
     "description": "Transf Pix enviada",
     "history": "Pró-labore",
@@ -741,7 +831,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0029",
+    "id": "tx-0030",
     "date": "2025-09-01",
     "description": "Transf Pix enviada",
     "history": "Salários",
@@ -754,7 +844,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0030",
+    "id": "tx-0031",
     "date": "2025-09-01",
     "description": "Transf Pix enviada",
     "history": "Salários",
@@ -767,11 +857,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0031",
+    "id": "tx-0032",
     "date": "2025-09-01",
     "description": "Compra no débito",
     "history": "Lanches para colaboradores",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "LIPI SUPERMERCADO",
     "typeId": 2,
     "type": "Debito",
@@ -780,7 +870,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0032",
+    "id": "tx-0033",
     "date": "2025-09-01",
     "description": "Pgto QR Code Pix",
     "history": "MEI atrasado",
@@ -793,7 +883,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0033",
+    "id": "tx-0034",
     "date": "2025-09-01",
     "description": "Transf Pix enviada",
     "history": "Pró-labore",
@@ -806,7 +896,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0034",
+    "id": "tx-0035",
     "date": "2025-09-01",
     "description": "Transf Pix recebida",
     "history": "Esporádico",
@@ -819,7 +909,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0035",
+    "id": "tx-0036",
     "date": "2025-09-01",
     "description": "Transf Pix recebida",
     "history": "Esporádico",
@@ -832,7 +922,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0036",
+    "id": "tx-0037",
     "date": "2025-09-02",
     "description": "Transf Pix enviada",
     "history": "Salários",
@@ -845,7 +935,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0037",
+    "id": "tx-0038",
     "date": "2025-09-02",
     "description": "Transf Pix recebida",
     "history": "Esporádico",
@@ -858,7 +948,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0038",
+    "id": "tx-0039",
     "date": "2025-09-02",
     "description": "Pgto QR Code Pix",
     "history": "MEI mês atual",
@@ -871,7 +961,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0039",
+    "id": "tx-0040",
     "date": "2025-09-03",
     "description": "Transf Pix enviada",
     "history": "Locação de câmera",
@@ -884,11 +974,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0040",
+    "id": "tx-0041",
     "date": "2025-09-05",
     "description": "Compra no débito",
     "history": "Lanches para colaboradores",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "MERCADINHO BOM…",
     "typeId": 2,
     "type": "Debito",
@@ -897,11 +987,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0041",
+    "id": "tx-0042",
     "date": "2025-09-07",
     "description": "Compra no débito",
     "history": "Combustiveis",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "POSTO CATATAU II",
     "typeId": 2,
     "type": "Debito",
@@ -910,11 +1000,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0042",
+    "id": "tx-0043",
     "date": "2025-09-08",
     "description": "Compra no débito",
     "history": "Pró-labore",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "MP*CHEFDOACAI",
     "typeId": 3,
     "type": "Debito",
@@ -923,7 +1013,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0043",
+    "id": "tx-0044",
     "date": "2025-09-08",
     "description": "Transf Pix enviada",
     "history": "Comissões",
@@ -936,7 +1026,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0044",
+    "id": "tx-0045",
     "date": "2025-09-08",
     "description": "Transf Pix enviada",
     "history": "Comissões",
@@ -949,7 +1039,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0045",
+    "id": "tx-0046",
     "date": "2025-09-08",
     "description": "Transf Pix enviada",
     "history": "Lanches para colaboradores",
@@ -959,19 +1049,6 @@ export const mockTransactions: MockTransactionsType[] = [
     "type": "Debito",
     "amount": 8.0,
     "accountId": 65,
-    "bank": "Cora"
-  },
-  {
-    "id": "tx-0046",
-    "date": "2025-09-10",
-    "description": "Transf Pix enviada",
-    "history": "Transferencia entre contas",
-    "customerId": "41.655.312/0001-10",
-    "customer": "41 655 312 JULIO C…",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 30.0,
-    "accountId": 104,
     "bank": "Cora"
   },
   {
@@ -1002,6 +1079,19 @@ export const mockTransactions: MockTransactionsType[] = [
   },
   {
     "id": "tx-0049",
+    "date": "2025-09-10",
+    "description": "Transf Pix enviada",
+    "history": "Transferencia entre contas",
+    "customerId": "41.655.312/0001-10",
+    "customer": "41 655 312 JULIO C…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 30.0,
+    "accountId": 104,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0050",
     "date": "2025-09-11",
     "description": "Transf Pix enviada",
     "history": "Transferencia entre contas",
@@ -1014,7 +1104,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Cora"
   },
   {
-    "id": "tx-0050",
+    "id": "tx-0051",
     "date": "2025-08-25",
     "description": "Cobrança recebida",
     "history": "Mensalidade",
@@ -1027,7 +1117,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0051",
+    "id": "tx-0052",
     "date": "2025-08-25",
     "description": "Taxa de boleto",
     "history": "Tarifas de boletos",
@@ -1040,7 +1130,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0052",
+    "id": "tx-0053",
     "date": "2025-08-25",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -1053,7 +1143,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0053",
+    "id": "tx-0054",
     "date": "2025-08-25",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -1066,7 +1156,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0054",
+    "id": "tx-0055",
     "date": "2025-08-26",
     "description": "Cobrança recebida",
     "history": "Mensalidades",
@@ -1079,7 +1169,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0055",
+    "id": "tx-0056",
     "date": "2025-08-26",
     "description": "Taxa de boleto",
     "history": "Tarifas de boletos",
@@ -1092,7 +1182,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0056",
+    "id": "tx-0057",
     "date": "2025-08-26",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -1105,7 +1195,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0057",
+    "id": "tx-0058",
     "date": "2025-08-26",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -1118,7 +1208,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0058",
+    "id": "tx-0059",
     "date": "2025-09-15",
     "description": "Cobrança recebida",
     "history": "Mensalidade",
@@ -1131,7 +1221,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0059",
+    "id": "tx-0060",
     "date": "2025-09-15",
     "description": "Taxa de boleto",
     "history": "Tarifas de boletos",
@@ -1144,7 +1234,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0060",
+    "id": "tx-0061",
     "date": "2025-09-15",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -1157,7 +1247,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0061",
+    "id": "tx-0062",
     "date": "2025-09-17",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -1170,37 +1260,102 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0062",
-    "date": "2025-09-10",
-    "description": "PIX RECEBIDO",
-    "history": "Transferencia entre contas",
-    "customerId": "41655312000110.0",
-    "customer": "41.655.312 JULIO CESAR RODRIGUES PIRES",
-    "typeId": 1,
-    "type": "Credito",
-    "amount": 30.0,
-    "accountId": 106,
-    "bank": "Santander"
-  },
-  {
     "id": "tx-0063",
-    "date": "2025-09-10",
-    "description": "PIX RECEBIDO",
-    "history": "Transferencia entre contas",
-    "customerId": "41655312000110.0",
-    "customer": "41.655.312 JULIO CESAR RODRIGUES PIRES",
+    "date": "2025-09-23",
+    "description": "Cobrança recebida",
+    "history": "Mensalidade",
+    "customerId": "05.356.440/0001-08",
+    "customer": "J B Ferreira de Sá",
     "typeId": 1,
     "type": "Credito",
-    "amount": 30.0,
-    "accountId": 106,
-    "bank": "Santander"
+    "amount": 2500.0,
+    "accountId": 3,
+    "bank": "Asaas"
   },
   {
     "id": "tx-0064",
+    "date": "2025-09-23",
+    "description": "Taxa do Pix",
+    "history": "Tarifas de boletos",
+    "customerId": "05.356.440/0001-08",
+    "customer": "J B Ferreira de Sá",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 0.99,
+    "accountId": 92,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0065",
+    "date": "2025-09-23",
+    "description": "Taxa de mensageria",
+    "history": "Tarifas de mensageria",
+    "customerId": "05.356.440/0001-08",
+    "customer": "J B Ferreira de Sá",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 0.99,
+    "accountId": 81,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0066",
+    "date": "2025-09-24",
+    "description": "Transação via Pix",
+    "history": "Transferencia entre contas",
+    "customerId": "41.655.312/0001-10",
+    "customer": "JULIO CESAR RODRIGUES PIRES M",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 2498.02,
+    "accountId": 104,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0067",
+    "date": "2025-09-24",
+    "description": "Cobrança recebida",
+    "history": "Mensalidade",
+    "customerId": "",
+    "customer": "Diamond",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 2300.0,
+    "accountId": 3,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0068",
+    "date": "2025-09-24",
+    "description": "Taxa do Pix",
+    "history": "Tarifas de boletos",
+    "customerId": "",
+    "customer": "Diamond",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 0.99,
+    "accountId": 92,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0069",
+    "date": "2025-09-24",
+    "description": "Taxa de mensageria",
+    "history": "Tarifas de mensageria",
+    "customerId": "",
+    "customer": "Diamond",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 0.99,
+    "accountId": 81,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0070",
     "date": "2025-09-10",
     "description": "PIX RECEBIDO",
-    "history": "Transferencia entre contas",
-    "customerId": "41655312000110.0",
+    "history": "Transferencias entre contas",
+    "customerId": "41.655.312/0001-10",
     "customer": "41.655.312 JULIO CESAR RODRIGUES PIRES",
     "typeId": 1,
     "type": "Credito",
@@ -1209,11 +1364,37 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0065",
+    "id": "tx-0071",
+    "date": "2025-09-10",
+    "description": "PIX RECEBIDO",
+    "history": "Transferencias entre contas",
+    "customerId": "41.655.312/0001-10",
+    "customer": "41.655.312 JULIO CESAR RODRIGUES PIRES",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 30.0,
+    "accountId": 106,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0072",
+    "date": "2025-09-10",
+    "description": "PIX RECEBIDO",
+    "history": "Transferencias entre contas",
+    "customerId": "41.655.312/0001-10",
+    "customer": "41.655.312 JULIO CESAR RODRIGUES PIRES",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 30.0,
+    "accountId": 106,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0073",
     "date": "2025-09-11",
     "description": "COMPRA CARTAO DEB MC 11/09",
     "history": "Combustivel",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "POSTO CATATAU VIII",
     "typeId": 2,
     "type": "Debito",
@@ -1222,11 +1403,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0066",
+    "id": "tx-0074",
     "date": "2025-09-11",
     "description": "PIX RECEBIDO",
-    "history": "Transferencia entre contas",
-    "customerId": "41655312000110.0",
+    "history": "Transferencias entre contas",
+    "customerId": "41.655.312/0001-10",
     "customer": "41.655.312 JULIO CESAR RODRIGUES PIRES",
     "typeId": 1,
     "type": "Credito",
@@ -1235,11 +1416,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0067",
+    "id": "tx-0075",
     "date": "2025-09-12",
     "description": "COMPRA CARTAO DEB MC 12/09",
     "history": "Lanches para colaboradores",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "MEGA BOLO",
     "typeId": 2,
     "type": "Debito",
@@ -1248,11 +1429,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0068",
+    "id": "tx-0076",
     "date": "2025-09-15",
     "description": "COMPRA CARTAO DEB MC 15/09",
     "history": "Lanches para colaboradores",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "FRANCISCO JOSE DE S",
     "typeId": 2,
     "type": "Debito",
@@ -1261,11 +1442,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0069",
+    "id": "tx-0077",
     "date": "2025-09-15",
     "description": "PIX ENVIADO",
     "history": "Pilhas",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "AMAZON COM BR",
     "typeId": 2,
     "type": "Debito",
@@ -1274,11 +1455,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0070",
+    "id": "tx-0078",
     "date": "2025-09-15",
     "description": "COMPRA CARTAO DEB MC 15/09",
     "history": "Combustivel",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "POSTO CATATAU",
     "typeId": 2,
     "type": "Debito",
@@ -1287,11 +1468,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0071",
+    "id": "tx-0079",
     "date": "2025-09-15",
     "description": "PIX RECEBIDO 06780700320",
     "history": "Esporadico",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "JOSE INACIO SOUSA ALBUQUERQUE",
     "typeId": 1,
     "type": "Credito",
@@ -1300,11 +1481,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0072",
+    "id": "tx-0080",
     "date": "2025-09-17",
     "description": "COMPRA CARTAO DEB MC 17/09",
     "history": "Copos descartaveis",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "MP .TEIXEIRASACOL",
     "typeId": 2,
     "type": "Debito",
@@ -1313,11 +1494,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0073",
+    "id": "tx-0081",
     "date": "2025-09-17",
     "description": "COMPRA CARTAO DEB MC 17/09",
     "history": "Lanches para colaboradores",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "LIPI SUPERMERCADO",
     "typeId": 2,
     "type": "Debito",
@@ -1326,11 +1507,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0074",
+    "id": "tx-0082",
     "date": "2025-09-17",
     "description": "PIX RECEBIDO 41655312000110",
-    "history": "Transferencia entre contas",
-    "customerId": "41655312000110.0",
+    "history": "Transferencias entre contas",
+    "customerId": "41.655.312/0001-10",
     "customer": "41.655.312 JULIO CESAR RODRIGUES PIRES",
     "typeId": 1,
     "type": "Credito",
@@ -1339,11 +1520,11 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0075",
+    "id": "tx-0083",
     "date": "2025-09-18",
     "description": "COMPRA CARTAO DEB MC 18/09",
     "history": "Lanches para colaboradores",
-    "customerId": "nan",
+    "customerId": "",
     "customer": "R G MOREIRA SOUZA C",
     "typeId": 2,
     "type": "Debito",
@@ -1352,16 +1533,172 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0076",
+    "id": "tx-0084",
     "date": "2025-09-19",
     "description": "PIX RECEBIDO",
     "history": "Esporadico",
-    "customerId": "99256177587.0",
+    "customerId": "99256177587",
     "customer": "DANILA C M CERQUEIRA",
     "typeId": 1,
     "type": "Credito",
     "amount": 1000.0,
     "accountId": 2,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0085",
+    "date": "2025-09-22",
+    "description": "PAGAMENTO DE BOLETO",
+    "history": "BPO Ficeiro",
+    "customerId": "13.438.336/0001-82",
+    "customer": "ISRAEL FROTA ASSESSORIA",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 300.0,
+    "accountId": 24,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0086",
+    "date": "2025-09-22",
+    "description": "PAGAMENTO DARF EM CANAIS INTERNET",
+    "history": "MEI atual e mês atrasado",
+    "customerId": "00.394.460/0058-87",
+    "customer": "SIMPLES NACIONAL",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 182.57,
+    "accountId": 52,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0087",
+    "date": "2025-09-22",
+    "description": "PIX ENVIADO",
+    "history": "Gaveteiros",
+    "customerId": "10.573.521/0001-91",
+    "customer": "MERCADO PAGO INSTITUICAO",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 66.93,
+    "accountId": 77,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0088",
+    "date": "2025-09-22",
+    "description": "PIX ENVIADO",
+    "history": "Ar Condicionado",
+    "customerId": "10.573.521/0001-91",
+    "customer": "MERCADO PAGO INSTITUICAO",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 291.83,
+    "accountId": 73,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0089",
+    "date": "2025-09-22",
+    "description": "PIX ENVIADO",
+    "history": "Tripé",
+    "customerId": "10.573.521/0001-91",
+    "customer": "MERCADO PAGO INSTITUICAO",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 49.44,
+    "accountId": 73,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0090",
+    "date": "2025-09-22",
+    "description": "PIX ENVIADO",
+    "history": "Trieinamento",
+    "customerId": "10.573.521/0001-91",
+    "customer": "MERCADO PAGO INSTITUICAO",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 149.7,
+    "accountId": 98,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0091",
+    "date": "2025-09-22",
+    "description": "PIX ENVIADO",
+    "history": "Trieinamento",
+    "customerId": "10.573.521/0001-91",
+    "customer": "MERCADO PAGO INSTITUICAO",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 149.7,
+    "accountId": 98,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0092",
+    "date": "2025-09-22",
+    "description": "PIX ENVIADO",
+    "history": "Programa de Edição",
+    "customerId": "10.573.521/0001-91",
+    "customer": "MERCADO PAGO INSTITUICAO",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 95.0,
+    "accountId": 25,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0093",
+    "date": "2025-09-22",
+    "description": "PIX ENVIADO",
+    "history": "Tarifas de cartão",
+    "customerId": "10.573.521/0001-91",
+    "customer": "MERCADO PAGO INSTITUICAO",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 20.94,
+    "accountId": 94,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0094",
+    "date": "2025-09-22",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "07.256.867/0016-38",
+    "customer": "ARES MOTOS",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 4400.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0095",
+    "date": "2025-09-24",
+    "description": "PIX ENVIADO",
+    "history": "Internet",
+    "customerId": "04.601.397/0001-28",
+    "customer": "BRISANET",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 86.92,
+    "accountId": 57,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0096",
+    "date": "2025-09-24",
+    "description": "PIX RECEBIDO",
+    "history": "",
+    "customerId": "41.655.312/0001-10",
+    "customer": "41 655 312 JULIO CESAR RO",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 2498.02,
+    "accountId": 106,
     "bank": "Santander"
   }
 ];
@@ -1381,55 +1718,20 @@ export const chartAccounts: ChartAccountsType[] = [
     { accountId: 106, categories: "Transferências", subordinate: "" }
   ] },
   { id: 2, type: "Despesas", subcategories: [
-    { accountId: 1, categories: "Adiantamento de Salário", subordinate:	"Despesas Com Colaboradores" },
+    { accountId: 30, categories: "Despesas Administrativas", subordinate: "" },
     { accountId: 6, categories:	"Agua", subordinate: "Despesas Administrativas" },
     { accountId: 7, categories: "Alugueis", subordinate: "Despesas Administrativas" },
-    { accountId: 8,	categories: "Aplicações", subordinate: "Investimentos" },
-    { accountId: 9, categories:	"Ativo Imobilizado", subordinate: "" },
-    { accountId: 10, categories: "Beneficios Não Obrigatorios", subordinate: "Despesas Com Colaboradores" },
-    { accountId: 12, categories: "Bonus por Metas", subordinate: "Despesas Com Colaboradores" },
-    { accountId: 13, categories: "Brindes", subordinate: "Eventos e Confraternizações" },
-    { accountId: 14, categories: "Comissão dos Colaboradores", subordinate: "Despesas Com Colaboradores" },
-    { accountId: 17, categories: "Bolsa Estágio", subordinate: "Despesas Com Colaboradores" },
-    { accountId: 19, categories: "Folha de Pagamento", subordinate: "Despesas Com Colaboradores" },
-    { accountId: 20, categories: "Compras", subordinate: "" },
     { accountId: 21, categories: "Compras Esporádicas", subordinate: "Despesas Administrativas" },
-    { accountId: 22, categories: "Confraternizações", subordinate: "Eventos e Confraternizações" },
     { accountId: 23, categories: "Construções/Reformas", subordinate: "Despesas Administrativas" },
     { accountId: 24, categories: "Consultorias", subordinate: "Despesas Administrativas" },
-    { accountId: 27, categories: "DAS Simples Nacional", subordinate: "Impostos Mensais e Trimestrais" },
-    { accountId: 29, categories: "Decimo Terceiro Salario", subordinate: "Despesas Com Colaboradores" },
-    { accountId: 30, categories: "Despesas Administrativas", subordinate: "" },
     { accountId: 31, categories: "Despesas Com Clientes", subordinate: "Despesas Administrativas" },
-    { accountId: 32, categories: "Despesas Com Colaboradores", subordinate: "" },
     { accountId: 33, categories: "Despesas Com Veiculos", subordinate: "Despesas Administrativas" },
     { accountId: 34, categories: "Despesas Com Viagens e Hospedagens", subordinate: "Despesas Administrativas" },
-    { accountId: 35, categories: "Despesas de Estágio", subordinate: "Despesas Com Colaboradores" },
-    { accountId: 36, categories: "Despesas Eventuais", subordinate: "" },
-    { accountId: 37, categories: "Despesas Operacionais", subordinate: "" },
-    { accountId: 38, categories: "Devoluções", subordinate: "Outras Despesas" },
-    { accountId: 39, categories: "Emprestimos", subordinate: "Emprestimos e Financiamentos" },
-    { accountId: 40, categories: "Emprestimos e Financiamentos", subordinate: "" },
-    { accountId: 41, categories: "Emprestimos Internos", subordinate: "Outras Despesas" },
-    { accountId: 42, categories: "Encargos Bancários", subordinate: "" },
     { accountId: 43, categories: "Energia", subordinate: "Despesas Administrativas" },
     { accountId: 44, categories: "Equip. Uso e Consumo", subordinate: "Despesas Administrativas" },
-    { accountId: 45, categories: "Eventos e Confraternizações", subordinate: "" },
-    { accountId: 48, categories: "Férias", subordinate: "Despesas Com Colaboradores" },
-    { accountId: 52, categories: "Impostos", subordinate: "Impostos Mensais e Trimestrais" },
-    { accountId: 53, categories: "Impostos Mensais e Trimestrais", subordinate: "" },
-    { accountId: 56, categories: "Integralização de Capital", subordinate: "Investimentos" },
     { accountId: 57, categories: "Internet", subordinate: "Despesas Administrativas" },
-    { accountId: 58, categories: "Investimentos", subordinate: "" },
-    { accountId: 59, categories: "IPTU", subordinate: "Impostos Mensais e Trimestrais" },
     { accountId: 60, categories: "IPVA", subordinate: "Despesas Administrativas" },
-    { accountId: 61, categories: "Jantares/Almoços Em Confraternizações", subordinate: "Eventos e Confraternizações" },
-    { accountId: 62, categories: "Juros de Emprestimos", subordinate: "Emprestimos e Financiamentos" },
     { accountId: 63, categories: "Juros e Multas", subordinate: "Despesas Administrativas" },
-    { accountId: 64, categories: "Juros Utiliz Ch Especial", subordinate: "Encargos Bancários" },
-    { accountId: 65, categories: "Lanches e Refeições", subordinate: "Despesas Com Colaboradores" },
-    { accountId: 66, categories: "Lembranças e Troféus", subordinate: "Eventos e Confraternizações" },
-    { accountId: 67, categories: "Manutençao da Conta", subordinate: "Encargos Bancários" },
     { accountId: 68, categories: "Manutenção de Equipamentos", subordinate: "Despesas Administrativas" },
     { accountId: 69, categories: "Manutenção de Informatica", subordinate: "Despesas Administrativas" },
     { accountId: 70, categories: "Manutenção de Veiculos", subordinate: "Despesas Administrativas" },
@@ -1440,35 +1742,70 @@ export const chartAccounts: ChartAccountsType[] = [
     { accountId: 75, categories: "Material de Escritório", subordinate: "Despesas Administrativas" },
     { accountId: 76, categories: "Material Gráfico", subordinate: "Despesas Administrativas" },
     { accountId: 77, categories: "Moveis e Utensilios", subordinate: "Despesas Administrativas" },
+    { accountId: 86, categories: "Seguros", subordinate: "Despesas Administrativas" },
+    { accountId: 88, categories: "Serviços Terceirizados", subordinate: "Despesas Administrativas" },
+    { accountId: 90, categories: "Sistemas Contratados", subordinate: "Despesas Administrativas" },
+    { accountId: 95, categories: "Telefonia e Planos", subordinate: "Despesas Administrativas" },
+    { accountId: 96, categories: "Terrenos e Imoveis", subordinate: "Despesas Administrativas" },
+    { accountId: 98, categories: "Treinamentos e Cursos", subordinate: "Despesas Administrativas" },
+    { accountId: 8,	categories: "Aplicações", subordinate: "Investimentos" },
+    { accountId: 9, categories:	"Ativo Imobilizado", subordinate: "" },
+    { accountId: 1, categories: "Adiantamento de Salário", subordinate:	"Despesas Com Colaboradores" },
+    { accountId: 10, categories: "Beneficios Não Obrigatorios", subordinate: "Despesas Com Colaboradores" },
+    { accountId: 12, categories: "Bonus por Metas", subordinate: "Despesas Com Colaboradores" },
+    { accountId: 13, categories: "Brindes", subordinate: "Eventos e Confraternizações" },
+    { accountId: 14, categories: "Comissão dos Colaboradores", subordinate: "Despesas Com Colaboradores" },
+    { accountId: 17, categories: "Bolsa Estágio", subordinate: "Despesas Com Colaboradores" },
+    { accountId: 19, categories: "Folha de Pagamento", subordinate: "Despesas Com Colaboradores" },
+    { accountId: 20, categories: "Compras", subordinate: "" },
+    { accountId: 22, categories: "Confraternizações", subordinate: "Eventos e Confraternizações" },
+    { accountId: 27, categories: "DAS Simples Nacional", subordinate: "Impostos Mensais e Trimestrais" },
+    { accountId: 29, categories: "Decimo Terceiro Salario", subordinate: "Despesas Com Colaboradores" },
+    { accountId: 32, categories: "Despesas Com Colaboradores", subordinate: "" },
+    { accountId: 35, categories: "Despesas de Estágio", subordinate: "Despesas Com Colaboradores" },
+    { accountId: 36, categories: "Despesas Eventuais", subordinate: "" },
+    { accountId: 37, categories: "Despesas Operacionais", subordinate: "" },
+    { accountId: 38, categories: "Devoluções", subordinate: "Outras Despesas" },
+    { accountId: 39, categories: "Emprestimos", subordinate: "Emprestimos e Ficiamentos" },
+    { accountId: 40, categories: "Emprestimos e Ficiamentos", subordinate: "" },
+    { accountId: 41, categories: "Emprestimos Internos", subordinate: "Outras Despesas" },
+    { accountId: 42, categories: "Encargos Bancários", subordinate: "" },
+    { accountId: 45, categories: "Eventos e Confraternizações", subordinate: "" },
+    { accountId: 48, categories: "Férias", subordinate: "Despesas Com Colaboradores" },
+    { accountId: 52, categories: "Impostos", subordinate: "Impostos Mensais e Trimestrais" },
+    { accountId: 53, categories: "Impostos Mensais e Trimestrais", subordinate: "" },
+    { accountId: 56, categories: "Integralização de Capital", subordinate: "Investimentos" },
+    { accountId: 58, categories: "Investimentos", subordinate: "" },
+    { accountId: 59, categories: "IPTU", subordinate: "Impostos Mensais e Trimestrais" },
+    { accountId: 61, categories: "Jantares/Almoços Em Confraternizações", subordinate: "Eventos e Confraternizações" },
+    { accountId: 62, categories: "Juros de Emprestimos", subordinate: "Emprestimos e Ficiamentos" },
+    { accountId: 64, categories: "Juros Utiliz Ch Especial", subordinate: "Encargos Bancários" },
+    { accountId: 65, categories: "Lanches e Refeições", subordinate: "Despesas Com Colaboradores" },
+    { accountId: 66, categories: "Lembranças e Troféus", subordinate: "Eventos e Confraternizações" },
+    { accountId: 67, categories: "Manutençao da Conta", subordinate: "Encargos Bancários" },
     { accountId: 79, categories: "Outras Despesas", subordinate: "" },
     { accountId: 80, categories: "Outras Despesas", subordinate: "Despesas Eventuais" },
     { accountId: 81, categories: "Outras Tarifas", subordinate: "Encargos Bancários" },
     { accountId: 84, categories: "Rescisões", subordinate: "Despesas Com Colaboradores" },
-    { accountId: 86, categories: "Seguros", subordinate: "Despesas Administrativas" },
     { accountId: 87, categories: "Serviços Extraordinários", subordinate: "Eventos e Confraternizações" },
-    { accountId: 88, categories: "Serviços Terceirizados", subordinate: "Despesas Administrativas" },
     { accountId: 89, categories: "Simples Nacional", subordinate: "Impostos Mensais e Trimestrais" },
-    { accountId: 90, categories: "Sistemas Contratados", subordinate: "Despesas Administrativas" },
     { accountId: 91, categories: "Tarifas Bancárias", subordinate: "Encargos Bancários" },
     { accountId: 92, categories: "Tarifas de Boletos", subordinate: "Encargos Bancários" },
     { accountId: 93, categories: "Tarifas Pix", subordinate: "Encargos Bancários" },
     { accountId: 94, categories: "Tarifas Utiliz. Ch. Esp", subordinate: "Encargos Bancários" },
-    { accountId: 95, categories: "Telefonia e Planos", subordinate: "Despesas Administrativas" },
-    { accountId: 96, categories: "Terrenos e Imoveis", subordinate: "Despesas Administrativas" },
     { accountId: 97, categories: "Transferencias", subordinate: "" },
-    { accountId: 98, categories: "Treinamentos e Cursos", subordinate: "Despesas Administrativas" },
     { accountId: 99, categories: "Uniformes e Crachás", subordinate: "Despesas Com Colaboradores" },
     { accountId: 100, categories: "Vale Transportes", subordinate: "Despesas Com Colaboradores" },
     { accountId: 102, categories: "Copa e Cozinha", subordinate: "Despesas com Colaboradores" },
     { accountId: 104, categories: "Transferências", subordinate: "" }
   ] },
   { id: 3, type: "Custos", subcategories: [
+    { accountId: 26, categories: "Custos", subordinate: "" },
     { accountId: 11, categories: "Benefícios", subordinate: "Custo" },
     { accountId: 15, categories: "Comissões", subordinate: "Custo" },
     { accountId: 16, categories: "Bolsa Estágio", subordinate: "Custo" },
     { accountId: 18, categories: "Folha de Pagamento", subordinate: "Custo" },
     { accountId: 25, categories: "Custo com Sistemas", subordinate: "Custo" },
-    { accountId: 26, categories: "Custos", subordinate: "" },
     { accountId: 28, categories: "Décimo Terceiro", subordinate: "Custo" },
     { accountId: 101, categories: "Entregas ao Cliente", subordinate: "Custo" },
     { accountId: 46, categories: "Exames ASO", subordinate: "Custo" },
@@ -1478,7 +1815,7 @@ export const chartAccounts: ChartAccountsType[] = [
     { accountId: 51, categories: "Horas Extras", subordinate: "Custo" },
     { accountId: 54, categories: "INSS", subordinate: "Custo" },
     { accountId: 55, categories: "INSS/IRRF", subordinate: "Custo" },
-    { accountId: 103, categories: "Pró-labore", subordinate: "Custo" },
     { accountId: 85, categories: "Rescisões", subordinate: "Custo" },
+    { accountId: 103, categories: "Pró-labore", subordinate: "Custo" },
   ] },
 ];

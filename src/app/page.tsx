@@ -28,6 +28,7 @@ import { TableTransaction } from "./_components/overview/TableTransaction";
 import { KpiCard } from "./_components/card/KpiCard";
 import { CategoriesTreemap } from "./_components/tree-map/TreeMap";
 import { DetailsReport } from "./_components/report/DetailsReport";
+import { FixedExpenses } from "./_components/fixed-expense/FixedExpenses";
 
 export default function FinanceDashboardMockup() {
   const [query, setQuery] = useState("");
@@ -128,9 +129,10 @@ export default function FinanceDashboardMockup() {
       </div>
 
       <Tabs value={tab} onValueChange={setTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-2 sm:w-auto">
+        <TabsList className="grid w-full grid-cols-3 sm:w-auto">
           <TabsTrigger value="overview">Visão Geral</TabsTrigger>
           <TabsTrigger value="categories">Fluxo de Caixa</TabsTrigger>
+          <TabsTrigger value="controller">Controle</TabsTrigger>
         </TabsList>
 
         <TabsContent value="overview" className="space-y-4">
@@ -142,7 +144,7 @@ export default function FinanceDashboardMockup() {
 
           <TableTransaction
             query={query}
-            setQuery={setQuery}            
+            setQuery={setQuery}
             endDate={endDate}
             setEndDate={setEndDate}
             filter={filteredTx}
@@ -152,6 +154,10 @@ export default function FinanceDashboardMockup() {
         <TabsContent value="categories" className="space-y-4">
           <CategoriesTreemap />
           <DetailsReport />
+        </TabsContent>
+
+        <TabsContent value="controller" className="space-y-4">
+          <FixedExpenses />
         </TabsContent>
       </Tabs>
         

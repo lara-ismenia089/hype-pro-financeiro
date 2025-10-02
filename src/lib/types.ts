@@ -1,4 +1,5 @@
 export type MockCustomers = {
+	id: string;
 	cnpj: string;
 	companyName: string;
 	fantasyName: string;
@@ -6,30 +7,40 @@ export type MockCustomers = {
 	phone: string;
 	signedContract: string | null;
 	signedDate: string | null;
-	dueDate: string | null;
+	dueDate: string;
 	contractTime: string | null;
 	contractStatus: string;
 	monthlyFee: number;
 	terminationClause: string | null;
 	address: {
-		avenue: string;
 		street: string;
+		avenue: string;
+		number: number;
 		neighborhood: string;
-		number: string;
-		zipCode: string;
 		city: string;
 		state: string;
-		country: string;
 	}
 };
 
 export type MockFixedExpense = {
+	id: string;
   description: string;
   paymentMethod: string;
   amount: number;
   dueDate: string;
   observation: string;
-}
+	type: string;
+};
+
+export type MockCustomersVariables = {
+	id: string;
+	date: string;
+	customer: string;
+	event: string;
+	total: number;
+	paid: number;
+	open: number;
+};
 
 export type MockMonthlyType = {
 	month: string;
