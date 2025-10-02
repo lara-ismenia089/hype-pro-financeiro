@@ -215,7 +215,7 @@ export default function Customers() {
                         </CardTitle>
                         <Badge
                           variant={
-                            customer.contractStatus === "ativo"
+                            customer.contractStatus === "Ativo"
                               ? "default"
                               : customer.contractStatus === "vencido"
                               ? "destructive"
