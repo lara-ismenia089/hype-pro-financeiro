@@ -1,17 +1,27 @@
-"use client";
+'use client';
 
-import Image from "next/image";
+import { useMemo, useState } from "react";
+
 import { 
-  useMemo,
-  useState,
-} from "react";
+  User,
+  Mail,
+  Phone,
+  Building2,
+  DollarSign,
+  CalendarDays,
+} from "lucide-react";
+
+import { MainContainer } from "@/app/_components/container/MainContainer";
+import { FooterContainer } from "@/app/_components/footer/FooterContainer";
+import { FooterContent } from "@/app/_components/footer/FooterContent";
+import { Header } from "@/app/_components/header/Header";
+import { Badge } from "@/components/ui/badge";
 import { 
   Card,
   CardTitle,
   CardHeader,
   CardContent,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { 
   Select,
@@ -26,25 +36,9 @@ import {
   TabsTrigger,
   TabsContent,
 } from "@/components/ui/tabs";
-import { 
-  User,
-  Mail,
-  Phone,
-  Building2,
-  DollarSign,
-  CalendarDays,
-} from "lucide-react";
-import { 
-  mockCustomers,
-  mockCustomersVariables,
-} from "@/lib/mock";
-import { Header } from "@/app/_components/header/Header";
-import { MainContainer } from "@/app/_components/container/MainContainer";
-import { 
-  formatDate,
-  currencyBRL,
-} from "@/lib/utils";
-import { FooterContainer } from "@/app/_components/footer/FooterContainer";
+import { mockCustomers, mockCustomersVariables } from "@/lib/mock";
+import { formatDate, currencyBRL } from "@/lib/utils";
+
 
 export default function Customers() {
   const [search, setSearch] = useState("");
@@ -98,10 +92,6 @@ export default function Customers() {
       (acc, c) => acc + (c.total || 0),
       0
     );
-
-    // const activeCustomers = filteredCustomers.filter((c) =>
-    //   ["ativo", "em renovação", "pendente"].includes(c.contractStatus.toLocaleLowerCase())
-    // );
 
     const paid = mockCustomersVariables.reduce(
       (acc, c) => acc + (c.paid || 0),
@@ -398,12 +388,7 @@ export default function Customers() {
       </Tabs>
 
       <FooterContainer>
-        <div className="flex flex-col text-xs text-muted-foreground">
-          <p className="flex gap-2 py-1 font-semibold text-[14px]"><Building2 width={20} height={20} /> IF Consult LTDA</p>
-          <span className="flex gap-2"><Phone width={20} height={20} /> (88) 9205-8544</span>
-          <span className="flex gap-2"><Mail width={20} height={20} /> financeiro01@israelfrota.com.br</span>
-        </div>
-        <Image src={"/imagem.jpeg"} alt="Logo" width={50} height={50} />
+        <FooterContent />
       </FooterContainer>
     </MainContainer>
   );

@@ -1,39 +1,8 @@
-"use client";
+'use client';
 
-import {
-  Card,
-  CardTitle,
-  CardHeader,
-  CardContent,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
-import { 
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-} from "@/components/ui/popover";
-import {
-  useMemo,
-  useState,
-} from "react";
-import {
-  Wallet,
-  CalendarIcon,
-} from "lucide-react";
-import { 
-  formatDate,
-  currencyBRL,
-} from "@/lib/utils";
-import {
-  mockCustomers,
-  mockExpensesFixed,
-} from "@/lib/mock";
-import { MockFixedExpense } from "@/lib/types";
-import {
-  isAfter,
-  isBefore,
-} from "date-fns";
+import { useMemo, useState } from "react";
+
+import { isAfter, isBefore } from "date-fns";
 import {
   Bar,
   XAxis,
@@ -42,6 +11,25 @@ import {
   BarChart,
   CartesianGrid,
 } from "recharts";
+
+import { Wallet, CalendarIcon } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Card,
+  CardTitle,
+  CardHeader,
+  CardContent,
+} from "@/components/ui/card";
+import { 
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
+import { mockCustomers, mockExpensesFixed } from "@/lib/mock";
+import { MockFixedExpense } from "@/lib/types";
+import { formatDate, currencyBRL } from "@/lib/utils";
 
 export function FixedExpenses() {
   const [dateRange, setDateRange] = useState<{

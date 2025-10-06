@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
+
+import { ArrowUpRight, ArrowDownRight, Activity } from "lucide-react";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { mockTransactions } from "@/lib/mock";
 import { ReportGroup } from "@/lib/types";
 import { currencyBRL, buildReportArray } from "@/lib/utils";
-import { ArrowUpRight, ArrowDownRight, Activity } from "lucide-react";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
 
 const typeColors: Record<ReportGroup["type"], string> = {
   Receita: "text-emerald-700 dark:text-emerald-400",

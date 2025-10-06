@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+
 import { CardComponent } from "./CardComponent";
 
 type Variation = {

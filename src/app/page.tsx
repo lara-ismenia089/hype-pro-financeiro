@@ -1,34 +1,27 @@
 'use client';
 
-import Image from "next/image";
 import { useMemo, useState } from "react";
+
+import { TrendingUp, ArrowDownRight } from "lucide-react";
+
+import { KpiCard } from "@/app/_components/card/KpiCard";
+import { MainContainer } from "@/app/_components/container/MainContainer";
+import { FixedExpenses } from "@/app/_components/fixed-expense/FixedExpenses";
+import { FooterContainer } from "@/app/_components/footer/FooterContainer";
+import { FooterContent } from "@/app/_components/footer/FooterContent";
+import { Header } from "@/app/_components/header/Header";
+import { Overview } from "@/app/_components/overview/Overview";
+import { TableTransaction } from "@/app/_components/overview/TableTransaction";
+import { DetailsReport } from "@/app/_components/report/DetailsReport";
+import { CategoriesTreemap } from "@/app/_components/tree-map/TreeMap";
 import { 
   Tabs, 
   TabsList, 
   TabsTrigger, 
   TabsContent,
 } from "@/components/ui/tabs";
-import {
-  TrendingUp,
-  ArrowDownRight,
-  Phone,
-  Mail,
-  Building2
-} from "lucide-react";
-import { Header } from "@/app/_components/header/Header";
-import { MainContainer } from "./_components/container/MainContainer";
-import { FooterContainer } from "./_components/footer/FooterContainer";
+import { mockMonthly, mockTransactions } from "@/lib/mock";
 import { currencyBRL } from "@/lib/utils";
-import { 
-  mockMonthly,
-  mockTransactions,
-} from "@/lib/mock";
-import { Overview } from "./_components/overview/Overview";
-import { TableTransaction } from "./_components/overview/TableTransaction";
-import { KpiCard } from "./_components/card/KpiCard";
-import { CategoriesTreemap } from "./_components/tree-map/TreeMap";
-import { DetailsReport } from "./_components/report/DetailsReport";
-import { FixedExpenses } from "./_components/fixed-expense/FixedExpenses";
 
 export default function FinanceDashboardMockup() {
   const [query, setQuery] = useState("");
@@ -162,12 +155,7 @@ export default function FinanceDashboardMockup() {
       </Tabs>
         
       <FooterContainer>
-        <div className="flex flex-col text-xs text-muted-foreground">
-          <p className="flex gap-2 py-1 font-semibold text-[14px]"><Building2 width={20} height={20} /> IF Consult LTDA</p>
-          <span className="flex gap-2"><Phone width={20} height={20} /> (88) 9205-8544</span>
-          <span className="flex gap-2"><Mail width={20} height={20} /> financeiro01@israelfrota.com.br</span>
-        </div>
-        <Image src={"/imagem.jpeg"} alt="Logo" width={50} height={50} />
+        <FooterContent />
       </FooterContainer>
     </MainContainer>
   );

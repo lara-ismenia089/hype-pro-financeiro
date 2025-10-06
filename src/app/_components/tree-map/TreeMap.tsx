@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useMemo } from "react";
+
 import { Treemap, ResponsiveContainer, Tooltip } from "recharts";
 
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { mockTransactions } from "@/lib/mock";
 import { currencyBRL, getSubcategory } from "@/lib/utils";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 export function CategoriesTreemap() {
   const result = mockTransactions.filter(

@@ -1,14 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { MockMonthlyType } from "@/lib/types";
-import { 
-	Card,
-	CardTitle,
-	CardHeader,
-	CardContent,
-} from "@/components/ui/card";
+
 import { 
 	Bar,
 	XAxis,
@@ -19,7 +12,17 @@ import {
 	CartesianGrid,
 	ResponsiveContainer,
 } from "recharts";
+
 import { ChartColumn } from "lucide-react";
+
+import { Badge } from "@/components/ui/badge";
+import { 
+	Card,
+	CardTitle,
+	CardHeader,
+	CardContent,
+} from "@/components/ui/card";
+import { MockMonthlyType } from "@/lib/types";
 import { currencyBRL } from "@/lib/utils";
 
 export function Overview({ mockMonthly, fixedAvg, eventAvg }: { mockMonthly: MockMonthlyType[], fixedAvg: number, eventAvg: number }) {

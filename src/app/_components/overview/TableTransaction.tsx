@@ -1,9 +1,15 @@
-import {
-  Card,
-  CardTitle,
-  CardHeader,
-  CardContent,
-} from "@/components/ui/card";
+import React, { useState } from "react";
+
+import { format } from "date-fns";
+import { Tooltip } from "react-tooltip";
+
+import { 
+	Search,
+	ChevronDown,
+  CalendarIcon
+} from "lucide-react";
+
+import { Badge } from "@/components/ui/badge";
 import {
   Button
 } from "@/components/ui/button";
@@ -11,26 +17,23 @@ import {
   Calendar
 } from "@/components/ui/calendar";
 import {
+  Card,
+  CardTitle,
+  CardHeader,
+  CardContent,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { 
-	Search,
-	ChevronDown,
-  CalendarIcon
-} from "lucide-react";
-import { format } from "date-fns";
+import { MockTransactionsType } from "@/lib/types";
 import { 
 	formatDate,
 	currencyBRL,
   getSubcategory, 
 } from "@/lib/utils";
-import { Tooltip } from "react-tooltip";
-import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { MockTransactionsType } from "@/lib/types";
-import React, { useState } from "react";
 
 type TableTransactionType = {
   query: string;
