@@ -58,12 +58,13 @@ export default function FinanceDashboardMockup() {
 
     return mockTransactions.filter((t) => {
       const matchesQuery =
-        t.description.toLowerCase().includes(q) ||
-        t.type.toLowerCase().includes(q) ||
+        String(t.amount).includes(q) ||
         t.bank.toLowerCase().includes(q) ||
+        t.type.toLowerCase().includes(q) ||
         t.date.toLowerCase().includes(q);
 
       const txDate = new Date(t.date);
+      // Filtro de intervalo
       const beforeEnd = !endDate || txDate <= new Date(endDate);
 
       return matchesQuery && beforeEnd;

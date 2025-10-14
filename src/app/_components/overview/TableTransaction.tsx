@@ -128,8 +128,8 @@ export function TableTransaction({
               <th className="py-2 pr-4 pl-4">Data</th>
               <th className="py-2 pr-4">Cliente</th>
               <th className="py-2 pr-4">Descrição</th>
-              <th className="py-2 pr-4">Categoria</th>
-              <th className="py-2 pr-4">Subcategoria</th> 
+              <th className="py-2 pr-4">Movimento</th>
+              <th className="py-2 pr-4">Categoria</th> 
               <th className="py-2 pr-4 text-right">Valor</th>
             </tr>
           </thead>
@@ -175,7 +175,7 @@ export function TableTransaction({
                         >
                           <td className="py-2 pr-4 pl-4">{formatDate(t.date)}</td>
                           <td className="py-2 pr-4">{t.customer.toLowerCase()}</td>
-                          <td className="py-2 pr-4">{t.description}</td>
+                          <td className="py-2 pr-4">{t.description.toLowerCase()}</td>
                           <td className="py-2 pr-4">
                             <Badge variant={t.typeId === 1 ? "default" : "secondary"}>
                               {t.type}
