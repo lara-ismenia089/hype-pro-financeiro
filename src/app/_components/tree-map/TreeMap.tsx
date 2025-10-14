@@ -102,20 +102,45 @@ export function CategoriesTreemap() {
           ) : (
             <ul className="space-y-2">
               {filtered.map((item) => (
-                <li
-                  key={item.name}
-                  className="flex justify-between border-b last:border-0 pb-1"
-                >
-                  <span className="font-medium">{item.name}</span>
-                  <div className="flex items-center gap-2">
-                    <Badge variant="secondary">
-                      {((item.size / total) * 100).toFixed(1)}%
-                    </Badge>
-                    <span className="text-muted-foreground">
-                      {currencyBRL(item.size)}
-                    </span>
-                  </div>
-                </li>
+                <>
+                {item.name.toLowerCase() === "contratos mensais" || item.name.toLowerCase() === "projetos avulsos" ? 
+                  <li
+                    key={item.name}
+                    className="flex justify-between last:border-0 pb-1"
+                    >
+                    <span className="font-medium">{item.name}</span>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary">
+                        {((item.size / total) * 100).toFixed(1)}%
+                      </Badge>
+                      <span className="text-muted-foreground">
+                        {currencyBRL(item.size)}
+                      </span>
+                    </div>
+                  </li>
+                : <></>}</>
+              ))}
+
+              <div className="border-2 rounded-full"></div>
+
+              {filtered.map((item) => (
+                <>
+                {item.name.toLowerCase() !== "contratos mensais" && item.name.toLowerCase() !== "projetos avulsos" ? 
+                  <li
+                    key={item.name}
+                    className="flex justify-between last:border-0 pb-1"
+                    >
+                    <span className="font-medium">{item.name}</span>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary">
+                        {((item.size / total) * 100).toFixed(1)}%
+                      </Badge>
+                      <span className="text-muted-foreground">
+                        {currencyBRL(item.size)}
+                      </span>
+                    </div>
+                  </li>
+                : <></>}</>
               ))}
             </ul>
           )}

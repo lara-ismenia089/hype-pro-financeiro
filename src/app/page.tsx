@@ -21,7 +21,7 @@ import {
   TabsContent,
 } from "@/components/ui/tabs";
 import { mockMonthly, mockTransactions } from "@/lib/mock";
-import { currencyBRL } from "@/lib/utils";
+import { currencyBRL, getSubcategory } from "@/lib/utils";
 
 export default function FinanceDashboardMockup() {
   const [query, setQuery] = useState("");
@@ -61,7 +61,9 @@ export default function FinanceDashboardMockup() {
         String(t.amount).includes(q) ||
         t.bank.toLowerCase().includes(q) ||
         t.type.toLowerCase().includes(q) ||
-        t.date.toLowerCase().includes(q);
+        t.date.toLowerCase().includes(q) 
+        // ||
+        // getSubcategory(t.typeId).toLowerCase().includes(q);
 
       const txDate = new Date(t.date);
       // Filtro de intervalo
