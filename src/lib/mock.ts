@@ -2368,6 +2368,7 @@ export const chartAccounts: ChartAccountsType[] = [
     { accountId: 3, categories: "Contratos Mensais", subordinate: "Receita Fixo" },
     { accountId: 4, categories: "Resgate de Aplicação", subordinate: "Retorno de Capital" },
     { accountId: 5, categories: "Juros e Multas", subordinate: "Outras Receitas" },
+    { accountId: 111, categories: "Estornos", subordinate: "Outras Receitas" },
     { accountId: 106, categories: "Transferências", subordinate: "" }
   ] },
   { id: 2, type: "Despesas", subcategories: [
