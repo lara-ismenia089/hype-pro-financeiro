@@ -1922,7 +1922,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "typeId": 3,
     "type": "Debito",
     "amount": 1500.0,
-    "accountId": 16,
+    "accountId": 18,
     "bank": "Santander"
   },
   {
@@ -1935,7 +1935,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "typeId": 3,
     "type": "Debito",
     "amount": 800.0,
-    "accountId": 18,
+    "accountId": 16,
     "bank": "Santander"
   },
   {
@@ -2446,7 +2446,7 @@ export const chartAccounts: ChartAccountsType[] = [
     { accountId: 91, categories: "Tarifas Bancárias", subordinate: "Encargos Bancários" },
     { accountId: 92, categories: "Tarifas de Boletos", subordinate: "Encargos Bancários" },
     { accountId: 93, categories: "Tarifas Pix", subordinate: "Encargos Bancários" },
-    { accountId: 94, categories: "Tarifas Utiliz. Ch. Esp", subordinate: "Encargos Bancários" },
+    { accountId: 94, categories: "Tarifas Utiliz. Cartão", subordinate: "Encargos Bancários" },
     { accountId: 97, categories: "Transferencias", subordinate: "" },
     { accountId: 99, categories: "Uniformes e Crachás", subordinate: "Despesas Com Colaboradores" },
     { accountId: 100, categories: "Vale Transportes", subordinate: "Despesas Com Colaboradores" },
