@@ -973,7 +973,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "typeId": 2,
     "type": "Debito",
     "amount": 150.0,
-    "accountId": 19,
+    "accountId": 18,
     "bank": "Cora"
   },
   {
@@ -986,7 +986,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "typeId": 2,
     "type": "Debito",
     "amount": 150.0,
-    "accountId": 17,
+    "accountId": 16,
     "bank": "Cora"
   },
   {
