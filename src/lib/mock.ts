@@ -1997,10 +1997,10 @@ export const mockTransactions: MockTransactionsType[] = [
     "history": "Transferencias entre contas",
     "customerId": "",
     "customer": "41 655 312 JULIO CESAR RO",
-    "typeId": 2,
+    "typeId": 1,
     "type": "Credito",
     "amount": 2998.02,
-    "accountId": 104,
+    "accountId": 106,
     "bank": "Santander"
   },
   {
