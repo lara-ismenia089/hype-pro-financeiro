@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 
-import { TrendingUp, ArrowDownRight } from "lucide-react";
+import { TrendingUp, ArrowDownRight, ChartColumnBig } from "lucide-react";
 
 import { KpiCard } from "@/app/_components/card/KpiCard";
 import { MainContainer } from "@/app/_components/container/MainContainer";
@@ -23,6 +23,7 @@ import {
 import { mockMonthly, mockTransactions } from "@/lib/mock";
 import { currencyBRL, getSubcategory } from "@/lib/utils";
 import { isWithinInterval, isSameDay, endOfDay } from "date-fns";
+import { ResultChartModal } from "./_components/result/ResultChartModal";
 
 export default function FinanceDashboardMockup() {
   const [query, setQuery] = useState("");
@@ -36,6 +37,7 @@ export default function FinanceDashboardMockup() {
   const [tab, setTab] = useState("overview");
   const [kpiRevenue, setKpiRevenue] = useState(false);
   const [kpiExpense, setKpiExpense] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const kpis = useMemo(() => {
     const fixedRevenue = mockMonthly.month.reduce((a, c) => a + c.fixedRevenue, 0);
@@ -139,7 +141,11 @@ export default function FinanceDashboardMockup() {
           value={currencyBRL(kpis.totalRevenue - kpis.totalExpenses)}
           description="Disponível consolidado"
           delay={0.1}
+          icon={<ChartColumnBig />}
+          onIconClick={() => setOpen(true)}
         />
+
+        <ResultChartModal open={open} onClose={() => setOpen(false)} data={mockMonthly.month} />
 
         <KpiCard
           title="Margem"
