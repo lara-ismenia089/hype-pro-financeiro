@@ -38,17 +38,23 @@ import {
 type TableTransactionType = {
   query: string;
   setQuery: (value: string) => void;
-  endDate: Date;
-  setEndDate: (value: Date) => void;
+  dateRange: {
+    from: Date | undefined;
+    to: Date | undefined;
+  };
+  setDateRange: (value: {
+    from: Date | undefined;
+    to: Date | undefined;
+  }) => void;
   filter: MockTransactionsType[];
 };
 
 export function TableTransaction({ 
   query, 
   filter,
-  endDate,
+  dateRange,
   setQuery,
-  setEndDate, 
+  setDateRange, 
 }: TableTransactionType) {
   const [openCustomers, setOpenCustomers] = useState<Record<string, boolean>>({});
 
@@ -92,19 +98,30 @@ export function TableTransaction({
               <PopoverTrigger asChild>
                 <Button
                   variant="outline"
-                  className="w-[180px] justify-start text-left font-normal"
+                  className="w-auto justify-start text-left font-normal"
                 >
                   <CalendarIcon className="mr-2 h-4 w-4" />
-                  {endDate ? format(endDate, "dd/MM/yyyy") : <span>Até a data</span>}
+                  {dateRange.from && dateRange.to ? (
+                  <span>
+                    {dateRange.from.toDateString()} - {dateRange.to.toDateString()}
+                  </span>
+                ) : (
+                  <span>Filtrar</span>
+                )}
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0" align="start">
                 <Calendar
-                  mode="single"
-                  selected={endDate}
-                  onSelect={setEndDate}
-                  required
-                />
+                mode="range"
+                selected={dateRange}
+                onSelect={(range) =>
+                  setDateRange({
+                    from: range?.from,
+                    to: range?.to,
+                  })
+                }
+                numberOfMonths={2}
+              />
               </PopoverContent>
             </Popover>
           </div>

@@ -22,10 +22,17 @@ import {
 } from "@/components/ui/tabs";
 import { mockMonthly, mockTransactions } from "@/lib/mock";
 import { currencyBRL, getSubcategory } from "@/lib/utils";
+import { isWithinInterval, isSameDay, endOfDay } from "date-fns";
 
 export default function FinanceDashboardMockup() {
   const [query, setQuery] = useState("");
-  const [endDate, setEndDate] = useState(new Date());
+  const [dateRange, setDateRange] = useState<{
+    from: Date | undefined;
+    to: Date | undefined;
+  }>({
+    from: undefined,
+    to: undefined,
+  });
   const [tab, setTab] = useState("overview");
   const [kpiRevenue, setKpiRevenue] = useState(false);
   const [kpiExpense, setKpiExpense] = useState(false);
@@ -61,15 +68,35 @@ export default function FinanceDashboardMockup() {
         String(t.amount).includes(q) ||
         t.bank.toLowerCase().includes(q) ||
         t.type.toLowerCase().includes(q) ||
-        getSubcategory(t.accountId).toLowerCase().includes(q)
+        getSubcategory(t.accountId).toLowerCase().includes(q);
 
       const txDate = new Date(t.date);
-      // Filtro de intervalo
-      const beforeEnd = !endDate || txDate <= new Date(endDate);
 
-      return matchesQuery && beforeEnd;
+      if (!dateRange.from && !dateRange.to) {
+        return matchesQuery;
+      }
+
+      let inDateRange = true;
+
+      if (dateRange.from && dateRange.to) {
+        inDateRange =
+          isWithinInterval(txDate, {
+            start: dateRange.from,
+            end: endOfDay(dateRange.to),
+          }) ||
+          isSameDay(txDate, dateRange.from) ||
+          isSameDay(txDate, dateRange.to);
+      } else if (dateRange.from) {
+        inDateRange =
+          txDate >= dateRange.from || isSameDay(txDate, dateRange.from);
+      } else if (dateRange.to) {
+        inDateRange =
+          txDate <= endOfDay(dateRange.to) || isSameDay(txDate, dateRange.to);
+      }
+
+      return matchesQuery && inDateRange;
     });
-  }, [query, endDate]);
+  }, [query, dateRange]);
 
   return (
     <MainContainer>
@@ -139,8 +166,8 @@ export default function FinanceDashboardMockup() {
           <TableTransaction
             query={query}
             setQuery={setQuery}
-            endDate={endDate}
-            setEndDate={setEndDate}
+            dateRange={dateRange}
+            setDateRange={setDateRange}
             filter={filteredTx}
           />
         </TabsContent>
