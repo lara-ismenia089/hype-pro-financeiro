@@ -15,8 +15,7 @@ export const currencyBRL = (value: number) =>
   );
 
 export const formatDate = (date: string) => {
-  const dateList = date.split('-');
-  return `${dateList[2]}/${dateList[1]}/${dateList[0]}`;
+  return new Date(date).toLocaleDateString("pt-br");
 }
 
 export const getSubcategory = (accountId: number): string => {

@@ -26,7 +26,7 @@ export function CategoriesTreemap() {
 
   const total = data.reduce((acc, cur) => acc + cur.size, 0);
   const filtered = data
-    .filter((r) => r.size > 300);
+    .filter((r) => r.size > 670);
 
   return (
     <div className="grid gap-4 lg:grid-cols-3">
@@ -49,7 +49,7 @@ export function CategoriesTreemap() {
                   strokeWidth: 2,
                 }}
               />
-              {width > 80 && height > 30 && (
+              {width > 90 && height > 30 && (
                 <>
                   <text
                     x={x + width / 2}
