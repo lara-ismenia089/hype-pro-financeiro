@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 
-import { isAfter, isBefore } from "date-fns";
+import { isAfter, isBefore, isSameDay } from "date-fns";
 import {
   Bar,
   XAxis,
@@ -43,8 +43,21 @@ export function FixedExpenses() {
   const filteredExpenses = useMemo(() => {
     return mockExpensesFixed.filter((item) => {
       const due = new Date(item.dueDate);
-      if (dateRange.from && isBefore(due, dateRange.from)) return false;
-      if (dateRange.to && isAfter(due, dateRange.to)) return false;
+
+      if (
+        dateRange.from &&
+        isBefore(due, dateRange.from) &&
+        !isSameDay(due, dateRange.from)
+      )
+        return false;
+
+      if (
+        dateRange.to &&
+        isAfter(due, dateRange.to) &&
+        !isSameDay(due, dateRange.to)
+      )
+        return false;
+
       return true;
     });
   }, [dateRange]);

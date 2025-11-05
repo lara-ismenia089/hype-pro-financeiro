@@ -61,9 +61,7 @@ export default function FinanceDashboardMockup() {
         String(t.amount).includes(q) ||
         t.bank.toLowerCase().includes(q) ||
         t.type.toLowerCase().includes(q) ||
-        t.date.toLowerCase().includes(q) 
-        // ||
-        // getSubcategory(t.typeId).toLowerCase().includes(q);
+        getSubcategory(t.accountId).toLowerCase().includes(q)
 
       const txDate = new Date(t.date);
       // Filtro de intervalo
