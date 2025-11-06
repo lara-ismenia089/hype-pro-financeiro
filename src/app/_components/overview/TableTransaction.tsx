@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import { format } from "date-fns";
 import { Tooltip } from "react-tooltip";
 
 import { 
@@ -102,26 +101,26 @@ export function TableTransaction({
                 >
                   <CalendarIcon className="mr-2 h-4 w-4" />
                   {dateRange.from && dateRange.to ? (
-                  <span>
-                    {dateRange.from.toDateString()} - {dateRange.to.toDateString()}
-                  </span>
-                ) : (
-                  <span>Filtrar</span>
-                )}
+                    <span>
+                      {dateRange.from.toDateString()} - {dateRange.to.toDateString()}
+                    </span>
+                    ) : (
+                      <span>Filtrar</span>
+                  )}
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0" align="start">
                 <Calendar
-                mode="range"
-                selected={dateRange}
-                onSelect={(range) =>
-                  setDateRange({
-                    from: range?.from,
-                    to: range?.to,
-                  })
-                }
-                numberOfMonths={2}
-              />
+                  mode="range"
+                  selected={dateRange}
+                  onSelect={(range) =>
+                    setDateRange({
+                      from: range?.from,
+                      to: range?.to,
+                    })
+                  }
+                  numberOfMonths={2}
+                />
               </PopoverContent>
             </Popover>
           </div>

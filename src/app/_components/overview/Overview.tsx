@@ -62,149 +62,152 @@ export function Overview({ mockMonthly, fixedAvg, eventAvg }: { mockMonthly: Moc
 				</CardHeader>
 				<CardContent className="h-[320px]">
 					<ResponsiveContainer width="100%" height="100%">
-						{isOpen ? (<BarChart data={mockMonthly} margin={{ left: 8, right: 8, top: 8, bottom: 8 }}>
-							<CartesianGrid stroke="#e5e7eb" strokeDasharray="4 4" />
-							<XAxis
-								dataKey="month"
-								tick={{ fill: "#6b7280", fontSize: 10 }}
-								axisLine={false}
-								tickLine={false}
-							/>
-							<YAxis
-								tickFormatter={(value: number) => currencyBRL(value)}
-								tick={{ fill: "#6b7280", fontSize: 10 }}
-								axisLine={false}
-								tickLine={false}
-							/>
-							<Tooltip
-								formatter={(value: number) => currencyBRL(value)}
-								contentStyle={{
-									backgroundColor: "#fff",
-									borderRadius: "8px",
-									border: "1px solid #e5e7eb",
-									boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-								}}
-								labelStyle={{ fontWeight: "bold", color: "#374151" }}
-							/>
-							<Bar
-								type="monotone"
-								dataKey="variableRevenue"
-								stackId={"revenue"}
-								name="Receita Variável"
-								fill="#031B3D"
-							>
-								<LabelList 
+						{isOpen ? (
+							<BarChart data={mockMonthly} margin={{ left: 8, right: 8, top: 8, bottom: 8 }}>
+								<CartesianGrid stroke="#e5e7eb" strokeDasharray="4 4" />
+								<XAxis
+									dataKey="month"
+									tick={{ fill: "#6b7280", fontSize: 10 }}
+									axisLine={false}
+									tickLine={false}
+								/>
+								<YAxis
+									tickFormatter={(value: number) => currencyBRL(value)}
+									tick={{ fill: "#6b7280", fontSize: 10 }}
+									axisLine={false}
+									tickLine={false}
+								/>
+								<Tooltip
+									formatter={(value: number) => currencyBRL(value)}
+									contentStyle={{
+										backgroundColor: "#fff",
+										borderRadius: "8px",
+										border: "1px solid #e5e7eb",
+										boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+									}}
+									labelStyle={{ fontWeight: "bold", color: "#374151" }}
+								/>
+								<Bar
+									type="monotone"
 									dataKey="variableRevenue"
-									formatter={(label: React.ReactNode) =>
-										currencyBRL(Number(label))
-									}
-									fontSize={10}
-								/>
-							</Bar>
-							<Bar
-								type="monotone"
-								dataKey="fixedRevenue"
-								stackId={"revenue"}
-								name="Receita Fixa"
-								fill="#020E20"
-								radius={[6, 6, 0, 0]}
-							>
-								<LabelList 
+									stackId={"revenue"}
+									name="Receita Variável"
+									fill="#031B3D"
+								>
+									<LabelList 
+										dataKey="variableRevenue"
+										formatter={(label: React.ReactNode) =>
+											currencyBRL(Number(label))
+										}
+										fontSize={10}
+									/>
+								</Bar>
+								<Bar
+									type="monotone"
 									dataKey="fixedRevenue"
-									formatter={(value: React.ReactNode) => 
-										currencyBRL(Number(value))
-									}
-									fontSize={10}
-								/>
-							</Bar>
-							<Bar
-								type="monotone"
-								dataKey="expense"
-								name="Despesa"
-								stackId={"expense"}
-								fill="#031B3D"
-							>
-								<LabelList
+									stackId={"revenue"}
+									name="Receita Fixa"
+									fill="#020E20"
+									radius={[6, 6, 0, 0]}
+								>
+									<LabelList 
+										dataKey="fixedRevenue"
+										formatter={(value: React.ReactNode) => 
+											currencyBRL(Number(value))
+										}
+										fontSize={10}
+									/>
+								</Bar>
+								<Bar
+									type="monotone"
 									dataKey="expense"
-									formatter={(label: React.ReactNode) =>
-										currencyBRL(Number(label))
-									}
-									fontSize={10}
-								/>
-							</Bar>
-							<Bar
-								type="monotone"
-								dataKey="cost"
-								name="Custo"
-								stackId={"expense"}
-								fill="#020E20"
-								radius={[6, 6, 0, 0]}
-							>
-								<LabelList 
+									name="Despesa"
+									stackId={"expense"}
+									fill="#031B3D"
+								>
+									<LabelList
+										dataKey="expense"
+										formatter={(label: React.ReactNode) =>
+											currencyBRL(Number(label))
+										}
+										fontSize={10}
+									/>
+								</Bar>
+								<Bar
+									type="monotone"
 									dataKey="cost"
-									formatter={(label: React.ReactNode) =>
-										currencyBRL(Number(label))
-									}
-									fontSize={10}
+									name="Custo"
+									stackId={"expense"}
+									fill="#020E20"
+									radius={[6, 6, 0, 0]}
+								>
+									<LabelList 
+										dataKey="cost"
+										formatter={(label: React.ReactNode) =>
+											currencyBRL(Number(label))
+										}
+										fontSize={10}
+									/>
+								</Bar>
+							</BarChart>
+						) : (
+							<BarChart data={dataResult} margin={{ left: 8, right: 8, top: 8, bottom: 8 }}>
+								<CartesianGrid stroke="#e5e7eb" strokeDasharray="4 4" />
+								<XAxis
+									dataKey="month"
+									tick={{ fill: "#6b7280", fontSize: 10 }}
+									axisLine={false}
+									tickLine={false}
 								/>
-							</Bar>
-						</BarChart>) : (
-						<BarChart data={dataResult} margin={{ left: 8, right: 8, top: 8, bottom: 8 }}>
-							<CartesianGrid stroke="#e5e7eb" strokeDasharray="4 4" />
-							<XAxis
-								dataKey="month"
-								tick={{ fill: "#6b7280", fontSize: 10 }}
-								axisLine={false}
-								tickLine={false}
-							/>
-							<YAxis
-								tickFormatter={(value: number) => currencyBRL(value)}
-								tick={{ fill: "#6b7280", fontSize: 10 }}
-								axisLine={false}
-								tickLine={false}
-							/>
-							<Tooltip
-								formatter={(value: number) => currencyBRL(value)}
-								contentStyle={{
-									backgroundColor: "#fff",
-									borderRadius: "8px",
-									border: "1px solid #e5e7eb",
-									boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-								}}
-								labelStyle={{ fontWeight: "bold", color: "#374151" }}
-							/>
-							<Bar
-								type="monotone"
-								dataKey="totalRevenue"
-								stackId={"revenue"}
-								name="Receita"
-								fill="#031B3D"
-							>
-								<LabelList 
+								<YAxis
+									tickFormatter={(value: number) => currencyBRL(value)}
+									tick={{ fill: "#6b7280", fontSize: 10 }}
+									axisLine={false}
+									tickLine={false}
+								/>
+								<Tooltip
+									formatter={(value: number) => currencyBRL(value)}
+									contentStyle={{
+										backgroundColor: "#fff",
+										borderRadius: "8px",
+										border: "1px solid #e5e7eb",
+										boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+									}}
+									labelStyle={{ fontWeight: "bold", color: "#374151" }}
+								/>
+								<Bar
+									type="monotone"
 									dataKey="totalRevenue"
-									formatter={(label: React.ReactNode) =>
-										currencyBRL(Number(label))
-									}
-									fontSize={10}
-								/>
-							</Bar>
-							<Bar
-								type="monotone"
-								dataKey="totalExpense"
-								stackId={"revenue"}
-								name="Despesa e custo"
-								fill="#020E20"
-								radius={[6, 6, 0, 0]}
-							>
-								<LabelList 
+									stackId={"revenue"}
+									name="Receita"
+									fill="#031B3D"
+								>
+									<LabelList 
+										dataKey="totalRevenue"
+										formatter={(label: React.ReactNode) =>
+											currencyBRL(Number(label))
+										}
+										fontSize={10}
+									/>
+								</Bar>
+								<Bar
+									type="monotone"
 									dataKey="totalExpense"
-									formatter={(label: React.ReactNode) =>
-										currencyBRL(Number(label))
-									}
-									fontSize={10}
-								/>
-							</Bar>
-						</BarChart>)}
+									stackId={"revenue"}
+									name="Despesa e custo"
+									fill="#020E20"
+									radius={[6, 6, 0, 0]}
+								>
+									<LabelList 
+										dataKey="totalExpense"
+										formatter={(label: React.ReactNode) =>
+											currencyBRL(Number(label))
+										}
+										fontSize={10}
+									/>
+								</Bar>
+							</BarChart>
+						)}
 					</ResponsiveContainer>
 				</CardContent>
 			</Card>
