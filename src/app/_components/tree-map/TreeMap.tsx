@@ -26,7 +26,7 @@ export function CategoriesTreemap() {
 
   const total = data.reduce((acc, cur) => acc + cur.size, 0);
   const filtered = data
-    .filter((r) => r.size > 670);
+    .filter((r) => r.size > 1000);
 
   return (
     <div className="grid gap-4 lg:grid-cols-3">
