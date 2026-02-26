@@ -1107,10 +1107,10 @@ export const mockTransactions: MockTransactionsType[] = [
     "history": "Transferencia entre contas",
     "customerId": "41.655.312/0001-10",
     "customer": "41 655 312 JULIO C…",
-    "typeId": 2,
+    "typeId": 1,
     "type": "Credito",
     "amount": 5501.83,
-    "accountId": 104,
+    "accountId": 106,
     "bank": "Cora"
   },
   {
@@ -1705,10 +1705,10 @@ export const mockTransactions: MockTransactionsType[] = [
     "history": "Transferencia entre contas",
     "customerId": "41.655.312/0001-10",
     "customer": "41.655.312 JULIO C…",
-    "typeId": 2,
+    "typeId": 1,
     "type": "Credito",
     "amount": 2497.0,
-    "accountId": 104,
+    "accountId": 106,
     "bank": "Cora"
   },
   {
