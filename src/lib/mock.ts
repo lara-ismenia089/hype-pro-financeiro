@@ -1957,7 +1957,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "customerId": "10.573.521/0001-91",
     "customer": "MERCADO PAGO IN…",
     "typeId": 2,
-    "type": "",
+    "type": "Debito",
     "amount": 49.44,
     "accountId": 73,
     "bank": "Cora"
@@ -1970,7 +1970,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "customerId": "10.573.521/0001-91",
     "customer": "MERCADO PAGO IN…",
     "typeId": 2,
-    "type": "",
+    "type": "Debito",
     "amount": 149.7,
     "accountId": 98,
     "bank": "Cora"
@@ -1983,7 +1983,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "customerId": "10.573.521/0001-91",
     "customer": "MERCADO PAGO IN…",
     "typeId": 3,
-    "type": "",
+    "type": "Debito",
     "amount": 189.0,
     "accountId": 25,
     "bank": "Cora"
@@ -1996,7 +1996,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "customerId": "10.573.521/0001-91",
     "customer": "MERCADO PAGO IN…",
     "typeId": 2,
-    "type": "",
+    "type": "Debito",
     "amount": 14.94,
     "accountId": 63,
     "bank": "Cora"
