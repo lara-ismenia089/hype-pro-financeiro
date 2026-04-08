@@ -109,7 +109,7 @@ export default function Customers() {
       paid,
       open,
     };
-  }, [mockCustomersVariables]);
+  }, []);
 
   return (
     <MainContainer>

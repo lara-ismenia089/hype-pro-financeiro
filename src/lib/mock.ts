@@ -128,6 +128,29 @@ export const mockCustomers: MockCustomers[] = [
       "city": "Tianguá",
       "state": "CE"
     }
+  },
+  {
+    "id": "ct-0006",
+    "cnpj": "",
+    "companyName": "FELIPE FROTA",
+    "fantasyName": "",
+    "email": "",
+    "phone": "",
+    "signedContract": "",
+    "signedDate": "",
+    "dueDate": "2025-10-10T12:00:00",
+    "contractTime": "",
+    "contractStatus": "",
+    "monthlyFee": 3000.0,
+    "terminationClause": "",
+    "address": {
+      "street": "",
+      "avenue": "",
+      "number": 0,
+      "neighborhood": "",
+      "city": "",
+      "state": ""
+    }
   }
 ];
 
@@ -187,7 +210,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Despesas de funcionamento"
   },
   {
-    "id": "ep-0006",
+    "id": "ep-0007",
     "description": "Fatura Santander",
     "paymentMethod": "Cartão",
     "amount": 819.23,
@@ -196,7 +219,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Cartão de crédito"
   },
   {
-    "id": "ep-0007",
+    "id": "ep-0008",
     "description": "INSS",
     "paymentMethod": "Guia",
     "amount": 0.0,
@@ -205,7 +228,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Impostos"
   },
   {
-    "id": "ep-0008",
+    "id": "ep-0009",
     "description": "FGTS",
     "paymentMethod": "Guia",
     "amount": 0.0,
@@ -214,7 +237,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Impostos"
   },
   {
-    "id": "ep-0009",
+    "id": "ep-0010",
     "description": "Aluguel + Energia",
     "paymentMethod": "Desconto",
     "amount": 700.0,
@@ -223,7 +246,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Despesas de funcionamento"
   },
   {
-    "id": "ep-0010",
+    "id": "ep-0011",
     "description": "Software – Adobe (cartão hype)",
     "paymentMethod": "Cartão",
     "amount": 92.0,
@@ -232,7 +255,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Cartão de crédito"
   },
   {
-    "id": "ep-0011",
+    "id": "ep-0012",
     "description": "Software – Google",
     "paymentMethod": "Cartão",
     "amount": 105.0,
@@ -241,7 +264,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Cartão de crédito"
   },
   {
-    "id": "ep-0012",
+    "id": "ep-0013",
     "description": "Tripé",
     "paymentMethod": "Cartão",
     "amount": 49.44,
@@ -250,7 +273,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Cartão de crédito"
   },
   {
-    "id": "ep-0013",
+    "id": "ep-0014",
     "description": "Treinamento Don",
     "paymentMethod": "Cartão",
     "amount": 149.44,
@@ -259,7 +282,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Cartão de crédito"
   },
   {
-    "id": "ep-0014",
+    "id": "ep-0015",
     "description": "DAF/Gaveteiros",
     "paymentMethod": "Cartão",
     "amount": 66.93,
@@ -268,7 +291,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Cartão de crédito"
   },
   {
-    "id": "ep-0015",
+    "id": "ep-0016",
     "description": "Ar-condicionado",
     "paymentMethod": "Cartão",
     "amount": 291.83,
@@ -277,7 +300,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Cartão de crédito"
   },
   {
-    "id": "ep-0016",
+    "id": "ep-0017",
     "description": "Simples Nacional",
     "paymentMethod": "Guia",
     "amount": 600.0,
@@ -286,7 +309,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Impostos"
   },
   {
-    "id": "ep-0017",
+    "id": "ep-0018",
     "description": "Mensalidade BPO",
     "paymentMethod": "Boleto",
     "amount": 300.0,
@@ -295,7 +318,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Contabilidade e serviços extras"
   },
   {
-    "id": "ep-0018",
+    "id": "ep-0019",
     "description": "Mensalidade Contabilidade",
     "paymentMethod": "Boleto",
     "amount": 80.0,
@@ -304,7 +327,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Contabilidade e serviços extras"
   },
   {
-    "id": "ep-0019",
+    "id": "ep-0020",
     "description": "Seguro",
     "paymentMethod": "-",
     "amount": 0.0,
@@ -313,7 +336,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Colaboradores - Encargos"
   },
   {
-    "id": "ep-0020",
+    "id": "ep-0021",
     "description": "Agência",
     "paymentMethod": "-",
     "amount": 0.0,
@@ -322,7 +345,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Colaboradores - Encargos"
   },
   {
-    "id": "ep-0021",
+    "id": "ep-0022",
     "description": "Provisão 13º",
     "paymentMethod": "-",
     "amount": 0.0,
@@ -331,7 +354,7 @@ export const mockExpensesFixed: MockFixedExpense[] = [
     "type": "Colaboradores - Encargos"
   },
   {
-    "id": "ep-0022",
+    "id": "ep-0023",
     "description": "Provisão Férias",
     "paymentMethod": "-",
     "amount": 0.0,
@@ -2044,13 +2067,13 @@ export const mockTransactions: MockTransactionsType[] = [
     "id": "tx-0123",
     "date": "2026-02-26T12:00:00",
     "description": "Transf Pix enviada",
-    "history": "Pro-labore",
+    "history": "Folha de Pagamento Custo",
     "customerId": "603.804.323-31",
     "customer": "Mayane Lima dos Sa…",
     "typeId": 3,
     "type": "Debito",
     "amount": 1180.0,
-    "accountId": 103,
+    "accountId": 18,
     "bank": "Cora"
   },
   {
@@ -2070,7 +2093,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "id": "tx-0125",
     "date": "2026-02-27T12:00:00",
     "description": "Transf Pix enviada",
-    "history": "",
+    "history": "Pro-labore",
     "customerId": "067.164.483-14",
     "customer": "JULIO CESAR RODR…",
     "typeId": 3,
@@ -2122,7 +2145,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "id": "tx-0129",
     "date": "2026-03-02T12:00:00",
     "description": "Transf Pix enviada",
-    "history": "",
+    "history": "Pro-labore",
     "customerId": "067.164.483-14",
     "customer": "JULIO CESAR RODR…",
     "typeId": 3,
@@ -2146,6 +2169,461 @@ export const mockTransactions: MockTransactionsType[] = [
   },
   {
     "id": "tx-0131",
+    "date": "2026-03-03T12:00:00",
+    "description": "Compra no débito",
+    "history": "Lanches para colaboradores",
+    "customerId": "-",
+    "customer": "FRANCISCO JOSE D…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 6.5,
+    "accountId": 65,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0132",
+    "date": "2026-03-04T12:00:00",
+    "description": "Pgto QR Code Pix",
+    "history": "Lanches para colaboradores",
+    "customerId": "600.809.753-05",
+    "customer": "Alessandro Magalhae…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 18.0,
+    "accountId": 65,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0133",
+    "date": "2026-03-06T12:00:00",
+    "description": "Compra no débito",
+    "history": "",
+    "customerId": "-",
+    "customer": "LOJA IMPERIO.",
+    "typeId": 1,
+    "type": "Debito",
+    "amount": 80.0,
+    "accountId": 0,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0134",
+    "date": "2026-03-06T12:00:00",
+    "description": "Compra no débito",
+    "history": "",
+    "customerId": "-",
+    "customer": "LIVRARIA VASCONCE",
+    "typeId": 1,
+    "type": "Debito",
+    "amount": 11.33,
+    "accountId": 0,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0135",
+    "date": "2026-03-06T12:00:00",
+    "description": "Transf Pix enviada",
+    "history": "Pro-labore",
+    "customerId": "067.164.483-14",
+    "customer": "JULIO CESAR RODR…",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 50.0,
+    "accountId": 103,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0136",
+    "date": "2026-03-08T12:00:00",
+    "description": "Compra no débito",
+    "history": "Combustível",
+    "customerId": "-",
+    "customer": "CATATAU COMERCI…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 50.0,
+    "accountId": 33,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0137",
+    "date": "2026-03-08T12:00:00",
+    "description": "Transf Pix enviada",
+    "history": "Pro-labore",
+    "customerId": "067.164.483-14",
+    "customer": "JULIO CESAR RODR…",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 40.0,
+    "accountId": 103,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0138",
+    "date": "2026-03-09T12:00:00",
+    "description": "Transf Pix recebida",
+    "history": "Projetos Avulsos",
+    "customerId": "57.600.227/0001-95",
+    "customer": "F. P. FROTA DE LIMA",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 3500.0,
+    "accountId": 2,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0139",
+    "date": "2026-03-10T12:00:00",
+    "description": "Transf Pix enviada",
+    "history": "Folha de Pagamento Custo",
+    "customerId": "603.804.323-31",
+    "customer": "Mayane Lima dos Sa…",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 1300.0,
+    "accountId": 18,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0140",
+    "date": "2026-03-10T12:00:00",
+    "description": "Transf Pix enviada",
+    "history": "Pro-labore",
+    "customerId": "067.164.483-14",
+    "customer": "JULIO CESAR RODR…",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 1000.0,
+    "accountId": 103,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0141",
+    "date": "2026-03-10T12:00:00",
+    "description": "Transf Pix enviada",
+    "history": "Folha de Pagamento Custo",
+    "customerId": "082.939.493-17",
+    "customer": "JOAO VITOR FONT…",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 695.0,
+    "accountId": 18,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0142",
+    "date": "2026-03-11T12:00:00",
+    "description": "Compra no débito",
+    "history": "Combustível",
+    "customerId": "-",
+    "customer": "CATATAU COMERCI…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 100.0,
+    "accountId": 33,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0143",
+    "date": "2026-03-12T12:00:00",
+    "description": "Compra no débito",
+    "history": "Manutenção de Veículos",
+    "customerId": "-",
+    "customer": "MP*BIBILAUTOPECA",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 200.0,
+    "accountId": 70,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0144",
+    "date": "2026-03-13T12:00:00",
+    "description": "Pgto QR Code Pix",
+    "history": "",
+    "customerId": "38.372.267/0001-82",
+    "customer": "SHPP BRASIL INSTIT…",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 22.6,
+    "accountId": 103,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0145",
+    "date": "2026-03-13T12:00:00",
+    "description": "Pgto QR Code Pix",
+    "history": "Lanches para colaboradores",
+    "customerId": "600.809.753-05",
+    "customer": "Alessandro Magalhae…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 10.5,
+    "accountId": 65,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0146",
+    "date": "2026-03-14T12:00:00",
+    "description": "Transf Pix enviada",
+    "history": "Pro-labore",
+    "customerId": "067.164.483-14",
+    "customer": "JULIO CESAR RODR…",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 100.0,
+    "accountId": 103,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0147",
+    "date": "2026-03-17T12:00:00",
+    "description": "Pgto QR Code Pix",
+    "history": "Lanches para colaboradores",
+    "customerId": "600.809.753-05",
+    "customer": "Alessandro Magalhae…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 10.5,
+    "accountId": 65,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0148",
+    "date": "2026-03-19T12:00:00",
+    "description": "Pgto QR Code Pix",
+    "history": "Construções/reformas",
+    "customerId": "04.980.988/0001-53",
+    "customer": "CELESTINO CONST…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 20.0,
+    "accountId": 23,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0149",
+    "date": "2026-03-19T12:00:00",
+    "description": "Compra no débito",
+    "history": "Construções/reformas",
+    "customerId": "-",
+    "customer": "TECHNIC PARTICIPA",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 12.0,
+    "accountId": 23,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0150",
+    "date": "2026-03-22T12:00:00",
+    "description": "Compra no débito",
+    "history": "Lanches para colaboradores",
+    "customerId": "-",
+    "customer": "ROGERIO DO CALDO",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 30.0,
+    "accountId": 65,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0151",
+    "date": "2026-03-23T12:00:00",
+    "description": "Transf Pix recebida",
+    "history": "Transferencia entre contas",
+    "customerId": "41.655.312/0001-10",
+    "customer": "41.655.312 JULIO C…",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 2497.06,
+    "accountId": 106,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0152",
+    "date": "2026-03-23T12:00:00",
+    "description": "Pgto QR Code Pix",
+    "history": "Internet",
+    "customerId": "04.601.397/0001-28",
+    "customer": "BRISANET SERVICO…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 92.32,
+    "accountId": 57,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0153",
+    "date": "2026-03-23T12:00:00",
+    "description": "Pgto QR Code Pix",
+    "history": "MEI mês atual",
+    "customerId": "00.394.460/0058-87",
+    "customer": "MINISTERIO DA FAZ…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 32.47,
+    "accountId": 89,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0154",
+    "date": "2026-03-23T12:00:00",
+    "description": "Transf Pix enviada",
+    "history": "Pro-labore",
+    "customerId": "067.164.483-14",
+    "customer": "JULIO CESAR RODR…",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 565.94,
+    "accountId": 103,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0155",
+    "date": "2026-03-23T12:00:00",
+    "description": "Compra no débito",
+    "history": "Lanches para colaboradores",
+    "customerId": "-",
+    "customer": "XIMENES ATACAREJ…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 17.81,
+    "accountId": 65,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0156",
+    "date": "2026-03-23T12:00:00",
+    "description": "Compra no débito",
+    "history": "Lanches para colaboradores",
+    "customerId": "-",
+    "customer": "MERCADINHO BOM…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 16.88,
+    "accountId": 65,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0157",
+    "date": "2026-03-24T12:00:00",
+    "description": "Transf Pix enviada",
+    "history": "Pro-labore",
+    "customerId": "067.164.483-14",
+    "customer": "JULIO CESAR RODR…",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 50.0,
+    "accountId": 103,
+    "bank": ""
+  },
+  {
+    "id": "tx-0158",
+    "date": "2026-03-24T12:00:00",
+    "description": "Compra no débito",
+    "history": "Lanches para colaboradores",
+    "customerId": "-",
+    "customer": "MEGA BOLO",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 7.0,
+    "accountId": 65,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0159",
+    "date": "2026-03-25T12:00:00",
+    "description": "Compra no débito",
+    "history": "Lanches para colaboradores",
+    "customerId": "-",
+    "customer": "MERCADINHO BOM…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 9.0,
+    "accountId": 65,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0160",
+    "date": "2026-03-26T12:00:00",
+    "description": "Compra no débito",
+    "history": "Construções/reformas",
+    "customerId": "-",
+    "customer": "CONSTRUPISO TIA…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 73.92,
+    "accountId": 23,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0161",
+    "date": "2026-03-26T12:00:00",
+    "description": "Compra no débito",
+    "history": "Construções/reformas",
+    "customerId": "-",
+    "customer": "CONSTRUPISO TIA…",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 27.1,
+    "accountId": 23,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0162",
+    "date": "2026-03-26T12:00:00",
+    "description": "Compra no débito",
+    "history": "Lanches para colaboradores",
+    "customerId": "-",
+    "customer": "SUPERMERC SERVE …",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 17.05,
+    "accountId": 65,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0163",
+    "date": "2026-03-26T12:00:00",
+    "description": "Compra no débito",
+    "history": "Combustível",
+    "customerId": "-",
+    "customer": "POSTO CATATAU",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 100.0,
+    "accountId": 33,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0164",
+    "date": "2026-03-30T12:00:00",
+    "description": "Transf Pix enviada",
+    "history": "Pro-labore",
+    "customerId": "067.164.483-14",
+    "customer": "JULIO CESAR RODR…",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 200.0,
+    "accountId": 103,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0165",
+    "date": "2026-03-31T12:00:00",
+    "description": "Compra no débito",
+    "history": "Combustível",
+    "customerId": "-",
+    "customer": "POSTO CATATAU",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 100.0,
+    "accountId": 33,
+    "bank": "Cora"
+  },
+  {
+    "id": "tx-0166",
     "date": "2025-08-25T12:00:00",
     "description": "Cobrança recebida",
     "history": "Mensalidade",
@@ -2158,7 +2636,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0132",
+    "id": "tx-0167",
     "date": "2025-08-25T12:00:00",
     "description": "Taxa de boleto",
     "history": "Tarifas de boletos",
@@ -2171,7 +2649,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0133",
+    "id": "tx-0168",
     "date": "2025-08-25T12:00:00",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -2184,7 +2662,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0134",
+    "id": "tx-0169",
     "date": "2025-08-25T12:00:00",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -2197,7 +2675,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0135",
+    "id": "tx-0170",
     "date": "2025-08-26T12:00:00",
     "description": "Cobrança recebida",
     "history": "Mensalidades",
@@ -2210,7 +2688,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0136",
+    "id": "tx-0171",
     "date": "2025-08-26T12:00:00",
     "description": "Taxa de boleto",
     "history": "Tarifas de boletos",
@@ -2223,7 +2701,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0137",
+    "id": "tx-0172",
     "date": "2025-08-26T12:00:00",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -2236,7 +2714,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0138",
+    "id": "tx-0173",
     "date": "2025-08-26T12:00:00",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -2249,7 +2727,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0139",
+    "id": "tx-0174",
     "date": "2025-09-15T12:00:00",
     "description": "Cobrança recebida",
     "history": "Mensalidade",
@@ -2262,7 +2740,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0140",
+    "id": "tx-0175",
     "date": "2025-09-15T12:00:00",
     "description": "Taxa de boleto",
     "history": "Tarifas de boletos",
@@ -2275,7 +2753,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0141",
+    "id": "tx-0176",
     "date": "2025-09-15T12:00:00",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -2288,7 +2766,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0142",
+    "id": "tx-0177",
     "date": "2025-09-17T12:00:00",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -2301,7 +2779,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0143",
+    "id": "tx-0178",
     "date": "2025-09-23T12:00:00",
     "description": "Cobrança recebida",
     "history": "Mensalidade",
@@ -2314,7 +2792,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0144",
+    "id": "tx-0179",
     "date": "2025-09-23T12:00:00",
     "description": "Taxa do Pix",
     "history": "Tarifas de boletos",
@@ -2327,7 +2805,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0145",
+    "id": "tx-0180",
     "date": "2025-09-23T12:00:00",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -2340,7 +2818,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0146",
+    "id": "tx-0181",
     "date": "2025-09-24T12:00:00",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -2353,7 +2831,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0147",
+    "id": "tx-0182",
     "date": "2025-09-24T12:00:00",
     "description": "Cobrança recebida",
     "history": "Mensalidade",
@@ -2366,7 +2844,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0148",
+    "id": "tx-0183",
     "date": "2025-09-24T12:00:00",
     "description": "Taxa do Pix",
     "history": "Tarifas de boletos",
@@ -2379,7 +2857,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0149",
+    "id": "tx-0184",
     "date": "2025-09-24T12:00:00",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -2392,7 +2870,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0150",
+    "id": "tx-0185",
     "date": "2025-09-25T12:00:00",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -2405,7 +2883,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0151",
+    "id": "tx-0186",
     "date": "2025-09-29T12:00:00",
     "description": "Cobrança recebida",
     "history": "Mensalidade",
@@ -2418,7 +2896,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0152",
+    "id": "tx-0187",
     "date": "2025-09-29T12:00:00",
     "description": "Taxa do Pix",
     "history": "Tarifas de boletos",
@@ -2431,7 +2909,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0153",
+    "id": "tx-0188",
     "date": "2025-09-29T12:00:00",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -2444,7 +2922,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0154",
+    "id": "tx-0189",
     "date": "2025-09-29T12:00:00",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -2457,7 +2935,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0155",
+    "id": "tx-0190",
     "date": "2025-10-06T12:00:00",
     "description": "Estorno de transação via Pix",
     "history": "Estorno pelo banco",
@@ -2470,7 +2948,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0156",
+    "id": "tx-0191",
     "date": "2025-10-06T12:00:00",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -2483,7 +2961,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0157",
+    "id": "tx-0192",
     "date": "2025-10-15T12:00:00",
     "description": "Cobrança recebida",
     "history": "Mensalidade",
@@ -2496,7 +2974,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0158",
+    "id": "tx-0193",
     "date": "2025-10-15T12:00:00",
     "description": "Taxa de boleto",
     "history": "Tarifas de boletos",
@@ -2509,7 +2987,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0159",
+    "id": "tx-0194",
     "date": "2025-10-15T12:00:00",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -2522,7 +3000,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0160",
+    "id": "tx-0195",
     "date": "2025-10-20T12:00:00",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -2535,7 +3013,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0161",
+    "id": "tx-0196",
     "date": "2025-10-22T12:00:00",
     "description": "Cobrança recebida",
     "history": "Mensalidade",
@@ -2548,7 +3026,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0162",
+    "id": "tx-0197",
     "date": "2025-10-22T12:00:00",
     "description": "Taxa do Pix",
     "history": "Tarifas de boletos",
@@ -2561,7 +3039,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0163",
+    "id": "tx-0198",
     "date": "2025-10-22T12:00:00",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -2574,7 +3052,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0164",
+    "id": "tx-0199",
     "date": "2025-10-24T12:00:00",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -2587,7 +3065,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0165",
+    "id": "tx-0200",
     "date": "2025-11-07T12:00:00",
     "description": "Estorno de transação via Pix",
     "history": "Estorno pelo banco",
@@ -2600,7 +3078,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0166",
+    "id": "tx-0201",
     "date": "2025-11-07T12:00:00",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -2613,7 +3091,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0167",
+    "id": "tx-0202",
     "date": "2025-11-14T12:00:00",
     "description": "Cobrança recebida",
     "history": "Mensalidade",
@@ -2626,7 +3104,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0168",
+    "id": "tx-0203",
     "date": "2025-11-14T12:00:00",
     "description": "Taxa de boleto",
     "history": "Tarifas de boletos",
@@ -2639,7 +3117,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0169",
+    "id": "tx-0204",
     "date": "2025-11-14T12:00:00",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -2652,7 +3130,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0170",
+    "id": "tx-0205",
     "date": "2025-11-17T12:00:00",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -2665,7 +3143,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0171",
+    "id": "tx-0206",
     "date": "2025-11-25T12:00:00",
     "description": "Cobrança recebida",
     "history": "Mensalidade",
@@ -2678,7 +3156,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0172",
+    "id": "tx-0207",
     "date": "2025-11-25T12:00:00",
     "description": "Taxa do Pix",
     "history": "Tarifas de boletos",
@@ -2691,7 +3169,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0173",
+    "id": "tx-0208",
     "date": "2025-11-25T12:00:00",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -2704,7 +3182,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0174",
+    "id": "tx-0209",
     "date": "2025-11-25T12:00:00",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -2717,7 +3195,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0175",
+    "id": "tx-0210",
     "date": "2025-12-15T12:00:00",
     "description": "Cobrança recebida",
     "history": "Mensalidade",
@@ -2730,7 +3208,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0176",
+    "id": "tx-0211",
     "date": "2025-12-15T12:00:00",
     "description": "Taxa do Pix",
     "history": "Tarifas de boletos",
@@ -2743,7 +3221,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0177",
+    "id": "tx-0212",
     "date": "2025-12-15T12:00:00",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -2756,7 +3234,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0178",
+    "id": "tx-0213",
     "date": "2025-12-16T12:00:00",
     "description": "Transação via Pix",
     "history": "Transferencia entre contas",
@@ -2769,7 +3247,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0179",
+    "id": "tx-0214",
     "date": "2025-12-24T12:00:00",
     "description": "Cobrança recebida",
     "history": "Mensalidade",
@@ -2782,7 +3260,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0180",
+    "id": "tx-0215",
     "date": "2025-12-24T12:00:00",
     "description": "Taxa do Pix",
     "history": "Tarifas de boletos",
@@ -2795,7 +3273,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0181",
+    "id": "tx-0216",
     "date": "2025-12-24T12:00:00",
     "description": "Taxa de mensageria",
     "history": "Tarifas de mensageria",
@@ -2808,7 +3286,241 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Asaas"
   },
   {
-    "id": "tx-0182",
+    "id": "tx-0217",
+    "date": "2026-01-16T12:00:00",
+    "description": "Cobrança recebida",
+    "history": "Mensalidade",
+    "customerId": "",
+    "customer": "FarmaFormula",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 2000.0,
+    "accountId": 3,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0218",
+    "date": "2026-01-16T12:00:00",
+    "description": "Taxa do Pix",
+    "history": "Tarifas de boletos",
+    "customerId": "",
+    "customer": "FarmaFormula",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 1.99,
+    "accountId": 92,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0219",
+    "date": "2026-01-16T12:00:00",
+    "description": "Taxa de mensageria",
+    "history": "Tarifas de mensageria",
+    "customerId": "",
+    "customer": "FarmaFormula",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 0.99,
+    "accountId": 81,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0220",
+    "date": "2026-01-19T12:00:00",
+    "description": "Transação via Pix",
+    "history": "Transferencia entre contas",
+    "customerId": "",
+    "customer": "41 655 312 JULIO CESAR RODRIGUES PIRES M",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 1997.02,
+    "accountId": 104,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0221",
+    "date": "2026-01-19T12:00:00",
+    "description": "Estorno de transação via Pix",
+    "history": "Estorno pelo banco",
+    "customerId": "",
+    "customer": "Estorno de transação via Pix",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 1997.02,
+    "accountId": 111,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0222",
+    "date": "2026-01-19T12:00:00",
+    "description": "Transação via Pix",
+    "history": "Transferencia entre contas",
+    "customerId": "",
+    "customer": "41 655 312 JULIO CESAR RODRIGUES PIRES M",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 1997.02,
+    "accountId": 104,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0223",
+    "date": "2026-01-22T12:00:00",
+    "description": "Cobrança recebida",
+    "history": "Mensalidade",
+    "customerId": "05.356.440/0001-08",
+    "customer": "J B Ferreira de Sá",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 2500.0,
+    "accountId": 3,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0224",
+    "date": "2026-01-22T12:00:00",
+    "description": "Taxa do Pix",
+    "history": "Tarifas de boletos",
+    "customerId": "05.356.440/0001-08",
+    "customer": "J B Ferreira de Sá",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 1.99,
+    "accountId": 92,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0225",
+    "date": "2026-01-22T12:00:00",
+    "description": "Taxa de mensageria",
+    "history": "Tarifas de mensageria",
+    "customerId": "05.356.440/0001-08",
+    "customer": "J B Ferreira de Sá",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 0.99,
+    "accountId": 81,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0226",
+    "date": "2026-01-23T12:00:00",
+    "description": "Transação via Pix",
+    "history": "Transferencia entre contas",
+    "customerId": "",
+    "customer": "41 655 312 JULIO CESAR RODRIGUES PIRES M",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 2497.0,
+    "accountId": 104,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0227",
+    "date": "2026-02-24T12:00:00",
+    "description": "Cobrança recebida",
+    "history": "Mensalidade",
+    "customerId": "05.356.440/0001-08",
+    "customer": "J B Ferreira de Sá",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 2500.0,
+    "accountId": 3,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0228",
+    "date": "2026-02-24T12:00:00",
+    "description": "Taxa do Pix",
+    "history": "Tarifas de boletos",
+    "customerId": "05.356.440/0001-08",
+    "customer": "J B Ferreira de Sá",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 1.99,
+    "accountId": 92,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0229",
+    "date": "2026-02-24T12:00:00",
+    "description": "Taxa de mensageria",
+    "history": "Tarifas de mensageria",
+    "customerId": "05.356.440/0001-08",
+    "customer": "J B Ferreira de Sá",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 0.99,
+    "accountId": 81,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0230",
+    "date": "2026-02-25T12:00:00",
+    "description": "Transação via Pix",
+    "history": "Transferencia entre contas",
+    "customerId": "",
+    "customer": "41 655 312 JULIO CESAR RODRIGUES PIRES M",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 2497.0,
+    "accountId": 104,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0231",
+    "date": "2026-03-23T12:00:00",
+    "description": "Cobrança recebida",
+    "history": "Mensalidade",
+    "customerId": "05.356.440/0001-08",
+    "customer": "J B Ferreira de Sá",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 2500.0,
+    "accountId": 3,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0232",
+    "date": "2026-03-23T12:00:00",
+    "description": "Taxa do Pix",
+    "history": "Tarifas de boletos",
+    "customerId": "05.356.440/0001-08",
+    "customer": "J B Ferreira de Sá",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 1.99,
+    "accountId": 92,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0233",
+    "date": "2026-03-23T12:00:00",
+    "description": "Taxa de mensageria",
+    "history": "Tarifas de mensageria",
+    "customerId": "05.356.440/0001-08",
+    "customer": "J B Ferreira de Sá",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 0.99,
+    "accountId": 81,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0234",
+    "date": "2026-03-23T12:00:00",
+    "description": "Transação via Pix",
+    "history": "Transferencia entre contas",
+    "customerId": "",
+    "customer": "41 655 312 JULIO CESAR RODRIGUES PIRES M",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 2497.06,
+    "accountId": 104,
+    "bank": "Asaas"
+  },
+  {
+    "id": "tx-0235",
     "date": "2025-09-10T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Transferencias entre contas",
@@ -2821,7 +3533,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0183",
+    "id": "tx-0236",
     "date": "2025-09-10T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Transferencias entre contas",
@@ -2834,7 +3546,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0184",
+    "id": "tx-0237",
     "date": "2025-09-10T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Transferencias entre contas",
@@ -2847,7 +3559,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0185",
+    "id": "tx-0238",
     "date": "2025-09-11T12:00:00",
     "description": "COMPRA CARTAO DEB",
     "history": "Combustivel",
@@ -2860,7 +3572,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0186",
+    "id": "tx-0239",
     "date": "2025-09-11T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Transferencias entre contas",
@@ -2873,7 +3585,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0187",
+    "id": "tx-0240",
     "date": "2025-09-12T12:00:00",
     "description": "COMPRA CARTAO DEB",
     "history": "Lanches para colaboradores",
@@ -2886,7 +3598,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Lanches para colaboradores"
   },
   {
-    "id": "tx-0188",
+    "id": "tx-0241",
     "date": "2025-09-15T12:00:00",
     "description": "COMPRA CARTAO DEB",
     "history": "Lanches para colaboradores",
@@ -2899,7 +3611,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0189",
+    "id": "tx-0242",
     "date": "2025-09-15T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pilhas",
@@ -2912,7 +3624,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0190",
+    "id": "tx-0243",
     "date": "2025-09-15T12:00:00",
     "description": "COMPRA CARTAO DEB",
     "history": "Combustivel",
@@ -2925,7 +3637,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0191",
+    "id": "tx-0244",
     "date": "2025-09-15T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Esporadico",
@@ -2938,7 +3650,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0192",
+    "id": "tx-0245",
     "date": "2025-09-17T12:00:00",
     "description": "COMPRA CARTAO DEB",
     "history": "Copos descartaveis",
@@ -2951,7 +3663,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0193",
+    "id": "tx-0246",
     "date": "2025-09-17T12:00:00",
     "description": "COMPRA CARTAO DEB",
     "history": "Lanches para colaboradores",
@@ -2964,7 +3676,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0194",
+    "id": "tx-0247",
     "date": "2025-09-17T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Transferencias entre contas",
@@ -2977,7 +3689,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0195",
+    "id": "tx-0248",
     "date": "2025-09-18T12:00:00",
     "description": "COMPRA CARTAO DEB",
     "history": "Lanches para colaboradores",
@@ -2990,7 +3702,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0196",
+    "id": "tx-0249",
     "date": "2025-09-19T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Esporadico",
@@ -3003,7 +3715,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0197",
+    "id": "tx-0250",
     "date": "2025-09-22T12:00:00",
     "description": "PAGAMENTO DE BOLETO",
     "history": "BPO Ficeiro",
@@ -3016,7 +3728,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0198",
+    "id": "tx-0251",
     "date": "2025-09-22T12:00:00",
     "description": "PAGAMENTO DARF EM CANAIS INTERNET",
     "history": "MEI atual e mês atrasado",
@@ -3029,7 +3741,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0199",
+    "id": "tx-0252",
     "date": "2025-09-22T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Gaveteiros",
@@ -3042,7 +3754,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0200",
+    "id": "tx-0253",
     "date": "2025-09-22T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Ar Condicionado",
@@ -3055,7 +3767,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0201",
+    "id": "tx-0254",
     "date": "2025-09-22T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Tripé",
@@ -3068,7 +3780,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0202",
+    "id": "tx-0255",
     "date": "2025-09-22T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Trieinamento",
@@ -3081,7 +3793,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0203",
+    "id": "tx-0256",
     "date": "2025-09-22T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Programa de Edição",
@@ -3094,7 +3806,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0204",
+    "id": "tx-0257",
     "date": "2025-09-22T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Tarifas de cartão",
@@ -3107,7 +3819,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0205",
+    "id": "tx-0258",
     "date": "2025-09-22T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -3120,7 +3832,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0206",
+    "id": "tx-0259",
     "date": "2025-09-24T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Internet",
@@ -3133,7 +3845,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0207",
+    "id": "tx-0260",
     "date": "2025-09-24T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Transferencias entre contas",
@@ -3146,7 +3858,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0208",
+    "id": "tx-0261",
     "date": "2025-09-26T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Esporadico",
@@ -3159,7 +3871,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0209",
+    "id": "tx-0262",
     "date": "2025-09-26T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -3172,7 +3884,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0210",
+    "id": "tx-0263",
     "date": "2025-09-29T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Esporadico",
@@ -3185,7 +3897,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0211",
+    "id": "tx-0264",
     "date": "2025-09-29T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -3198,7 +3910,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0212",
+    "id": "tx-0265",
     "date": "2025-10-01T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Salários",
@@ -3211,7 +3923,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0213",
+    "id": "tx-0266",
     "date": "2025-10-01T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Reembolso Combustivel",
@@ -3224,7 +3936,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0214",
+    "id": "tx-0267",
     "date": "2025-10-02T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Salários",
@@ -3237,7 +3949,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0215",
+    "id": "tx-0268",
     "date": "2025-10-02T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Bolsa Estágio",
@@ -3250,7 +3962,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0216",
+    "id": "tx-0269",
     "date": "2025-10-02T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Impostos MEI",
@@ -3263,7 +3975,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0217",
+    "id": "tx-0270",
     "date": "2025-10-02T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Impostos MEI",
@@ -3276,7 +3988,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0218",
+    "id": "tx-0271",
     "date": "2025-10-02T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Impostos MEI",
@@ -3289,7 +4001,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0219",
+    "id": "tx-0272",
     "date": "2025-10-03T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -3302,7 +4014,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0220",
+    "id": "tx-0273",
     "date": "2025-10-08T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Transferencias entre contas",
@@ -3315,7 +4027,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0221",
+    "id": "tx-0274",
     "date": "2025-10-08T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Lanches e Refeições",
@@ -3328,7 +4040,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0222",
+    "id": "tx-0275",
     "date": "2025-10-08T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Lanches e Refeições",
@@ -3341,7 +4053,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0223",
+    "id": "tx-0276",
     "date": "2025-10-09T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -3354,7 +4066,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0224",
+    "id": "tx-0277",
     "date": "2025-10-10T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Aniversário do Joao Vitor",
@@ -3367,7 +4079,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0225",
+    "id": "tx-0278",
     "date": "2025-10-17T12:00:00",
     "description": "COMPRA CARTAO DEB",
     "history": "Combustivel",
@@ -3380,7 +4092,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0226",
+    "id": "tx-0279",
     "date": "2025-10-17T12:00:00",
     "description": "COMPRA CARTAO DEB",
     "history": "Lanches para colaboradores",
@@ -3393,7 +4105,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0227",
+    "id": "tx-0280",
     "date": "2025-10-20T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pinceis, folhas...",
@@ -3406,7 +4118,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0228",
+    "id": "tx-0281",
     "date": "2025-10-20T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Transferencias entre contas",
@@ -3419,7 +4131,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0229",
+    "id": "tx-0282",
     "date": "2025-10-20T12:00:00",
     "description": "PAGAMENTO CARTAO CREDITO",
     "history": "Pró-labore",
@@ -3432,7 +4144,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0230",
+    "id": "tx-0283",
     "date": "2025-10-20T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Ar Condicionado",
@@ -3445,7 +4157,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0231",
+    "id": "tx-0284",
     "date": "2025-10-20T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Tripé",
@@ -3458,7 +4170,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0232",
+    "id": "tx-0285",
     "date": "2025-10-20T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Trieinamento",
@@ -3471,7 +4183,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0233",
+    "id": "tx-0286",
     "date": "2025-10-20T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Programa de Edição",
@@ -3484,7 +4196,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0234",
+    "id": "tx-0287",
     "date": "2025-10-20T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Parcela Moto",
@@ -3497,7 +4209,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0235",
+    "id": "tx-0288",
     "date": "2025-10-20T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Internet",
@@ -3510,7 +4222,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0236",
+    "id": "tx-0289",
     "date": "2025-10-20T12:00:00",
     "description": "PIX ENVIADO",
     "history": "",
@@ -3523,7 +4235,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0237",
+    "id": "tx-0290",
     "date": "2025-10-20T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Esporadico",
@@ -3536,7 +4248,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0238",
+    "id": "tx-0291",
     "date": "2025-10-20T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Lanches para colaboradores",
@@ -3549,7 +4261,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0239",
+    "id": "tx-0292",
     "date": "2025-10-21T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Lanches para colaboradores",
@@ -3562,7 +4274,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0240",
+    "id": "tx-0293",
     "date": "2025-10-21T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Mensalidades",
@@ -3575,7 +4287,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0241",
+    "id": "tx-0294",
     "date": "2025-10-21T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Mensalidades",
@@ -3588,7 +4300,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0242",
+    "id": "tx-0295",
     "date": "2025-10-21T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -3601,697 +4313,8 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0243",
-    "date": "2025-10-23T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 500.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0244",
-    "date": "2025-10-23T12:00:00",
-    "description": "COMPRA CARTAO DEB",
-    "history": "Material de Higiene e Limpeza",
-    "customerId": "",
-    "customer": "MATEUS SUPERMERC",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 76.88,
-    "accountId": 74,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0245",
-    "date": "2025-10-23T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 200.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0246",
-    "date": "2025-10-27T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 200.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0247",
-    "date": "2025-10-27T12:00:00",
-    "description": "PIX RECEBIDO",
-    "history": "Esporadico",
-    "customerId": "",
-    "customer": "VIVAZ CONSTRUTORA",
-    "typeId": 1,
-    "type": "Credito",
-    "amount": 900.0,
-    "accountId": 2,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0248",
-    "date": "2025-10-27T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 2000.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0249",
-    "date": "2025-10-27T12:00:00",
-    "description": "COMPRA CARTAO DEB",
-    "history": "Lanches para colaboradores",
-    "customerId": "",
-    "customer": "IDEAL DELICATESSEN",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 8.0,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0250",
-    "date": "2025-10-30T12:00:00",
-    "description": "COMPRA CARTAO DEB",
-    "history": "Lanches para colaboradores",
-    "customerId": "",
-    "customer": "IDEAL DELICATESSEN",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 4.0,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0251",
-    "date": "2025-11-03T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Lanches para colaboradores",
-    "customerId": "",
-    "customer": "ANA CRISTINA PINTO DE AGU",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 8.0,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0252",
-    "date": "2025-11-03T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Lanches para colaboradores",
-    "customerId": "82387",
-    "customer": "ANA CRISTINA PINTO DE AGU",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 0.5,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0253",
-    "date": "2025-11-03T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Lanches para colaboradores",
-    "customerId": "",
-    "customer": "ANA CRISTINA PINTO DE AGU",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 8.0,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0254",
-    "date": "2025-11-03T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Lanches para colaboradores",
-    "customerId": "",
-    "customer": "ANA CRISTINA PINTO DE AGU",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 0.5,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0255",
-    "date": "2025-11-03T12:00:00",
-    "description": "COMPRA CARTAO DEB MC",
-    "history": "Lanches para colaboradores",
-    "customerId": "",
-    "customer": "IDEAL DELICATESSEN",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 8.96,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0256",
-    "date": "2025-11-03T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Salários",
-    "customerId": "",
-    "customer": "JOAO VITOR FONTENELE DA S",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 1500.0,
-    "accountId": 18,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0257",
-    "date": "2025-11-03T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Salários",
-    "customerId": "",
-    "customer": "Mayane Lima dos Santos",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 1500.0,
-    "accountId": 18,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0258",
-    "date": "2025-11-03T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Bolsa Estágio",
-    "customerId": "",
-    "customer": "Saimon Nascimento Silva",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 800.0,
-    "accountId": 16,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0259",
-    "date": "2025-11-04T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 500.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0260",
-    "date": "2025-11-04T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Impostos MEI",
-    "customerId": "",
-    "customer": "RECEITA FEDERAL",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 80.9,
-    "accountId": 89,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0261",
-    "date": "2025-11-05T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 115.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0262",
-    "date": "2025-11-06T12:00:00",
-    "description": "COMPRA CARTAO DEB MC 06/11",
-    "history": "Lanches para colaboradores",
-    "customerId": "",
-    "customer": "FRANCISCO JOSE DE S",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 8.0,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0263",
-    "date": "2025-11-07T12:00:00",
-    "description": "PIX RECEBIDO",
-    "history": "Transferencias entre contas",
-    "customerId": "",
-    "customer": "41 655 312 JULIO CESAR RO",
-    "typeId": 1,
-    "type": "Credito",
-    "amount": 2497.02,
-    "accountId": 106,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0264",
-    "date": "2025-11-07T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 1500.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0265",
-    "date": "2025-11-10T12:00:00",
-    "description": "COMPRA CARTAO",
-    "history": "Pro-labore",
-    "customerId": "",
-    "customer": "EXTRA SAO JOSE",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 49.99,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0266",
-    "date": "2025-11-10T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 300.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0267",
-    "date": "2025-11-10T12:00:00",
-    "description": "PIX RECEBIDO",
-    "history": "Mensalidades",
-    "customerId": "",
-    "customer": "CASA DE CECILIA",
-    "typeId": 1,
-    "type": "Credito",
-    "amount": 3000.0,
-    "accountId": 3,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0268",
-    "date": "2025-11-10T12:00:00",
-    "description": "PIX RECEBIDO",
-    "history": "Esporadico",
-    "customerId": "",
-    "customer": "VIVAZ CONSTRUTORA",
-    "typeId": 1,
-    "type": "Credito",
-    "amount": 900.0,
-    "accountId": 2,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0269",
-    "date": "2025-11-11T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Internet",
-    "customerId": "",
-    "customer": "BRISANET",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 86.92,
-    "accountId": 57,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0270",
-    "date": "2025-11-11T12:00:00",
-    "description": "COMPRA CARTAO",
-    "history": "Lanches para colaboradores",
-    "customerId": "",
-    "customer": "IDEAL DELICATESSEN",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 7.2,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0271",
-    "date": "2025-11-12T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 700.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0272",
-    "date": "2025-11-14T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Uniformes Colaboradores",
-    "customerId": "",
-    "customer": "RAFAEL GONDIM BESSA",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 216.0,
-    "accountId": 99,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0273",
-    "date": "2025-11-14T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Uniformes Colaboradores",
-    "customerId": "",
-    "customer": "RAFAEL GONDIM BESSA",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 36.0,
-    "accountId": 99,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0274",
-    "date": "2025-11-14T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Combustivel",
-    "customerId": "",
-    "customer": "CATATAU COMERCIO DE COMBU",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 200.0,
-    "accountId": 33,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0275",
-    "date": "2025-11-14T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 50.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0276",
-    "date": "2025-11-17T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Lanches para colaboradores",
-    "customerId": "",
-    "customer": "TETE SUPERMERCADO E COMER",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 22.45,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0277",
-    "date": "2025-11-17T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Locação de Camera",
-    "customerId": "",
-    "customer": "Adonys Shakaryan Ramires",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 150.0,
-    "accountId": 88,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0278",
-    "date": "2025-11-17T12:00:00",
-    "description": "PAGAMENTO CARTAO CREDITO",
-    "history": "Pro-labore",
-    "customerId": "",
-    "customer": "CARTAO MASTER",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 819.23,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0279",
-    "date": "2025-11-17T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 700.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0280",
-    "date": "2025-11-17T12:00:00",
-    "description": "PIX RECEBIDO",
-    "history": "Transferencias entre contas",
-    "customerId": "",
-    "customer": "41 655 312 JULIO CESAR RO",
-    "typeId": 1,
-    "type": "Credito",
-    "amount": 1997.0,
-    "accountId": 106,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0281",
-    "date": "2025-11-17T12:00:00",
-    "description": "COMPRA CARTAO",
-    "history": "Lanches para colaboradores",
-    "customerId": "",
-    "customer": "IDEAL DELICATESSEN",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 7.09,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0282",
-    "date": "2025-11-17T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Tripé",
-    "customerId": "",
-    "customer": "MERCADO PAGO INSTITUICAO",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 49.44,
-    "accountId": 73,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0283",
-    "date": "2025-11-17T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Trieinamento",
-    "customerId": "",
-    "customer": "MERCADO PAGO INSTITUICAO",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 149.7,
-    "accountId": 98,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0284",
-    "date": "2025-11-17T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Programa de Edição",
-    "customerId": "",
-    "customer": "MERCADO PAGO INSTITUICAO",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 95.0,
-    "accountId": 25,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0285",
-    "date": "2025-11-17T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Parcela Moto",
-    "customerId": "",
-    "customer": "MERCADO PAGO INSTITUICAO",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 200.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0286",
-    "date": "2025-11-18T12:00:00",
-    "description": "COMPRA CARTAO",
-    "history": "Placa HYPE",
-    "customerId": "",
-    "customer": "AliceArtefatosEm",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 68.0,
-    "accountId": 77,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0287",
-    "date": "2025-11-19T12:00:00",
-    "description": "COMPRA CARTAO",
-    "history": "Combustivel",
-    "customerId": "",
-    "customer": "POSTO AVENIDA",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 100.0,
-    "accountId": 33,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0288",
-    "date": "2025-11-19T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Lanches para colaboradores",
-    "customerId": "",
-    "customer": "RONILDO CASSIO DE CAMPOS",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 15.0,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0289",
-    "date": "2025-11-19T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 300.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0290",
-    "date": "2025-11-21T12:00:00",
-    "description": "PIX RECEBIDO",
-    "history": "Esporadico",
-    "customerId": "",
-    "customer": "KARLA RIBEIRO M PORTELA",
-    "typeId": 1,
-    "type": "Credito",
-    "amount": 2750.0,
-    "accountId": 2,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0291",
-    "date": "2025-11-21T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Lanches para colaboradores",
-    "customerId": "",
-    "customer": "MERCADINHO BOM PRECO",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 8.5,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0292",
-    "date": "2025-11-21T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Lanches para colaboradores",
-    "customerId": "",
-    "customer": "RONILDO CASSIO DE CAMPOS",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 15.0,
-    "accountId": 65,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0293",
-    "date": "2025-11-21T12:00:00",
-    "description": "COMPRA CARTAO",
-    "history": "Manutenção de Veículo",
-    "customerId": "",
-    "customer": "AUTO PECAS O BICUDO",
-    "typeId": 2,
-    "type": "Debito",
-    "amount": 15.0,
-    "accountId": 70,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0294",
-    "date": "2025-11-21T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 50.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
-    "id": "tx-0295",
-    "date": "2025-11-24T12:00:00",
-    "description": "PIX ENVIADO",
-    "history": "Pró-labore",
-    "customerId": "",
-    "customer": "JULIO CESAR RODRIGUES PIR",
-    "typeId": 3,
-    "type": "Debito",
-    "amount": 100.0,
-    "accountId": 103,
-    "bank": "Santander"
-  },
-  {
     "id": "tx-0296",
-    "date": "2025-11-24T12:00:00",
+    "date": "2025-10-23T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
     "customerId": "",
@@ -4304,6 +4327,695 @@ export const mockTransactions: MockTransactionsType[] = [
   },
   {
     "id": "tx-0297",
+    "date": "2025-10-23T12:00:00",
+    "description": "COMPRA CARTAO DEB",
+    "history": "Material de Higiene e Limpeza",
+    "customerId": "",
+    "customer": "MATEUS SUPERMERC",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 76.88,
+    "accountId": 74,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0298",
+    "date": "2025-10-23T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 200.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0299",
+    "date": "2025-10-27T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 200.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0300",
+    "date": "2025-10-27T12:00:00",
+    "description": "PIX RECEBIDO",
+    "history": "Esporadico",
+    "customerId": "",
+    "customer": "VIVAZ CONSTRUTORA",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 900.0,
+    "accountId": 2,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0301",
+    "date": "2025-10-27T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 2000.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0302",
+    "date": "2025-10-27T12:00:00",
+    "description": "COMPRA CARTAO DEB",
+    "history": "Lanches para colaboradores",
+    "customerId": "",
+    "customer": "IDEAL DELICATESSEN",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 8.0,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0303",
+    "date": "2025-10-30T12:00:00",
+    "description": "COMPRA CARTAO DEB",
+    "history": "Lanches para colaboradores",
+    "customerId": "",
+    "customer": "IDEAL DELICATESSEN",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 4.0,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0304",
+    "date": "2025-11-03T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Lanches para colaboradores",
+    "customerId": "",
+    "customer": "ANA CRISTINA PINTO DE AGU",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 8.0,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0305",
+    "date": "2025-11-03T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Lanches para colaboradores",
+    "customerId": "82387",
+    "customer": "ANA CRISTINA PINTO DE AGU",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 0.5,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0306",
+    "date": "2025-11-03T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Lanches para colaboradores",
+    "customerId": "",
+    "customer": "ANA CRISTINA PINTO DE AGU",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 8.0,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0307",
+    "date": "2025-11-03T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Lanches para colaboradores",
+    "customerId": "",
+    "customer": "ANA CRISTINA PINTO DE AGU",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 0.5,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0308",
+    "date": "2025-11-03T12:00:00",
+    "description": "COMPRA CARTAO DEB MC",
+    "history": "Lanches para colaboradores",
+    "customerId": "",
+    "customer": "IDEAL DELICATESSEN",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 8.96,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0309",
+    "date": "2025-11-03T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Salários",
+    "customerId": "",
+    "customer": "JOAO VITOR FONTENELE DA S",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 1500.0,
+    "accountId": 18,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0310",
+    "date": "2025-11-03T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Salários",
+    "customerId": "",
+    "customer": "Mayane Lima dos Santos",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 1500.0,
+    "accountId": 18,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0311",
+    "date": "2025-11-03T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Bolsa Estágio",
+    "customerId": "",
+    "customer": "Saimon Nascimento Silva",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 800.0,
+    "accountId": 16,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0312",
+    "date": "2025-11-04T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 500.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0313",
+    "date": "2025-11-04T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Impostos MEI",
+    "customerId": "",
+    "customer": "RECEITA FEDERAL",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 80.9,
+    "accountId": 89,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0314",
+    "date": "2025-11-05T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 115.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0315",
+    "date": "2025-11-06T12:00:00",
+    "description": "COMPRA CARTAO DEB MC 06/11",
+    "history": "Lanches para colaboradores",
+    "customerId": "",
+    "customer": "FRANCISCO JOSE DE S",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 8.0,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0316",
+    "date": "2025-11-07T12:00:00",
+    "description": "PIX RECEBIDO",
+    "history": "Transferencias entre contas",
+    "customerId": "",
+    "customer": "41 655 312 JULIO CESAR RO",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 2497.02,
+    "accountId": 106,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0317",
+    "date": "2025-11-07T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 1500.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0318",
+    "date": "2025-11-10T12:00:00",
+    "description": "COMPRA CARTAO",
+    "history": "Pro-labore",
+    "customerId": "",
+    "customer": "EXTRA SAO JOSE",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 49.99,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0319",
+    "date": "2025-11-10T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 300.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0320",
+    "date": "2025-11-10T12:00:00",
+    "description": "PIX RECEBIDO",
+    "history": "Mensalidades",
+    "customerId": "",
+    "customer": "CASA DE CECILIA",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 3000.0,
+    "accountId": 3,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0321",
+    "date": "2025-11-10T12:00:00",
+    "description": "PIX RECEBIDO",
+    "history": "Esporadico",
+    "customerId": "",
+    "customer": "VIVAZ CONSTRUTORA",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 900.0,
+    "accountId": 2,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0322",
+    "date": "2025-11-11T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Internet",
+    "customerId": "",
+    "customer": "BRISANET",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 86.92,
+    "accountId": 57,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0323",
+    "date": "2025-11-11T12:00:00",
+    "description": "COMPRA CARTAO",
+    "history": "Lanches para colaboradores",
+    "customerId": "",
+    "customer": "IDEAL DELICATESSEN",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 7.2,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0324",
+    "date": "2025-11-12T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 700.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0325",
+    "date": "2025-11-14T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Uniformes Colaboradores",
+    "customerId": "",
+    "customer": "RAFAEL GONDIM BESSA",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 216.0,
+    "accountId": 99,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0326",
+    "date": "2025-11-14T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Uniformes Colaboradores",
+    "customerId": "",
+    "customer": "RAFAEL GONDIM BESSA",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 36.0,
+    "accountId": 99,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0327",
+    "date": "2025-11-14T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Combustivel",
+    "customerId": "",
+    "customer": "CATATAU COMERCIO DE COMBU",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 200.0,
+    "accountId": 33,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0328",
+    "date": "2025-11-14T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 50.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0329",
+    "date": "2025-11-17T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Lanches para colaboradores",
+    "customerId": "",
+    "customer": "TETE SUPERMERCADO E COMER",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 22.45,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0330",
+    "date": "2025-11-17T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Locação de Camera",
+    "customerId": "",
+    "customer": "Adonys Shakaryan Ramires",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 150.0,
+    "accountId": 88,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0331",
+    "date": "2025-11-17T12:00:00",
+    "description": "PAGAMENTO CARTAO CREDITO",
+    "history": "Pro-labore",
+    "customerId": "",
+    "customer": "CARTAO MASTER",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 819.23,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0332",
+    "date": "2025-11-17T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 700.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0333",
+    "date": "2025-11-17T12:00:00",
+    "description": "PIX RECEBIDO",
+    "history": "Transferencias entre contas",
+    "customerId": "",
+    "customer": "41 655 312 JULIO CESAR RO",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 1997.0,
+    "accountId": 106,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0334",
+    "date": "2025-11-17T12:00:00",
+    "description": "COMPRA CARTAO",
+    "history": "Lanches para colaboradores",
+    "customerId": "",
+    "customer": "IDEAL DELICATESSEN",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 7.09,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0335",
+    "date": "2025-11-17T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Tripé",
+    "customerId": "",
+    "customer": "MERCADO PAGO INSTITUICAO",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 49.44,
+    "accountId": 73,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0336",
+    "date": "2025-11-17T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Trieinamento",
+    "customerId": "",
+    "customer": "MERCADO PAGO INSTITUICAO",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 149.7,
+    "accountId": 98,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0337",
+    "date": "2025-11-17T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Programa de Edição",
+    "customerId": "",
+    "customer": "MERCADO PAGO INSTITUICAO",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 95.0,
+    "accountId": 25,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0338",
+    "date": "2025-11-17T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Parcela Moto",
+    "customerId": "",
+    "customer": "MERCADO PAGO INSTITUICAO",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 200.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0339",
+    "date": "2025-11-18T12:00:00",
+    "description": "COMPRA CARTAO",
+    "history": "Placa HYPE",
+    "customerId": "",
+    "customer": "AliceArtefatosEm",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 68.0,
+    "accountId": 77,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0340",
+    "date": "2025-11-19T12:00:00",
+    "description": "COMPRA CARTAO",
+    "history": "Combustivel",
+    "customerId": "",
+    "customer": "POSTO AVENIDA",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 100.0,
+    "accountId": 33,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0341",
+    "date": "2025-11-19T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Lanches para colaboradores",
+    "customerId": "",
+    "customer": "RONILDO CASSIO DE CAMPOS",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 15.0,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0342",
+    "date": "2025-11-19T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 300.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0343",
+    "date": "2025-11-21T12:00:00",
+    "description": "PIX RECEBIDO",
+    "history": "Esporadico",
+    "customerId": "",
+    "customer": "KARLA RIBEIRO M PORTELA",
+    "typeId": 1,
+    "type": "Credito",
+    "amount": 2750.0,
+    "accountId": 2,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0344",
+    "date": "2025-11-21T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Lanches para colaboradores",
+    "customerId": "",
+    "customer": "MERCADINHO BOM PRECO",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 8.5,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0345",
+    "date": "2025-11-21T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Lanches para colaboradores",
+    "customerId": "",
+    "customer": "RONILDO CASSIO DE CAMPOS",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 15.0,
+    "accountId": 65,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0346",
+    "date": "2025-11-21T12:00:00",
+    "description": "COMPRA CARTAO",
+    "history": "Manutenção de Veículo",
+    "customerId": "",
+    "customer": "AUTO PECAS O BICUDO",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 15.0,
+    "accountId": 70,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0347",
+    "date": "2025-11-21T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 50.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0348",
+    "date": "2025-11-24T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 100.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0349",
+    "date": "2025-11-24T12:00:00",
+    "description": "PIX ENVIADO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "JULIO CESAR RODRIGUES PIR",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 500.0,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0350",
     "date": "2025-11-25T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Transferencias entre contas",
@@ -4316,7 +5028,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0298",
+    "id": "tx-0351",
     "date": "2025-11-25T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -4329,7 +5041,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0299",
+    "id": "tx-0352",
     "date": "2025-11-25T12:00:00",
     "description": "COMPRA CARTAO",
     "history": "Combustivel",
@@ -4342,7 +5054,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0300",
+    "id": "tx-0353",
     "date": "2025-11-26T12:00:00",
     "description": "COMPRA CARTAO",
     "history": "Lanches para colaboradores",
@@ -4355,7 +5067,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0301",
+    "id": "tx-0354",
     "date": "2025-11-26T12:00:00",
     "description": "COMPRA CARTAO",
     "history": "Lanches para colaboradores",
@@ -4368,7 +5080,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0302",
+    "id": "tx-0355",
     "date": "2025-11-26T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -4381,7 +5093,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0303",
+    "id": "tx-0356",
     "date": "2025-11-27T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Esporadico",
@@ -4394,7 +5106,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0304",
+    "id": "tx-0357",
     "date": "2025-11-28T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -4407,7 +5119,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0305",
+    "id": "tx-0358",
     "date": "2025-11-28T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Taxa de alteração",
@@ -4420,7 +5132,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0306",
+    "id": "tx-0359",
     "date": "2025-11-28T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Mensalidades",
@@ -4433,7 +5145,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0307",
+    "id": "tx-0360",
     "date": "2025-12-01T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -4446,7 +5158,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0308",
+    "id": "tx-0361",
     "date": "2025-12-01T12:00:00",
     "description": "COMPRA CARTAO",
     "history": "Pró-labore",
@@ -4459,7 +5171,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0309",
+    "id": "tx-0362",
     "date": "2025-12-01T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Bolsa Estágio",
@@ -4472,7 +5184,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0310",
+    "id": "tx-0363",
     "date": "2025-12-01T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Salários",
@@ -4485,7 +5197,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0311",
+    "id": "tx-0364",
     "date": "2025-12-01T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Decimo Terceiro João Vitor",
@@ -4498,7 +5210,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0312",
+    "id": "tx-0365",
     "date": "2025-12-01T12:00:00",
     "description": "COMPRA CARTAO",
     "history": "Lanches para colaboradores",
@@ -4511,7 +5223,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0313",
+    "id": "tx-0366",
     "date": "2025-12-01T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -4524,7 +5236,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0314",
+    "id": "tx-0367",
     "date": "2025-12-01T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -4537,7 +5249,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0315",
+    "id": "tx-0368",
     "date": "2025-12-02T12:00:00",
     "description": "COMPRA CARTAO",
     "history": "Acessório celular da HYPE",
@@ -4550,7 +5262,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0316",
+    "id": "tx-0369",
     "date": "2025-12-03T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Impostos MEI",
@@ -4563,7 +5275,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0317",
+    "id": "tx-0370",
     "date": "2025-12-03T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Esporádico",
@@ -4576,7 +5288,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0318",
+    "id": "tx-0371",
     "date": "2025-12-03T12:00:00",
     "description": "COMPRA CARTAO",
     "history": "Acessório celular da HYPE",
@@ -4589,7 +5301,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0319",
+    "id": "tx-0372",
     "date": "2025-12-04T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Mensalidades",
@@ -4602,7 +5314,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0320",
+    "id": "tx-0373",
     "date": "2025-12-04T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -4615,7 +5327,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0321",
+    "id": "tx-0374",
     "date": "2025-12-09T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -4628,7 +5340,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0322",
+    "id": "tx-0375",
     "date": "2025-12-09T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Serviços Terceirizados",
@@ -4641,7 +5353,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0323",
+    "id": "tx-0376",
     "date": "2025-12-10T12:00:00",
     "description": "TARIFA MENSALIDADE",
     "history": "Manutenção da Conta",
@@ -4654,7 +5366,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0324",
+    "id": "tx-0377",
     "date": "2025-12-10T12:00:00",
     "description": "COMPRA CARTAO",
     "history": "Lanches para colaboradores",
@@ -4667,7 +5379,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0325",
+    "id": "tx-0378",
     "date": "2025-12-11T12:00:00",
     "description": "COMPRA CARTAO",
     "history": "Lanches para colaboradores",
@@ -4680,7 +5392,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0326",
+    "id": "tx-0379",
     "date": "2025-12-12T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -4693,7 +5405,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0327",
+    "id": "tx-0380",
     "date": "2025-12-15T12:00:00",
     "description": "COMPRA CARTAO",
     "history": "Combustível",
@@ -4706,7 +5418,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0328",
+    "id": "tx-0381",
     "date": "2025-12-15T12:00:00",
     "description": "PAGAMENTO CARTAO CREDITO",
     "history": "Pró-labore",
@@ -4719,7 +5431,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0329",
+    "id": "tx-0382",
     "date": "2025-12-15T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Tripé",
@@ -4732,7 +5444,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0330",
+    "id": "tx-0383",
     "date": "2025-12-15T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Treinamento",
@@ -4745,7 +5457,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0331",
+    "id": "tx-0384",
     "date": "2025-12-15T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Programa de Edição",
@@ -4758,7 +5470,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0332",
+    "id": "tx-0385",
     "date": "2025-12-15T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Parcela Moto",
@@ -4771,7 +5483,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0333",
+    "id": "tx-0386",
     "date": "2025-12-15T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Internet",
@@ -4784,7 +5496,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0334",
+    "id": "tx-0387",
     "date": "2025-12-15T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Pró-labore",
@@ -4797,7 +5509,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0335",
+    "id": "tx-0388",
     "date": "2025-12-15T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Transferencias entre contas",
@@ -4810,7 +5522,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0336",
+    "id": "tx-0389",
     "date": "2025-12-15T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Esporádico",
@@ -4823,7 +5535,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0337",
+    "id": "tx-0390",
     "date": "2025-12-16T12:00:00",
     "description": "PIX ENVIADO",
     "history": "Transferencias entre contas",
@@ -4836,7 +5548,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "bank": "Santander"
   },
   {
-    "id": "tx-0338",
+    "id": "tx-0391",
     "date": "2026-01-21T12:00:00",
     "description": "PIX RECEBIDO",
     "history": "Transferencias entre contas",
@@ -4846,6 +5558,32 @@ export const mockTransactions: MockTransactionsType[] = [
     "type": "Credito",
     "amount": 960.0,
     "accountId": 106,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0392",
+    "date": "2026-01-21T12:00:00",
+    "description": "PAGAMENTO CARTAO CREDITO",
+    "history": "Pró-labore",
+    "customerId": "",
+    "customer": "CARTAO MASTER",
+    "typeId": 3,
+    "type": "Debito",
+    "amount": 953.01,
+    "accountId": 103,
+    "bank": "Santander"
+  },
+  {
+    "id": "tx-0393",
+    "date": "2026-01-23T12:00:00",
+    "description": "TARIFA MENSALIDADE",
+    "history": "Manutenção da Conta",
+    "customerId": "",
+    "customer": "",
+    "typeId": 2,
+    "type": "Debito",
+    "amount": 239.0,
+    "accountId": 67,
     "bank": "Santander"
   }
 ];
