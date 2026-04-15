@@ -1,6 +1,6 @@
 export const ROUTER = {
 	login: "/login",
 	register: "/register",
-	customer: "ui/customer",
+	customer: "/ui/customer",
 	dashboard: "/ui/dashboard",
 };
