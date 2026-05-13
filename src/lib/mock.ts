@@ -2226,7 +2226,7 @@ export const mockTransactions: MockTransactionsType[] = [
     "history": "Pro-labore",
     "customerId": "067.164.483-14",
     "customer": "JULIO CESAR RODR…",
-    "typeId": 3,
+    "typeId": 1,
     "type": "Debito",
     "amount": 50.0,
     "accountId": 103,
