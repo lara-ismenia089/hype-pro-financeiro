@@ -1,18 +1,15 @@
 import { useState } from "react";
-
 import { toast } from "sonner";
 
 import {
 	signIn,
 	signUp,
 } from "@/lib/auth/auth-client";
-
+import { ROUTER } from "@/lib/constants/routes";
 import {
 	loginSchema,
 	registerSchema,
 } from "@/lib/validations/authSchemas";
-
-import { ROUTER } from "@/lib/constants/routes";
 
 
 export function useAuthForm() {
