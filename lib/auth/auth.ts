@@ -1,5 +1,6 @@
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
+
 import { getDb } from "@/database/mongo";
 
 

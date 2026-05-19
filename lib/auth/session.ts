@@ -1,7 +1,8 @@
-import { redirect } from "next/navigation";
 import { headers } from "next/headers";
-import { auth } from "./auth";
+import { redirect } from "next/navigation";
+
 import { ROUTER } from "../constants/routes";
+import { auth } from "./auth";
 
 export async function getSession() {
 	return auth.api.getSession({
