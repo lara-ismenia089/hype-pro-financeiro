@@ -1,24 +1,21 @@
+import Image from "next/image";
 import {
 	UseFormReturn,
 } from "react-hook-form";
 
-import Image from "next/image";
-
+import { FormField } from "@/app/components/ui/form-field";
+import { Button } from "@/components/ui/button";
 import {
 	Card,
-	CardTitle,
+	CardContent,
 	CardFooter,
 	CardHeader,
-	CardContent,
+	CardTitle,
 } from "@/components/ui/card";
 import {
 	Field,
 	FieldGroup,
 } from "@/components/ui/field";
-import { Button } from "@/components/ui/button";
-
-import { FormField } from "@/app/components/ui/form-field";
-
 import { type LoginSchema } from "@/lib/validations/authSchemas";
 
 
