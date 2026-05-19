@@ -8,7 +8,7 @@ import { CHART_ACCOUNT } from "@/app/server/constaint";
 import {
   FinancialTransaction,
   FinancialReportSection,
-} from "./types/types";
+} from "./types";
 
 
 export function cn(...inputs: ClassValue[]) {
