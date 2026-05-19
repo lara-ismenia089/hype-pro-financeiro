@@ -1,15 +1,13 @@
 "use client";
 
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-
-import { useAuthForm } from "@/hooks/useAuthForm";
+import { useForm } from "react-hook-form";
 
 import { LoginForm } from "@/app/components/auth/LoginForm";
-
+import { useAuthForm } from "@/hooks/useAuthForm";
 import {
-	loginSchema,
 	type LoginSchema,
+	loginSchema,
 } from "@/lib/validations/authSchemas";
 
 
